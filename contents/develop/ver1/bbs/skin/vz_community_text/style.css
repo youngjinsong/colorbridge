@@ -1,0 +1,233 @@
+/*************************************/
+/** 1.제작 : 보짱넷 (http://vozzang.net)  **/
+/** 2.연락처 : bunggae@nate.com **/
+/** 3.작성일 : 2009년 6월 22일       **/
+/*************************************/
+@charset "euc-kr";
+
+/* 기본 */
+BODY,TD,input,DIV,form,TEXTAREA,center,pre,blockquote {font-size:12px;font-family:돋움;color:#666;}
+img {border:none;}
+li{list-style:none;}
+ul, li, dl, dd, dt {margin:0; padding:0;}
+h4 {font-size:100%; margin:0; padding:0;}
+address,em{font-style:normal;}
+input,textarea,select{font-family:inherit; font-size:1.05em;}
+input{padding-right:1px;}
+
+a{color:#666; text-decoration:none;}
+a:visited,a:visited *{color:#666;}
+a.visited,a.visited:visited{color:#666;}
+a:hover,a:hover *,a.visited:hover{color:#ff7800; text-decoration:underline;}
+.clear{display:block; float:none; clear:both; height:0; width:100%; font-size:0 !important; line-height:0 !important; overflow:hidden; margin:0 !important; padding:0 !important;}
+
+.boardsetup {position:relative; width:100%; padding:15px 0 0 0;}
+.boardsetup .categoryarea {float:left;}
+.boardsetup .menuarea {font-size:11px; float:right;}
+
+/* 텍스트형 리스트 */
+.boardlisttext a {color:#000;}
+.boardlisttext a:hover {color:#EE5A00;}
+.boardlisttext {width:100%; margin-top:10px; border-top:1px solid #ddd; font-weight:normal;}
+.boardlisttext thead th {padding:10px 0 7px 0; font:8pt 돋움,Dotum; color:#626262; background-color:#f2f2f2; text-align:center; letter-spacing:-1px;}
+.boardlisttext thead th a {color:#626262;}
+.boardlisttext tbody td {padding:9px 0 6px 0; border-bottom:1px solid #eaeaea; background-color:#fff;}
+.boardlisttext tbody td.num {width:60px; text-align:center;font:normal 11px tahoma; color:#B3B3B3;}
+.boardlisttext tbody td.num span.now {font:bold 11px tahoma; color:#E15916;}
+.boardlisttext tbody td.checkbox {width:30px; text-align:center;}
+.boardlisttext tbody td.category {width:100px; text-align:center; font:8pt 돋움,Dotum; color:#999;}
+.boardlisttext tbody td.category a {color:#999;}
+.boardlisttext tbody td.title {text-align:left;}
+.boardlisttext tbody td.title a {display:inline-block; font:10pt 굴림,Gulim;}
+.boardlisttext tbody td.title img{margin-left:5px; vertical-align:middle;}
+.boardlisttext tbody td.title span.cate {font-size:11px; color:#999;}
+.boardlisttext tbody td.title span.cate a {font-size:11px; color:#999;}
+.boardlisttext tbody td.title span.cmt {padding:0 0 0 2px;font:8pt 돋움,Dotum;color:#a68b74;}
+.boardlisttext tbody td.title span.notice {font-weight:bold;color:#ff6c00;}
+.boardlisttext tbody td.name {width:90px; text-align:left; font:8pt 돋움,Dotum; letter-spacing:-1px; color:#a68b75;}
+.boardlisttext tbody td.name a {color:#a68b75;}
+.boardlisttext tbody td.name img {vertical-align:middle; padding:0 1px 0 0;}
+.boardlisttext tbody td.date {width:50px; text-align:center; font:8pt tahoma; padding:0; color:#909090;}
+.boardlisttext tbody td.readnum {width:50px; text-align:center; font:8pt tahoma; padding:0; color:#626262;}
+.boardlisttext tbody td.good {width:50px; text-align:center; color:#9845cc;}
+.boardlisttext tbody td.nogood {width:50px; text-align:center;}
+
+
+
+/* 리스트 하단 */
+.boardlistfoot {height:30px; position:relative; width:100%; margin:15px 0 15px 0; text-align:center;}
+.boardlistfoot .btnwrite {position:absolute; top:0; right:0;}
+.boardlistfoot .btnlist {position:absolute; top:0; left:0;}
+
+
+.print_page { font-weight:normal;padding:0 3px 0 3px;}
+
+
+/* 글 작성 */
+.boardwrite {width:100%; border-top:1px solid #ddd; text-align:left;}
+.boardwrite thead th {height:50px; padding:0 0 0 10px; font-size:15px; border-bottom:1px solid #ddd; background-color:#f5f5f5;}
+.boardwrite tbody th {width:100px; padding:0 0 0 10px; border-bottom:1px solid #ddd; font-size:12px;}
+.boardwrite tbody td {padding:5px 0 5px 0; border-bottom:1px solid #ddd; font-size:12px;}
+.boardwrite tbody td .input_text {height:18px; border:1px solid #ddd; padding:4px 3px 1px 4px; background-color:#fff;}
+.boardwrite tfoot td {position:relative; padding:15px 0 5px 0; text-align:center; border:none;}
+.boardwrite tfoot td .btnpreview {float:left; *position:absolute; *top:15px; *left:15px;}
+
+
+
+/* 글 보기 */
+.boardview {width:100%; text-align:left; font-weight:normal;}
+.boardview h4.title {margin-top:5px; padding:20px 0 20px 15px; font:bold 12pt 굴림,Gulim; color:#444444; border-top:1px solid #eaeaea; word-break:break-all; background-color:#f5f5f5;}
+.boardview ul.writer {height:20px;padding:0 15px 10px 15px; border-bottom:1px solid #eaeaea; background-color:#f5f5f5;}
+.boardview ul.writer li {list-style:none;}
+.boardview ul.writer li span.name {padding:0; font:8pt 돋움,Dotum; line-height:1.2em;letter-spacing:-1px; color:#a68b75;}
+.boardview ul.writer li span.name a {color:#a68b75;}
+.boardview ul.writer li span.name img {vertical-align:middle; padding:0 1px 0 0;}
+.boardview ul.writer li span.date {padding:0 0 0 12px; font:8pt tahoma; color:#909090;}
+.boardview ul.writer li span.readnum {padding:0 0 0 12px; font:8pt 돋움,Dotum; line-height:1.2em;letter-spacing:-1px;color:#666666;}
+.boardview ul.writer li span.good {padding:0 0 0 12px;font:8pt 돋움,Dotum;line-height:1.2em;letter-spacing:-1px; color:#9845cc;}
+
+
+
+.boardview .file {clear:both;padding:5px 0 5px 15px; border-bottom:1px dashed #ddd;}
+.boardview .link {clear:both;padding:5px 0 5px 15px; border-bottom:1px dashed #ddd;}
+.boardview .fileview {clear:both;padding:10px 0 15px 0;}
+.boardview .contents {clear:both; padding:35px 15px 35px 15px; font-weight:normal;}
+.boardview .signature {clear:both;padding:15px 15px 0 15px;}
+
+.boardview .normalline {height:1px; line-height:1px; font-size:1px; background-color:#ddd; clear:both;}
+
+
+
+/* 검색 */
+.boardsearch { text-align:center; margin:10px 0 0 0; }
+.boardsearch .stx {width:200px; border:1px solid #ddd; padding:3px;}
+.boardsearch .searchbtn {*top:-5px; _top:-4px;}
+
+
+
+
+
+
+/* 코멘트 */
+.boardcommentlist {position:relative; width:100%; clear:both; border-top:1px solid #eaeaea; background-color:#fff; text-align:left;}
+.boardcommentlist td.cmtlistview {*width:100%;}
+.cmtlisthead {height:25px; margin:10px 0 0 0; padding:7px 0 0 0;}
+.cmtlistwriter {width:300px; padding:0 0 0 20px; float:left;}
+.cmtlistbtn {width:150px; padding:0 10px 0 0; float:right; text-align:right;}
+.cmtlisttext {clear:both; padding:5px 20px 15px 20px; background-color:#fff; font-weight:normal;}
+.cmtdatetime {font-weight:normal; color:#888; font-size:11px;}
+.boardcmtwrite {width:100%; background-color:#f5f5f5; text-align:left;}
+.boardcmtwrite td {padding:0 0 15px 15px;}
+.boardcmtwrite td.memowrite {padding:15px 15px 5px 15px;}
+.boardcmtwrite textarea {width:99%; border:1px solid #ddd;}
+
+.boardrecommend {padding:30px 0 0 0;}
+.boardrecommend a {display:block; float:left; height:30px; padding:0 10px 0 10px; border:1px solid #ff98b5; background-color:#ffe7ee; font-weight:bold; line-height:250%;text-decoration:none;}
+.boardrecommend a:hover {text-decoration:none;}
+.boardrecommend span.good {display:block;padding:0 0 0 50px; background:url(../img/board/icon_good.gif) no-repeat 0 6px; color:#000000; text-decoration:none;}
+.boardrecommend span.nogood {display:block;padding:0 0 0 18px; background:url(../skin/board/basic/img/icon_nogood.gif) no-repeat 0 6px; color:#2a94e5;text-decoration:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* NHN > UIT Center > Open UI Platform Team > Jeong Chan Myeong(dece24@nhncorp.com) */
+/* vozzang.net 수정 */
+
+/* Anchor Button */
+a.button,
+a.button span { position:relative; display:inline-block; text-decoration:none !important; background:url(./img/buttonWhite.gif) no-repeat; cursor:pointer; white-space:nowrap; vertical-align:middle; *vertical-align:top;}
+a.button { padding:0; background-position:left top; overflow:visible;}
+a.button span { left:2px; padding:6px 10px 5px 8px; _padding:3px 10px 8px 8px; color:#000; font:12px/12px Sans-serif; background-position:right top;}
+a.button, x:-moz-any-link { font:0/23px Sans-serif; padding:12px 0; top:1px;} /* Firefox 2 Fix */
+a.button, x:-moz-any-link, x:default { padding:0; top:0;} /* Firefox 2 Fix */
+a.button img {position:relative; top:5px; *top:7px; left:7px; z-index:1;} /* vozzang.net 수정 */
+
+/* Large Size */
+a.button.large { background-position:left -30px; }
+a.button.large span { padding:7px 10px 6px 8px; font:16px/16px Sans-serif; background-position:right -30px;}
+a.button.large, x:-moz-any-link { font:0/29px Sans-serif; padding:15px 0;} /* Firefox 2 Fix */
+a.button.large, x:-moz-any-link, x:default { padding:0;} /* Firefox 2 Fix */
+/* xLarge Size */
+a.button.xLarge { background-position:left -65px; }
+a.button.xLarge span { padding:8px 10px 7px 8px; font:20px/20px Sans-serif; background-position:right -65px;}
+a.button.xLarge, x:-moz-any-link { font:0/35px Sans-serif; padding:18px 0;} /* Firefox 2 Fix */
+a.button.xLarge, x:-moz-any-link, x:default { padding:0;} /* Firefox 2 Fix */
+/* Small Size */
+a.button.small { background-position:left -107px; }
+a.button.small span { padding:4px 6px 3px 4px; _padding:2px 6px 5px 4px; font:10px/11px Sans-serif; _font:11px/11px Sans-serif; background-position:right -107px;}
+a.button.small, x:-moz-any-link { font:0/18px Sans-serif; padding:9px 0;} /* Firefox 2 Fix */
+a.button.small, x:-moz-any-link, x:default { padding:0;} /* Firefox 2 Fix */
+
+/* Control Button + Submit Button */
+span.button,
+span.button button,
+span.button input { position:relative; margin:0; display:inline-block; border:0; font:12px Sans-serif; white-space:nowrap; background:url(./img/buttonWhite.gif) no-repeat; vertical-align:middle;}
+span.button { *top:-1px; _top:0px; padding:0; _padding:0 0 1px 0; background-position:left top;} /* vozzang.net 수정 */
+span.button, x:-moz-any-link{ font:0/23px Sans-serif; padding:11px 0;} /* Firefox 2 Fix */
+span.button, x:-moz-any-link, x:default{ padding:0;} /* Firefox 2 Fix */
+span.button button,
+span.button input { height:23px; left:2px; *top:0px; _top:-1px; padding:0 10px 0 8px; *padding:0 5px 0 3px; line-height:24px; background-position:right top; cursor:pointer;} /* vozzang.net 수정 */
+/* Large Size */
+span.button.large { background-position:left -30px;}
+span.button.large, x:-moz-any-link{ font:0/29px Sans-serif; padding:14px 0;} /* Firefox 2 Fix */
+span.button.large, x:-moz-any-link, x:default{ padding:0;} /* Firefox 2 Fix */
+span.button.large button,
+span.button.large input { height:30px; *top:0; _top:-1px; padding:0 10px 0 8px; *padding:0 5px 0 3px; font:16px/30px Sans-serif; background-position:right -30px;}
+/* xLarge Size */
+span.button.xLarge { background-position:left -65px;}
+span.button.xLarge, x:-moz-any-link{ font:0/35px Sans-serif; padding:17px 0;} /* Firefox 2 Fix */
+span.button.xLarge, x:-moz-any-link, x:default{ padding:0;} /* Firefox 2 Fix */
+span.button.xLarge button,
+span.button.xLarge input { height:35px; padding:0 10px 0 8px; *padding:0 5px 0 3px; font:20px/36px Sans-serif; background-position:right -65px;}
+/* Small Size */
+span.button.small { background-position:left -107px;}
+span.button.small, x:-moz-any-link{ font:0/18px Sans-serif; padding:9px 0;} /* Firefox 2 Fix */
+span.button.small, x:-moz-any-link, x:default{ padding:0;} /* Firefox 2 Fix */
+span.button.small button,
+span.button.small input { height:18px; *top:0; _top:-1px; padding:0 6px 0 4px; *padding:0 3px 0 2px; font:11px/18px Sans-serif; background-position:right -107px;}
+span.button.small button, x:-moz-any-link,
+span.button.small input, x:-moz-any-link{ top:-1px;} /* Firefox 2 Fix */
+span.button.small button, x:-moz-any-link, x:default,
+span.button.small input, x:-moz-any-link, x:default{ top:0;} /* Firefox 2 Fix */
+
+/* Strong Button */
+a.button.strong *,
+span.button.strong * { font-weight:bold !important;}
+
+/* Icon Add */
+a.button .icon { position:relative; border:0; vertical-align:middle;}
+span.button .icon { position:relative; left:10px; margin-right:8px; vertical-align:middle;}
+
+/* Color Preset */
+a.button.green,
+a.button.green span,
+span.button.green,
+span.button.green button,
+span.button.green input { background-image:url(./img/buttonGreen.gif); color:#fff;}
+a.button.black,
+a.button.black span,
+span.button.black,
+span.button.black button,
+span.button.black input { background-image:url(./img/buttonBlack.gif); color:#fff;}
+a.button.red,
+a.button.red span,
+span.button.red,
+span.button.red button,
+span.button.red input { background-image:url(./img/buttonRed.gif); color:#fff;}
+a.button.blue,
+a.button.blue span,
+span.button.blue,
+span.button.blue button,
+span.button.blue input { background-image:url(./img/buttonBlue.gif); color:#fff;}
+
+/* Offset Debug */
+a.button,
+span.button{ margin-right:2px;}

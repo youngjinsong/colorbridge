@@ -1,0 +1,103 @@
+#wrap{max-width:320px;background:#fff;text-align:center;border-radius:.938em;-webkit-border-radius:.938em;-moz-border-radius:.938em;-o-border-radius:.938em;box-shadow:0 0 35px 1px #908d6a;margin:0 auto}
+#wrap:after{content:"Mobile 320* 480"}
+header .sogabox{width:100%;margin-top:1em;padding-top:.5em;border-bottom:1px dashed #ccc;font-weight:800;font-size:80%;color:#888}
+header .sogabox a{width:47%;display:inline-block;-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-o-transition:all .3s ease-out;padding:1em 0}
+header .sogabox a:hover{background:#D0001E;color:#fff}
+header .logo{margin:1em auto}
+header nav{text-align:center}
+header nav ul li{float:left}
+header nav li{font-weight:700;width:50%;font-size:80%;-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-o-transition:all .3s ease-out;padding:1em 0}
+body,header nav li:hover{background:#fcfbf5}
+header .sogabox .div,header nav li .submenu{display:none}
+
+section.container01{width:100%}
+section.container01 img{width:90%;margin:0 auto}
+section .box01{width:98%;margin:0 auto}
+section .box01 hgroup{padding:.9em 0}
+section .box01 hgroup h2{font-size:70%;font-weight:800;color:#908d6a;letter-spacing:2px;padding-bottom:3px}
+section .box01 hgroup h3{font-size:90%;font-weight:800;border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding:.3em 0}
+section .box01 hgroup h4{margin-top:1.5em;font-size:.84em;line-height:1.65em;text-align:left;padding:0 1em}
+section.container02{width:100%;margin:20px auto}
+section .box02{position:relative;overflow:hidden;width:95%;height:225px;float:left;border-radius:.5em;-webkit-border-radius:.5em;-moz-border-radius:.5em;border:1px solid #ccc;-o-border-radius:.5em;box-shadow:0 0 5px #8E8C75;margin:.5em}
+section .box02 .boximg2{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:.5em;-webkit-border-radius:.5em;-moz-border-radius:.5em;-o-border-radius:.5em}
+section .box02 h2{font-weight:700;padding-top:1.5em;font-size:80%}
+section .box02 h3{font-weight:700;padding-top:10px;font-size:80%;color:#908d6a}
+section .box02 p{font-size:75%;line-height:23px;text-align:left;margin:7px}
+section .more{margin-left:10px;font-size:83%;color:#d52a33}
+section .more:hover{color:green}
+article .heading01{font-weight:700;font-size:90%;display:inline-block}
+article .heading02{padding-top:27px;font-weight:700;font-size:90%;display:inline-block}
+
+/* sub1 */
+section.container03{width:100%}
+section.container03 img{width:100%;margin-top:1.22em}
+section .box03{width:100%;margin:.5em auto}
+section .box03 hgroup{padding:.1em .5em}
+section .box03 hgroup h2.none{display:none}
+section .box03 hgroup h3{padding-top:20px;font-size:82%;line-height:1.6em;border-top:5px double #eee;margin:1.5em 1em}
+section .box03 hgroup h4{width:65%;font-size:95%;font-weight:800;border-top:5px double #eee;color:#796A53;margin:0 auto;padding:.4em .05em}
+section .box03 hgroup h5{font-size:85%;font-weight:800;line-height:1em;letter-spacing:1px;font-style:italic;color:#DA2731}
+section.container04{width:98%;text-align:left;margin:4em auto}
+section.container04 h3{font-size:95%;font-weight:800;padding-bottom:.5em;border-bottom:1px dashed #ccc;text-align:center}
+section .box04{width:90%;height:100%;border-radius:.5em;-webkit-border-radius:.5em;-moz-border-radius:.5em;border:1px solid #ccc;-o-border-radius:.5em;box-shadow:0 0 10px #908d6a;margin:1em auto}
+section .box04 h4{text-align:center;font-weight:800;font-size:88%;padding:1em}
+section .box04 .pic01{width:100%;margin:0 auto}
+section .box04 p{line-height:2em;font-size:87%;margin:1em}
+section .box05{width:92%;border-left:5px double #eee;border-right:5px double #eee;border-radius:.5em;-webkit-border-radius:.5em;-moz-border-radius:.5em;-o-border-radius:.5em;box-shadow:0 0 8px #796A53;margin:1.5em auto;padding:1em .5em}
+section.container04 .num1{width:37%;border-bottom:3px solid #EDECE8;font-size:112%;font-weight:800;clear:both;display:inline-block;padding:.5em 9.5em .5em 0}
+section.container04 .bonmun1{font-size:88%;line-height:2.5em}
+
+/* sub2 */
+section.container05{width:100%;text-align:left;margin:1.5em 0}
+section.container05 img{width:95%;margin:1em .5em}
+section.container05 h2{border-top:5px double #ccc;border-bottom:5px double #ccc;margin-top:1em;font-weight:700;font-size:82%;text-align:center;box-shadow:0 0 5px 1px #908d6a;color:#000;padding:15px}
+section.container05 h2:hover{border-top:5px double #ccc;border-bottom:5px double #ccc;color:#7d181e}
+section.container06 h3{font-weight:700;font-size:90%;color:#908d6a;padding:.5em 0}
+section.container06 h2{border:1px solid #ccc;font-weight:700;width:100%;margin-top:15px;background:#fefdfa;box-shadow:0 0 3px #ccc;padding:15px 0}
+section .box06{position:relative;overflow:hidden;width:97%;padding-bottom:2em;background:#fefdfa;box-shadow:0 0 10px 1px #ccc;margin:.3em auto}
+section .box06 h3{font-weight:700;width:100%;background:#d52a33;color:#fff;padding:5px 0}
+section .box06 p{line-height:1.3em;font-size:86.5%;text-align:left;padding:.46em .3em}
+section .box06 span{margin-top:.5em;font-weight:700;font-size:70%;text-algin:center}
+section.container07 h3{font-weight:700;font-size:90%;color:#fff;margin:0;padding:5px 0}
+section.container07 h4{font-weight:700;color:#908d6a;margin:10px 0}
+section.container07 .box06{height:190px}
+section.container07 .boximg6{height:220px}
+section.container07 p{line-height:1.5em;font-size:90%;margin:0 .4em}
+section.container06,section.container07{width:100%}
+section .box06 h4,section .box06 .boximg6,.more1{display:none}
+
+/* sub3 */
+section.container08 h3{margin-top:15px}
+section.container08 img{width:85%;margin:1em auto}
+section .box08 h2{font-weight:700;color:#CACEDA;padding:10px 0}
+section .box08 p{line-height:2em;text-align:left;font-size:83%;padding:10px}
+section .box08 h3{width:100%;margin-top:25px;border-top:5px double #ccc;font-weight:700;font-size:90%;background:#eee;padding:10px 0}
+section .box09{width:100%;margin-bottom:10px}
+section .box09 h2{font-weight:700;margin-bottom:10px;border-bottom:5px double #eee;color:#ccc;padding:10px 0}
+section .box09 .bold{font-weight:700;font-size:90%}
+section .box09 img{float:left;padding:10px}
+section .box09 p{line-height:1.5em;font-size:90%;padding-top:10px;text-align:left}
+section.container08,section.container09,section .box08{width:100%}
+
+/* sub4 */
+section.container10{width:100%;padding-bottom:20px;border-bottom:5px double #ccc;margin:0 auto}
+section.container10 h2{display:none}
+section .box10{width:85%;background:#FEFDFA;text-align:center;border-radius:.5em;-webkit-border-radius:.5em;-moz-border-radius:.5em;-o-border-radius:.5em;box-shadow:0 0 35px 1px #908d6a;border:1px solid #ccc;margin:2em auto;padding:1em .5em}
+section .box11{width:100%;margin:1em 0}
+section .box11 h4{margin-top:1em;font-weight:700;font-size:75%}
+section .box11 p{line-height:25px;font-size:83%;padding:15px 10px}
+section .box10-1{width:85%;background:#FEFDFA;text-align:center;border-radius:.5em;-webkit-border-radius:.5em;-moz-border-radius:.5em;-o-border-radius:.5em;box-shadow:0 0 35px 1px #908d6a;border:1px solid #ccc;margin:1.5em auto;padding:1em .5em}
+section.container11{width:100%}
+section.container11 h2{font-weight:700;font-size:100%;padding:7px 0}
+section.container11 h3{font-weight:700;border-bottom:5px double #ccc;font-size:85%;padding:9px 0}
+section .box12{width:98%;box-shadow:0 0 15px 1px #908d6a;border:1px solid #ccc;text-align:left;margin:1em auto;padding:2.5em 0}
+section .box12 h4{font-weight:700;text-indent:2em;padding-bottom:.5em}
+section .box12 .faqli{border-bottom:1px dashed #ccc;font-weight:700;font-size:78%;color:#888787;cursor:pointer;margin:15px;padding:.3em .2em}
+section .box12 .faqli:hover{filter:alpha(opacity=90);opacity:0.9;color:#666}
+section .box12 .faqli .q{margin-right:5px;font-weight:700;color:#D0001E}
+section .box12 .faqli .a{margin-right:10px;font-weight:700;color:#547169;font-size:120%}
+section .box12 .faqli .bonmun{font-weight:400;line-height:25px;font-size:95%;cursor:default;padding:15px}
+section .box13{width:100%;background:#EAE5E5;margin:1em auto;padding:2em 0}
+section .box13 img{width:90%;margin-top:1em}
+section .box10 p,section .box10-1 p{font-weight:700;padding:8px 0}
+section .box10 img,section .box10-1 img{width:90%}

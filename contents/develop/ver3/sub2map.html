@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html><html lang="en">
+<head>
+<title>SONG YOUNG JIN</title>
+<meta charset="utf-8">
+<script src="js/jquery.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="img/favicon.ico" />
+<link rel ="stylesheet" type = "text/css" href = "css/default.css">
+<link rel="stylesheet" type ="text/css" href="../reset.css">
+<script type="text/javascript" src="/contents/js/google-analytics.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript"src="../js/HTML5forIE.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="../js/IE9.js" type="text/javascript"></script>
+<script src="../js/ie7-squish.js" type="text/javascript"></script>
+<script src="../js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+
+
+<style type="text/css">
+.subnav{float:left; width:180px; height:200px; margin:16px 0 0 55px; font-weight:bold; line-height:20px; border-top:3px solid #49A7C7; }
+.subnav li a{display:block; padding:5px; color:#999; }
+.subnav li a:hover{background:#D9E7ED; color:#fff; }
+
+section{width:650px; height:450px; position:relative; border:1px solid #ccc; margin:20px 0 148px 260px; }
+section .heading {margin:0 auto; padding:5px; width:270px; font-weight:bold; background:#49A7C7; }
+section .heading a{font-weight:bold; color:#fff; background:#49A7C7; }
+
+article{width:620px; margin:70px auto; }
+article ul.tab {padding:0; margin-left:30px; }
+article ul.tab li {list-style-type:none; float:left; }
+article ul.tab li a {outline:none; background:#eee; display:block; color:blue; line-height:40px; text-align:center; }
+article ul.tab li a.selected {background:#ccc; text-decoration: none; color:#333; cursor:default; }
+
+article ul.tab .tb1 a {width:92px; height:77px; background:url(img/tb01.jpg);}
+article ul.tab .tb1 a:hover{background:url(img/tb02.jpg); }
+article ul.tab .tb1 a.selected{background:url(img/tb02.jpg); }
+article ul.tab .tb2 a {width:92px; height:77px; background:url(img/tb03.jpg); }
+article ul.tab .tb2 a:hover{background:url(img/tb04.jpg); }
+article ul.tab .tb2 a.selected{background:url(img/tb04.jpg); }
+article ul.tab .tb3 a {width:92px; height:77px; background:url(img/tb05.jpg); }
+article ul.tab .tb3 a:hover{background:url(img/tb06.jpg); }
+article ul.tab .tb3 a.selected{background:url(img/tb06.jpg); }
+article ul.tab .tb4 a {width:92px; height:77px; background:url(img/tb07.jpg); }
+article ul.tab .tb4 a:hover{background:url(img/tb08.jpg); }
+article ul.tab .tb4 a.selected{background:url(img/tb08.jpg); }
+article ul.tab .tb5 a {width:92px; height:77px; background:url(img/tb09.jpg); }
+article ul.tab .tb5 a:hover{background:url(img/tb10.jpg); }
+article ul.tab .tb5 a.selected{background:url(img/tb10.jpg); }
+article ul.tab .tb6 a {width:92px; height:77px; background:url(img/tb11.jpg); }
+article ul.tab .tb6 a:hover{background:url(img/tb12.jpg); }
+article ul.tab .tb6 a.selected{background:url(img/tb12.jpg); }
+
+article ul.panel {clear:both; border:0px solid #ccc; text-align:left; }
+article ul.panel li {list-style-type:none; color:#333; }
+
+ul.panel .heading1{text-align:center; font-size:16px; color:#384c4c; background:#cfebec; font-weight:bold; padding:5px 10px; }
+ul.panel .bonmun1{font-size:14px; padding:10px; line-height:26px; }
+
+</style>
+</head>
+
+
+<body>
+<script type="text/javascript">
+$(function() {
+	$("ul.panel li:not("+$("ul.tab li a.selected").attr("href")+")").hide();
+	$("ul.tab li a").click(function() {
+	$("ul.tab li a").removeClass("selected");
+	$(this).addClass("selected");
+	$("ul.panel li").slideUp("fast");
+	$($(this).attr("href")).slideDown("fast");
+	return false;
+	});
+	});	
+	
+</script>
+
+<div id="wrap">
+<header><nav>
+<span class="soga"><a href="/develop.html" title="go to develop Portfolio">development | <a href="/index.html" title="go to Color bridge home">Index</a></span><a href="index.html" title="Hello seychelles"><img src="img/logo.gif" class="logo" alt="logo"></a>
+<div class="clear"></div>
+<ul>
+<li class="text"><a href="sub1.html" title="여행지 소개 ">THE ISLAND</a></li>
+<li class="text"><a href="sub2.html" title="가볼만 한 장소">RESORT</a></li>
+<li class="text"><a href="sub3.html" title="운항 스케줄 ">FLIGHT SCHEDULE</a></li>
+<li class="text"><a href="sub4.html" title="방문하기 최적의 시기">BEST TIME TO VISIT</a></li>
+<li class="text"><a href="sub5.html" title="세이셀갤러리">GALLERY</a></li>
+<li class="text"><a href="sub6.html" title="자주듣는 질문">TRAVEL INFO</a></li>
+</ul>
+</nav></header>
+
+<nav class="ltnav">
+<ul class="subnav">
+<li><a href="sub2.html">지도로 찾기</a></li>
+<li>지역 정보 상세보기</li>
+</ul>
+</nav>
+
+<section>
+<p class="heading"><a href="sub2.html">Seychell Map</a></p>
+
+<article>
+<ul class="tab">
+<li class="tb1"><a href="#tab1" class="selected"></a></li>
+<li class="tb2"><a href="#tab2"></a></li>
+<li class="tb3"><a href="#tab3"></a></li>
+<li class="tb4"><a href="#tab4"></a></li>
+<li class="tb5"><a href="#tab5"></a></li>
+<li class="tb6"><a href="#tab6"></a></li></ul>
+
+<ul class="panel">
+<li id="tab1">
+<p class="heading1">Vallee de Mai</p>
+<p class="bonmun1">아담과 이브가 사는 오월의 계곡 "5월의 계곡"이라는 뜻의 Vallee de Mai.<br>15억 년 전부터 존재해 온 원시림이다. 50년 전까지만 해도 출입이 금지되었으나, 현재는 수많은 사람들이 방문한다. 거의 모든 종류의 나무들과 야생 조류, 파충류와 함께 코코 드 메르가 6천여 그루나 서식하고 있기 때문이다. 때문에 유네스코는 1983년 자연 문화유산으로 지정했다.</p>
+</li>
+<li id="tab2">
+<p class="heading1">Anse Source D’agent</p>
+<p class="bonmun1">41개의 크고 작은 화강암 섬들 중 가장 변화무쌍한 화강암 해변을 자랑한다.<br>햇빛의 각도에 따라 핑크와 그레이를 오가는 거대한 화강암들은 보면서도 현실이 맞는지 의심하게 만들 정도로 신비하고 아름답다.  워낙 아름다운 곳이고, 환경적으로 보호 받고 있기 때문에 입장료가 필요하다.</p>
+</li>
+<li id="tab3">
+<p class="heading1">Mahe</p>
+<p class="bonmun1">세이셸에서 가장 큰 섬이자 세이셸 인구의 80퍼센트 이상이 거주하는 메인 섬.<br>로컬 아트나 공예품을 둘러보기에 가장 좋은 장소다. 갤러리와 마켓이 있어 세이셸 문화를 폭넓게 둘러볼 수 있다. 최고의 드라이브 코스는 빅토리아에서 시작해 고급 리조트가 밀집돼 있는 북쪽을 둘러본 후 남서쪽으로 이동해 한적한 해변을 돌아보는 것이다. 드라이브를 하면서 좋은 스팟을 찾아 스노클링이나 낚시를 하며 시간을 보내고 리조트에 돌아와 스파를 받으면 그야말로 천국의 휴가 완성!</p>
+</li>
+<li id="tab4">
+<p class="heading1">Praslin</p>
+<p class="bonmun1">유네스코가 선정한 자연문화유산인 발레 드 메 국립공원이 있는 곳.<br>아름다운 절경으로 기네스북에도 오른 바 있는 Anse Lasio 역시 프랄린 섬에 있다.<br>한적한 시골 마을처럼 조용하고, 녹음이 짙어 다니는 내내 눈이 맑게 느껴지는 곳이다.</p>
+</li>
+<li id="tab5">
+<p class="heading1">인도양 최후의 낙원 La Digue 섬</p>
+<p class="bonmun1">영국 BBC 방송이 선정한 죽기전에 가 보아야 할 50곳 중 순위 40위 라디게 섬.<br>
+
+아프리카 대륙 동쪽으로 1,580km 떨어진 인도양에 인구 8만여명, 115개의 섬으로 이루어진 "세이셸"이란 아름다운 섬나라가 있는 데 한국인 방문객은 연간 50명도 되지않는다고 한다. 화강암 바위가 그럼처럼 펼쳐진 라 디게는 황소마차를 교통수단으로 이용할 정도로 문명과는 동떨어져 있어 다른 섬에 비해 다소 한적한 편이다. 대체로 물이 나지 않으며 사람이 거주하는 곳도 거의 없다. 그러나 진기한 동물과 식물이 풍부하여
+
+인도양 최후의 낙원이라고 불리우기도 한다</p>
+</li>
+<li id="tab6">
+<p class="heading1">Private Islands</p>
+<p class="bonmun1">세이셸에는 문명과 동떨어져 완벽한 섬 생활을 해볼 수 있는 Bird Island가 있다.<br>
+4월에서 10월까지 수천만 마리의 새들이 찾아와 장관을 이루는 곳으로, 최장수 자이언트 육지 거북이인 에스메랄다가 섬을 자유롭게 돌아다니고 있다.<br>환경 파괴를 최소화하기 위해 섬 내의 전기는 태양열 발전 시설을 이용하고, 물은 지하수를 사용한다. 리조트 내에는 TV나 에어컨 등 문명화된 시설이 없다. 자동차와 가로등도 없기 때문에 문명에서 벗어나 완벽한 자연 생활을 경험해 볼 수 있을 것이다.</p>
+</li></ul></article>
+
+
+
+
+</section>
+
+<div class="clear"></div>
+
+<footer>
+<p class="heading">&copy; ssong's summer project.</p>
+<span class="bonmun">이 홈페이지는 학습용으로 만든 개인용 포트폴리오입니다. 1024*768 해상도에 최적화 되었습니다.</span><br><span class="red">브라우져 Explorer 에서는 본문이 원활히 보이지 않을 수 있습니다.</span><br>
+<span class="bonmun">브라우져 크롬, 사파리, 파이어폭스, 오페라를 이용해주시기 바랍니다.</span></footer>
+</div></body></html>

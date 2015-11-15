@@ -1,0 +1,1 @@
+<a href=http://vozzang.net target=_blank onfocus=blur()>vozzang.net</a>

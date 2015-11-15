@@ -1,0 +1,46 @@
+@charset"utf-8";
+/*!------------------------------------------------------------ *
+ * momtalk.css
+ * First Updated: 2015.10.30
+ * Last Updated: 2015.10.30
+ * Author: youngjin song
+ * ------------------------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+}
+#wrap {
+  min-width: 950px;
+  height: 500px;
+  background: gray;
+}
+nav {
+  position: fixed;
+}
+nav {
+  width: 150px;
+  background: #ccc;
+}
+nav li {
+  padding: 20px;
+}
+#talkpic {
+  position: absolute;
+  top: 0;
+  left: 150px;
+  padding: 20px;
+  background: blue;
+  color: #fff;
+}
+#content-wrap {
+	padding-left: 150px;
+  min-width: 700px;
+  background: green;
+}
+#content-wrap #talk-list {
+  margin: 0 auto;
+  width: 90%;
+  height: 200px;
+  background: pink;
+  text-align: center;
+}

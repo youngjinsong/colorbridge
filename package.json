@@ -1,0 +1,12 @@
+{
+	"name": "colorbridge",
+	"description": "blog",
+	"version": "1.0.0",
+	"dependencies": {
+		"ejs": "*",
+		"express": "4.*.*"
+   },
+  "engines": {
+		"node": "0.12.x"
+	}
+}

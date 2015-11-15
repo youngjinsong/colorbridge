@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>똑똑한 육아 비서 맘톡</title>
+<!--[if lte IE 8]><script type="text/javascript"src="contents/js/HTML5forIE.js"></script><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 , user-scalable=no" /> 
+<link rel="shortcut icon" href="contents/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="contents/css/custom.css" />
+<link rel="stylesheet" type="text/css" href="contents/css/font-awesome.min.css" />
+<script type="text/javascript" src="contents/js/jquery1.8.2.min.js"></script>
+<script type="text/javascript" src="contents/js/custom.js"></script>
+<script type="text/javascript" src="contents/js/google-analytics.js"></script>
+<script src="contents/js/jquery.bxslider.min.js"></script>
+<script>
+$(document).ready(function ($) {
+	var serviceSlider = $('.serviceSlider').bxSlider({
+		 controls: false,
+		 pagerCustom: '#bx-pager'
+	});
+    $('.control_prev').on('click', function () {
+        serviceSlider.goToPrevSlide();
+        return false;
+	});
+    $('.control_next').on('click', function () {
+        serviceSlider.goToNextSlide();
+        return false;
+    });
+});
+</script>
+</head>
+<body>
+	<header>
+		<h1>
+			<a href="index.html" title="momtalk">
+				<img src="contents/img/sun.svg" class="rotate360" alt="logo" />
+			</a>
+		</h1>
+		<nav>
+			<button type="button" id="navtoggle">
+				<i class="fa fa-bars"></i> Menu
+			</button>
+			
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="service.html" class="selected">Service</a>
+				</li>
+				<li>
+					<a href="aboutus.html">About us</a>
+				</li>
+				<li>
+					<a href="career.html">Career</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<article id="service-banner">
+		<div id="slider">
+  		<a href="#" class="control_next"></a>
+			<a href="#" class="control_prev"></a>
+			
+			<ul class="serviceSlider">
+				<li class="slide cut1">
+					<div class="container">
+						<img src="contents/img/service-guide01.png" alt="momtalk talk mobile" />
+					</div>
+				</li>
+				
+				<li class="slide cut2">
+					<div class="container">
+						<img src="contents/img/service-guide02.png" alt="momtalk shopping mobile" />
+					</div><!-- /.container-->
+				</li>
+				
+				<li class="slide cut3">
+					<div class="container">
+						<img src="contents/img/service-guide03.png" alt="momtalk event mobile" />
+					</div><!-- /.container-->
+				</li>
+				
+				<li class="slide cut4">
+					<div class="container">
+						<img src="contents/img/service-guide04.png" alt="momtalk info mobile" />
+					</div><!-- /.container-->
+				</li>
+			</ul>
+		</div>
+	</article>
+	
+	<article id="service-introduce">
+		<ul id="bx-pager">
+			<li class="hvr-wobble">
+				<a data-slide-index="0" href="#" class="four">
+					<span class="circle"><i class="fa fa-calendar-check-o"></i></span>
+					<h4>정보 </h4>
+					<p>
+						꼭 필요한 정보를 맘톡이 콕!
+						<br>
+						임신부터 육아까지 꼼꼼정리
+					</p>
+				</a>
+			</li>
+			
+			<li class="hvr-wobble">
+				<a data-slide-index="1" href="#" class="one">
+					<span class="circle"><i class="fa fa-commenting-o"></i></span>
+					<h4>톡</h4>
+					<p>
+						다이나믹한 육아 라이프
+						<br>
+						우리 톡 까놓고 이야기해요
+					</p>
+				</a>
+			</li>
+			
+			<li class="hvr-wobble">
+				<a data-slide-index="2" href="#" class="two">
+					<span class="circle"><i class="fa fa-shopping-cart"></i></span>
+					<h4>이벤트</h4>
+					<p>
+						비켜 이 신상은 내꺼야!
+						<br>
+						선물은 기본 재미는 덤!
+					</p>
+				</a>
+			</li>
+			
+			<li class="hvr-wobble">
+				<a data-slide-index="3" href="#" class="three">
+					<span class="circle"><i class="fa fa-gift"></i></span>
+					<h4>쇼핑</h4>
+					<p>
+						톡튀는 아이템, 혹하는 가격
+						<br>
+						여보~ 육아는 템빨이야! 
+					</p>
+				</a>
+			</li>
+		</ul>
+	</article>
+	
+	<article id="service-thanks">
+		<h3>맘톡을 말한다</h3>
+		
+		<ul>
+			<li>
+				<i class="fa fa-user"></i>
+				<strong>맘톡은 나의 육아 고민 해결사</strong>
+				<span class="customer">- 맘톡 회원 '해와소나무' 님</span>
+				<p>
+					맘톡은 육아 전문가만 있나봐요... 질문하면 다 해결돼 아주그냥~~ 어뭉님들 감사해요!!!! 
+				</p>
+			</li>
+			
+			<li>
+				<i class="fa fa-user"></i>
+				<strong>맘톡의 좋은 점이 너무 많지만 그 중에 제일은 드림</strong>
+				<span class="customer">- 맘톡 회원 '서하맘'님</span>
+				<p>
+					말그대로 드림이다 내가 쓰다가 필요없어지는것들, 내가 안쓰는 물건들을 맘톡엄마들에게 드리는것이다. 맘톡에서는 판매가 아닌, 드림을 받고 드림을 하는 것이 당연하게 여겨진다. 
+					이렇게 마음을주고 마음을 받는일 너무 행복한 일이다. 
+					<a href="http://gs5279802.blog.me/220346356712" class="italic" target="_blank">원문 출처</a>
+				</p>
+			</li>
+			
+			<li>
+				<i class="fa fa-user"></i>
+				<strong>맘톡은 모든 고민을 아우를 수 있는 커뮤니티를 제공하고 있는 서비스.</strong>
+				<span class="customer">- 슈퍼맨 아빠의 자격 저자 '오세종'님</span>
+				<p>
+					맘톡은 임신, 출산, 육아는 물론 아이들 교육, 부부생활에 이르기까지 모든 고민을 아우를 수 있는 커뮤니티를 제공하고 있는 서비스이다. 자신의 아이들에게 필요한 육아용품에 대한 질문을 올리면 이와 관련된 댓글이 실시간으로 올라오기 때문에 임신-육아용품 구입에 대한 다양한 정보를 빠르게 얻을 수 있다.
+					<a href="http://news.heraldcorp.com/view.php?ud=20150224001048&md=20150225003126_BL" class="italic" title="" target="_blank">원문 출처</a>
+				</p>
+			</li>
+		</ul>
+	</article>
+	
+	<footer>
+		<div id="top" class="btn-effect">
+			<i class="fa fa-arrow-up"></i>
+		</div>
+		
+		<div id="companyinfo">
+			<ul id="footer-social">
+				<li>
+					<a href="https://story.kakao.com/ch/momtalk" class="btn-effect" title="kakaoTalk" target="_blank">
+						<img src="contents/img/icon-kakao.png" alt="kakaoTalk" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/talkping" class="btn-effect" title="facebook" target="_blank">
+						<img src="contents/img/icon-facebook.png" alt="facebook" />
+					</a>
+				</li>
+				<li>
+					<a href="http://blog.naver.com/momtalk2013" class="btn-effect" title="naver" target="_blank">
+						<img src="contents/img/icon-blog.png" alt="naver" />
+					</a>
+				</li>
+			</ul>
+		</div><!-- / companyinfo -->
+	
+		<div id="copyright">&copy;AND CO., LTD. All rights reserved.</div>
+	</footer>
+</body>
+</html>
