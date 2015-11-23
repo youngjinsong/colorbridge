@@ -16,27 +16,30 @@
 </head>
     
 <body>
-	<div class="overlay"></div>
-	<header>
-		<nav id="topnav">
-			<div id="menutoggle">
-				<div></div>
-			</div>
-			<ul>
-				<li>
+	<header id="main-header">
+		<div class="button_container" id="toggle">
+		  <span class="top"></span>
+		  <span class="middle"></span>
+		  <span class="bottom"></span>
+		</div>
+		<div class="nav-overlay" id="overlay">
+		  <nav class="overlay-menu">
+		    <ul>
+		      <li>
 					<a href="index.html" class="selected">Home</a>
 				</li>
 				<li>
 					<a href="about.html">about</a>
 				</li>
 				<li>
-					<a href="design.html">design</a>
-				</li>
-				<li>
 					<a href="projects.html">projects</a>
 				</li>
-			</ul>
-		</nav>
+				<li>
+					<a href="design.html">weekly drawing</a>
+				</li>
+		    </ul>
+		  </nav>
+		</div>
 	</header>
         
 <div class="container demo-1">
@@ -191,7 +194,7 @@
 		
 	<footer>
 		<span id="copyright">&copy; 2015</span>
-		<div id="top">scroll to Top &nbsp;<i class="fa fa-arrow-up"></i></div>
+		<div id="top"><i class="fa fa-arrow-up"></i></div>
 	</footer>
 </body>
 </html>
