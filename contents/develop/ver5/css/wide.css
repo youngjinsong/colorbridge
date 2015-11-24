@@ -10,7 +10,7 @@ body {
 	box-shadow: 0 0 10px 1px #D2CEA8;
 	border: 1px solid #eee;
 	margin: 30px auto;
-	padding: .313em 1em
+	padding: 2em 1em;
 }
 #wrap:after {
 	content: "Wide Layout 1024*768 "
@@ -516,7 +516,7 @@ section .box12 {
 	box-shadow: 0 0 15px 1px #908d6a;
 	border: 1px solid #ccc;
 	text-align: left;
-	margin: 20px 35px;
+	margin: 2em;
 	padding: 2.5em 0
 }
 section .box12 h4 {

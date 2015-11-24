@@ -34,6 +34,7 @@ body footer {
 	width: 100%;
 	background: #3A3A26;
 	color: #fff;
+	clear: both;
 }
 footer:hover {
 	background: #82824D

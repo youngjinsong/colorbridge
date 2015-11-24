@@ -16,30 +16,6 @@ article , aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
 .hide { display: none; }
 /* .blind { display: block; overflow: hidden; position: absolute; top: 0; left: -1000em; } */
 
-#site-nav {
-		padding: 5px 0;
-		width: 100%;
-		height: 20px;
-		background: #d9e7e8;
-		text-align: center;
-		font-size: 12px;
-		line-height: 20px;
-		color: #666;
-}
-#site-nav:after {
-	display: block;
-	content: "";
-	clear: both;
-}
-#site-nav a {
-	padding: 0 10px;
-	font-size: 12px;
-	line-height: 20px;
-	font-weight: bold;
-	color: #666;
-	font-family: Helvetica;
-}
-
 @media all and (min-width:1025px) {
 	* { font: 0/0 a; text-shadow: none; color: transparent; }
 	body { font-family: dotum; background: url("../images/body-bg.png") repeat-y center top #e4ebf3; }
@@ -61,7 +37,7 @@ article , aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
 	header #gnb li .nav-selected { font-weight: bold; color: #e06e56; }
 	
 	
-	#gnb-icon { position: relative; float: right; width: 12%; }
+	#gnb-icon { position: relative; float: right; margin-right: 4%; width: 12%; }
 	#gnb-icon .social-fb { 
 		position: absolute; top: 22px; left: 50%; margin-left: 374px; padding: 0; width: 32px; height: 32px; 
 		font: 0/0 a; text-shadow: none; color: transparent; background: url("../images/icon.png") no-repeat -8px -7px;	
@@ -526,10 +502,10 @@ article , aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
 	body { background-color: #D9E7E8; }
 	#wrap { 
 		position: relative; width: 95%; margin: 2em auto; padding-top: 1em; border-radius: 10px; 
-		box-shadow: 0 -4px 16px -4px #ccc; background: #fff;
+		background: #fff;
 	}
 	/* header */
-	header { margin: 0 auto; padding: 0.625em 0 0.225em 0; width: 98%; box-shadow: 0 4px 5px -1px #ccc;	}
+	header { margin: 0 auto; padding: 0.625em 0 0.225em 0; width: 98%; }
 	header:after { display: block; content: ""; clear: both; }
 	header h1 { float: left; margin: 0 4% 0 3%; }
 	header h1 a { font: 0/0 a; text-shadow: none; color: transparent; }
@@ -729,7 +705,7 @@ article , aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
 	#mobi-news-wrap { display: none; }
 	
 	/**** blog ****/
-	#blog-main-wrap { margin: 3% auto 6%; }
+	#blog-main-wrap { margin: 0 auto 6%; }
 	#blog-main-wrap:after { display: block; content: ""; clear: both; }
 	#blog-board-container { float: left; margin: 0 0 0 2%; width: 64%; }
 	#blog-banner { margin: 3% auto 4%; min-height: 155px; width: 96%; background: #f0f1f5; }
@@ -1034,7 +1010,7 @@ article , aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
 	header #gnb ul { margin: 0 auto; width: 95%; text-align: center; }
 	header #gnb ul:after { display: block; content: ""; clear: both; } 
 	header #gnb li { float: left; margin: 0.125em; width: 48%; }
-	header #gnb li a { display: block; padding: 5px 0; -webkit-box-shadow: 1px 1px 3px 0 #ccc; box-shadow: 1px 1px 3px 0 #ccc; 
+	header #gnb li a { display: block; padding: 5px 0; box-shadow: 0px 0px 3px 0 #ccc; 
 		line-height: 20px; letter-spacing: -2px; font-weight: bold; font-size: 100%; color: #7b858f;   
 	}
 	header #gnb li a:hover { color: #6791b0; }
@@ -1121,17 +1097,13 @@ article , aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
 		margin: 8% 0; width: 100%; color: #333;
 	}
 	#categori p { 
-		position: relative; padding: 3.5% 0; width: 100%; border-bottom: 2px solid #96B5B8;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		border-radius: 4px;		
-		text-align: center; font-weight: bold; 
-		background-color: #bdd;	cursor: pointer; opacity: 0.7; 
+    position: relative; padding: 3.5% 0 1% 10%; border-bottom: 5px solid #eee; font-weight: bold; cursor: pointer;
+    opacity: 0.7;
 	}
 	#categori .active { opacity: 1; color: #666; } /* jquery AddClass */
 	#categori.cateSelected { background-color: #f1f1f1; } /* jquery AddClass */
 	#categori span.nav-icon { 
-		display: block; position: absolute; top: 12%; right: 4%; width: 9%; height: 35px; 
+		display: block; position: absolute; top: 12%; left: 6px; width: 9%; height: 35px; 
 		background: url("../images/icon.png") no-repeat -251px -6px;  
 	}
 	ul#cate-nav { display: none; margin: 2% auto 0; width: 71%; }
@@ -1336,7 +1308,7 @@ article , aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
 	footer nav #ft-nav-share:after { display: block; content: ""; clear: both; }
 	footer nav #ft-nav-share li { float: right; margin: 1% 4% 0 0; width: 44%; }
 	footer nav #ft-nav-share li a { 
-		display: block; width: 100%; padding: 3px 0; border-radius: 4px; font-weight: bold; color: #fff;
+		display: block; width: 100%; padding: 14px 0; border-radius: 4px; font-weight: bold; color: #fff;
 	}
 	footer nav #ft-nav-share .footer-icon-fb { letter-spacing: 1px; background-color: #445E9F; }
 	footer nav #ft-nav-share .footer-icon-tw { margin-right: 10px; letter-spacing: 1px; background-color: #55B1E1; }

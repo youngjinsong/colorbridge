@@ -2,12 +2,6 @@
 
 #wrap{margin:0 auto; }
 #wrap .logo{margin:10px 0 10px 20px; }
-#wrap .soga{float:right; font-size:80%; color:#AAA9A9; margin: 8px 12px 0 0; }
-#wrap .soga:hover{color:#f00; }
-#wrap .portfolio:after {
-	margin-left: 10px;
-	content: "/";
-}
 #wrap .mtext{float:left;}
 
 
