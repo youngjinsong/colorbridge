@@ -84,12 +84,9 @@ $(document).ready(function() {
     $btnTop.removeClass('shown');
   });
   
-  /* ie7 download */
- 	var agt = navigator.userAgent.toLowerCase();
- 	var trident = navigator.userAgent.match(/Trident\/(\d)/i);
-	if (trident == null) {
-		if (agt.indexOf("msie") != -1) {
-			window.location.href("./oldbrowser.html");
-		}
+  /* ie version check after redirect */
+	if (document.all && document.documentMode && 8 === document.documentMode) {
+    alert('익스플로러를 최신 버전으로 업데이트 해주세요');
+    window.location.href("./oldbrowser.html");
 	}
 });
