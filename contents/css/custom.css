@@ -2,7 +2,7 @@
 /*!------------------------------------------------------------ *
  * ColorBridge.css
  * first Updated: 2014.12.24
- * Last Updated: 2015.11.28
+ * Last Updated: 2015.12.27
  * Author: youngjin song
  * ------------------------------------------------------------ */
 
@@ -826,46 +826,18 @@ footer a:hover {
 /* about */
 #about-wrap {
   margin: 110px auto 50px;
-  width: 88%;
-  border: 6px solid #fa443f;
 }
 #about-wrap #profile-card {
-  position: relative;
-  margin-bottom: 110px;
-  padding: 30px 0 0;
-  height: 119px;
-  background: #fa443f;
+  margin-bottom: 30px;
   text-align: center;
-  transition: all .5s;
-  -moz-transition: all .5s;
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
 }
 #about-wrap #profile-card .profile-pic {
-  margin: 13px auto 0;
-  width: 140px;
-  height: 140px;
-  background: #fff;
-  border-radius: 50%;
-  border: 9px solid #fff;
-  overflow: hidden;
-  transition: all .5s;
-  -moz-transition: all .5s;
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
+  margin: 0 auto;
+  width: 230px;
 }
-#about-wrap #profile-card .profile-pic img {
-	width: 100%;
-	border-radius: 50%;
-  -webkit-filter: grayscale(10%);
-  filter: grayscale(10%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+#about-wrap #profile-card .profile-pic .gallery {
+	margin: 0;
 }
-#about-wrap #profile-card .profile-pic img:hover {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-} 
 #about-wrap #profile-card h2 {
   margin: 5px 0 0;
 	text-transform: uppercase;
@@ -884,35 +856,44 @@ footer a:hover {
 #about-wrap #column-containter {
 	margin: 0 auto 20px;
 	padding: 25px 0;
-	width: 90%;
 }
-#about-wrap #column-containter h4:first-child {
-	border-top: none;
-} 
 #about-wrap #column-containter h4 {
-  padding-top: 30px;
-  border-top: 1px solid #eee;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+  margin-right: 2%;
+  padding-top: 10px;
+  width: 30%;
+  border-top: 2px solid #eee;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: absolute;
+  text-align: right;
 }
 #about-wrap #column-containter ul {
-	margin: 10px 0 30px;
+  margin-left: 38%;
+}
+#about-wrap #column-containter ul:after {
+	display: block;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  content: "";
+  clear: both;
 }
 #about-wrap #column-containter ul.skill li {
   display: inline-block;
   position: relative;
   margin: 2px 7px 5px 0;
-  padding: 5px 12px;
-  border: 1px solid #666;
+  padding: 4px 12px;
+  border: 1px solid #ccc;
   text-transform: uppercase;
 }
 #about-wrap #column-containter li {
 	margin: 7px 0;
+	list-style-type: disc;
+
 }
 #about-wrap #column-containter .date {
-	display: block;
-  margin-top: 13px;
-  color: #666;
+  margin-right: 10px;
+  color: rgba(102, 102, 102, 0.65);
 }
 
 /* design */
@@ -947,10 +928,10 @@ footer a:hover {
 }
 .grid__item img:hover {
 	border: 4px solid #fa443f;
-	-webkit-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  -ms-transition: all .4s ease-in-out;z
-  transition: all .4s ease-in-out;
+	-webkit-transition: border .3s ease-in-out;
+  -moz-transition: border .3s ease-in-out;
+  -ms-transition: border .3s ease-in-out;z
+  transition: border .3s ease-in-out;
 }
 .grid__item--current {
 	opacity: 0 !important;
@@ -965,6 +946,7 @@ footer a:hover {
 .img-wrap img {
 	display: block;
 	max-width: 100%;
+	border-radius: 4px;
 }
 .preview {
 	position: fixed;
@@ -987,13 +969,11 @@ footer a:hover {
 	height: 100%;
 	pointer-events: none;
 }
-
 .preview--open {
 	pointer-events: auto;
 }
 
 /* circle overlay (generated SVG) */
-
 .overlay {
 	position: absolute;
 	top: 0;
@@ -1122,6 +1102,10 @@ footer a:hover {
 	height: 0;
 	color: transparent;
 }
+#design-wrap .balloon {
+	margin: 0;
+}
+
 
 /* projects */
 #projects-wrap {
@@ -1152,6 +1136,9 @@ footer a:hover {
 	font-size: 30px;
 	color: rgba(250, 68, 63, 0.84);
 }
+#projects-wrap .row h2 + p {
+	margin-bottom: 20px;
+}
 #projects-wrap .row h3 {
 	margin-top: 10px;
 	color: rgba(32,32,32,.67);
@@ -1171,7 +1158,7 @@ footer a:hover {
   position: relative;
   display: inline-block;
   margin-top: 20px;
-	padding: 7px 14px;
+	padding: 9px 15px;
   border: 1px solid #fa443f;
   color: #fa443f;
   text-transform: uppercase;
@@ -1217,9 +1204,6 @@ footer a:hover {
 }
 
 /* old-browser */
-#old-browser {
-	background: #A1D0C3;
-}
 #old-browser-wrap {
   width: 700px;
   text-align: center;
@@ -1229,10 +1213,9 @@ footer a:hover {
   top: 50%;
 }
 #old-browser-wrap #content {
-  margin: 10px auto;
+  margin: 0 auto;
   width: 660px;
   text-align: center;
-  font-weight: bold;
 	letter-spacing: 1px;
 }
 #old-browser-wrap p {
@@ -1242,6 +1225,7 @@ footer a:hover {
 #old-browser-wrap p strong {
 	display: block;
   margin: 20px 0;
+  color: #202020;
 }
 #old-browser-wrap ul:after {
 	display: block;
@@ -1253,13 +1237,13 @@ footer a:hover {
   width: 165px;
   text-align: center;
 }
-#old-browser-wrap li:hover {
-	background: #5D5FA3;
-}
 #old-browser-wrap li a {
   display: block;
   padding: 20px;
-  color: #fff;
+  color: #43A3BF;	
+}
+#old-browser-wrap li:hover {
+	font-weight: bold;
 }
 #old-browser-wrap li a img {
   width: 100px;
@@ -1590,6 +1574,7 @@ footer a:hover {
 	/* about */
 	#about-wrap {
 		margin: 80px auto 30px;
+    padding-right: 3%;
 	}
 	
 	/* project */
@@ -1643,13 +1628,24 @@ footer a:hover {
 	/* about */
 	#about-wrap {
 		margin: 66px auto 0;
-		width: 95%;
+		padding: 0;
+    width: 90%;
 	}
-	#about-wrap #profile-card {
-  	margin-bottom: 130px;
+	#about-wrap #profile-card .profile-pic {
+		width: 55%;
 	}
-	#about-wrap #column-containter {
-		padding-top: 0;
+	#about-wrap #column-containter h4 {
+    position: static;
+    margin: 0 0 16px 0;
+    padding-bottom: 4px;
+    width: 100%;
+    border-top: none;
+    border-bottom: 2px solid #eee;
+    text-align: left; 
+	}
+	#about-wrap #column-containter ul {
+		margin-left: 0;
+    padding-left: 17px;
 	}
 
 	/* project */

@@ -2,7 +2,7 @@
 /*!------------------------------------------------------------ *
  * momtalk.css
  * First Updated: 2015.04.27
- * Last Updated: 2015.10.22
+ * Last Updated: 2015.12.22
  * Author: youngjin song
  * ------------------------------------------------------------ */
 
@@ -90,28 +90,19 @@ address {
 
 /* old-browser */
 #old-browser-wrap {
-  margin: 10% auto;
-  width: 700px;
-	text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -220px 0 0 -320px;
+  text-align: center;
 }
 #old-browser-wrap h1 img {
 	width: 140px;
 }
-#old-browser-wrap #content {
-  margin: 10px auto;
-  width: 660px;
-  border-radius: 4px;
-	background: #A1D0C3;
-	text-align: center;
-	color: #fff;
-}
-#old-browser-wrap #content p {
+#old-browser-wrap p {
   padding: 20px 0 0;
   line-height: 20px;
   font-weight: bold;
-}
-#old-browser-wrap #content p strong {
-	display: block;
 }
 #old-browser-wrap ul:after {
 	display: block;
@@ -123,14 +114,12 @@ address {
   width: 165px;
   text-align: center;
 }
-#old-browser-wrap a:hover {
-	background: #B6D5CC;
-	text-decoration: none;
-}
 #old-browser-wrap li a {
   display: block;
   padding: 20px;
-  color: #fff;
+}
+#old-browser-wrap li a:hover {
+	color: #ff5d2e;
 }
 #old-browser-wrap li a img {
   width: 100px;
