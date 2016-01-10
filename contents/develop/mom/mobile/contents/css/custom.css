@@ -1,10 +1,4 @@
 @charset"utf-8";
-/*!------------------------------------------------------------ *
- * momtalk.css
- * First Updated: 2015.04.27
- * Last Updated: 2015.10.22
- * Author: youngjin song
- * ------------------------------------------------------------ */
 
 *,
 *:after,
@@ -57,7 +51,8 @@ input {
 
 form#login-wrap {
 	margin: 20px auto 0;
-	padding: 20px 40px;
+	padding: 20px;
+	width: 95%;
 }
 #login-wrap #logo {
   display: block;
@@ -76,9 +71,10 @@ form#login-wrap {
 #login-wrap #btn-login {
 	display: block;
 	margin: 10px auto 23px;
-  width: 100%;
+  padding: 20px 10px;
   background: #ea5f38;
-  padding: 10px;
+  width: 100%;
+  border-radius: 30px;
   color: #fff;
   font-weight: bold;
   font-size: 16px;
@@ -87,9 +83,10 @@ form#login-wrap {
 	position: relative;
   display: block;
   margin: 7px auto 8px;
-  padding: 10px 56px;
+  padding: 15px 56px;
   width: 100%;
   border: 1px solid #ccc;
+  border-radius: 3px;
   text-align: center;
 }
 #signup {

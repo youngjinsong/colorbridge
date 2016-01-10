@@ -1,7 +1,7 @@
 /*!------------------------------------------------------------ *
  * momtalk.js
  * First Updated: 2015.04.27
- * Last Updated: 2015.05.15
+ * Last Updated: 2016.01.05
  * Author: youngjin song
  * ------------------------------------------------------------ */
 
@@ -28,12 +28,6 @@ $(document).ready(function() {
     $btnTop.removeClass('shown');
   });
   
-  /* appstore download */
-	$('#appstore').on('click', function() {
-		event.preventDefault();
-		alert('Coming Soon');
-	});
-	
 	/* acoodian team */
 	$careerContent.css('display','none');
 	$('.career-list:first').addClass("selected");
