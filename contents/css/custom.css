@@ -2,7 +2,7 @@
 /*!------------------------------------------------------------ *
  * ColorBridge.css
  * first Updated: 2014.12.24
- * Last Updated: 2016.01.04
+ * Last Updated: 2016.02.19
  * Author: youngjin song
  * ------------------------------------------------------------ */
 
@@ -62,7 +62,7 @@ li {
   top: 0;
   z-index: 101;
   width: 100%;
-  height: 90px;
+  height: 80px;
   background-color: rgba(255, 255, 255, 0.93);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -828,16 +828,17 @@ footer a:hover {
   margin: 110px auto 50px;
 }
 #about-wrap #profile-card {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   text-align: center;
 }
 #about-wrap #profile-card .profile-pic {
   margin: 0 auto;
-  width: 230px;
+  width: 135px;
 }
-#about-wrap #profile-card .profile-pic .gallery {
-	margin: 0;
+#about-wrap #profile-card .profile-pic img {
+	width: 100%;
 }
+
 #about-wrap #profile-card h2 {
   margin: 5px 0 0;
 	text-transform: uppercase;
@@ -856,41 +857,52 @@ footer a:hover {
 }
 #about-wrap #column-containter {
 	margin: 0 auto 20px;
-	padding: 25px 0;
+  width: 57%;
+}
+#about-wrap #column-containter .content {
+	margin-bottom: 40px;
+}
+#about-wrap #column-containter .content.education .date {
+	display: block;
+}
+#about-wrap #column-containter .content:after {
+	display: block;
+	content: "";
+	clear: both;
 }
 #about-wrap #column-containter h4 {
-  margin-right: 2%;
+	position: relative;
+  float: left;
   padding-top: 10px;
-  width: 30%;
-  border-top: 2px solid #eee;
+  width: 33.3333%;
   text-transform: uppercase;
   letter-spacing: 1px;
-  position: absolute;
-  text-align: right;
+}
+#about-wrap #column-containter h4:after {
+	display: block;
+	position: absolute;
+	margin-top: 8px;
+	width: 20px;
+	height: 2px;
+	background: #fa443f;
+	content: "";
+	clear: both;
 }
 #about-wrap #column-containter ul {
-  margin-left: 38%;
+  float: left;
+  width: 66.6667%;
 }
 #about-wrap #column-containter ul:after {
 	display: block;
-  position: relative;
-  width: 100%;
-  height: 60px;
   content: "";
   clear: both;
 }
 #about-wrap #column-containter ul.skill li {
-  display: inline-block;
-  position: relative;
-  margin: 2px 7px 5px 0;
-  padding: 4px 12px;
-  border: 1px solid #ccc;
+  margin: 10px 0;
   text-transform: uppercase;
 }
 #about-wrap #column-containter li {
 	margin: 7px 0;
-	list-style-type: disc;
-
 }
 #about-wrap #column-containter .date {
   margin-right: 10px;
@@ -923,8 +935,8 @@ footer a:hover {
 	opacity: 0;
 }
 .grid__item {
-	/*width: 270px;*/
-	width: 310px;
+	/*width: 310px;*/
+	width: 600px;
 	padding: 10px;
 }
 .grid__item img:hover {
@@ -1134,11 +1146,23 @@ footer a:hover {
   width: 36%;
 }
 #projects-wrap .row h2 {
-	font-size: 30px;
+	font-size: 27px;
+	text-transform: uppercase;
 	color: rgba(250, 68, 63, 0.84);
 }
 #projects-wrap .row h2 + p {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+}
+#projects-wrap .row h2 + p:after {
+  display: block;
+  position: absolute;
+  margin-top: 17px;
+  width: 20px;
+  height: 2px;
+  background: #fa443f;
+  content: "";
+  clear: both;
 }
 #projects-wrap .row h3 {
 	margin-top: 10px;
@@ -1197,6 +1221,7 @@ footer a:hover {
 }
 #projects-wrap .date {
 	display: block;
+  margin-top: 4px;
 	font-size: 90%;
 }
 #projects-wrap .role {
@@ -1577,6 +1602,9 @@ footer a:hover {
 		margin: 80px auto 30px;
     padding-right: 3%;
 	}
+	#about-wrap #column-containter {
+		width: 90%;
+	}
 	
 	/* project */
 	#projects-wrap {
@@ -1586,6 +1614,15 @@ footer a:hover {
     padding: 6px 11px;
     font-size: 90%;
 	}
+	#projects-wrap .row h2 {
+    margin-bottom: 7px;
+    font-size: 21px;
+	}
+	#about-wrap #profile-card .profile-pic .gallery {
+		height: 290px;
+		background-size: 1500px 290px;
+	}
+	
 	
 	/* design */
 	#design-wrap {
@@ -1633,41 +1670,41 @@ footer a:hover {
     width: 90%;
 	}
 	#about-wrap #profile-card .profile-pic {
-		width: 55%;
+		width: 40%;
 	}
 	#about-wrap #column-containter h4 {
-    position: static;
-    margin: 0 0 16px 0;
-    padding-bottom: 4px;
+    padding-bottom: 30px;
     width: 100%;
-    border-top: none;
-    border-bottom: 2px solid #eee;
-    text-align: left; 
 	}
 	#about-wrap #column-containter ul {
-		margin-left: 0;
-    padding-left: 17px;
+    float: none;
+    width: 100%;
 	}
 
 	/* project */
 	#projects-wrap {
 		margin: 40px auto 0;
-		text-align: center;
 	}
 	#projects-wrap .row {
     margin: 3% auto 7%;
-		width: 90%;
+		width: 100%;
 	}
 	#projects-wrap .row h2 {
 		margin-top: 15px;
+	}
+	#projects-wrap .row h2 + p {
+		margin-bottom: 20px;
+	}
+	#projects-wrap .row h2 + p:after {
+		display: none;
 	}
 	#projects-wrap .row h3 {
 		margin-top: 15px;
 	}
 	#projects-wrap .row .content {
 		float: none;
-		padding: 0;
-		width: 100%;
+		margin: 5% auto 10%;
+		width: 93%;
 	}
 	#projects-wrap .row a {
 		margin-top: 13px;
@@ -1681,6 +1718,9 @@ footer a:hover {
 	/* weekly drawing */
 	#design-wrap {
 		margin: 60px auto 0;
+	}
+	.grid__item {
+		width: auto;
 	}
 	
 }
@@ -1806,22 +1846,10 @@ footer a:hover {
 	
 	/* about */
 	#about-wrap #profile-card {
-		margin-bottom: 0;
+		margin-bottom: 30px;
 	}
-	#about-wrap #profile-card .profile-pic .gallery {
-		height: 290px;
-		background-size: 1500px 290px;
-	}
-	
 	
 	/* project */
-	#projects-wrap .row {
-		float: none;
-		margin: 10px auto;
-		width: 100%;
-		max-width: 90%;
-	}
-	
 }
 @media screen and (max-width: 320px) {
 	/*.overlay-menu ul { background: blue !important; }*/
