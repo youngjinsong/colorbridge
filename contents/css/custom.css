@@ -2,7 +2,7 @@
 /*!------------------------------------------------------------ *
  * ColorBridge.css
  * first Updated: 2014.12.24
- * Last Updated: 2016.02.19
+ * Last Updated: 2016.02.20
  * Author: youngjin song
  * ------------------------------------------------------------ */
 
@@ -1171,10 +1171,11 @@ footer a:hover {
 #projects-wrap .row li {
 	display: inline-block;
 	line-height: 22px;
+	text-transform: capitalize;
 }
 #projects-wrap .row li:after {
-	margin: 0 0 0 6px;
-	content: "/";
+	margin: 0 0 0 4px;
+	content: "∙";
 }
 #projects-wrap .row li:last-child:after {
 	content: "";
@@ -1611,7 +1612,7 @@ footer a:hover {
 		margin: 20px auto;
 	}
 	#projects-wrap .row a {
-    padding: 6px 11px;
+    padding: 11px 28px;
     font-size: 90%;
 	}
 	#projects-wrap .row h2 {
@@ -1679,6 +1680,12 @@ footer a:hover {
 	#about-wrap #column-containter ul {
     float: none;
     width: 100%;
+	}
+	#about-wrap #column-containter li {
+    margin: 12px 0;
+	}
+	#about-wrap #column-containter .date {
+		display: block;
 	}
 
 	/* project */
