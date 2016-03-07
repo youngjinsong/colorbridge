@@ -2,7 +2,7 @@
 /*!------------------------------------------------------------ *
  * ColorBridge.css
  * first Updated: 2014.12.24
- * Last Updated: 2016.02.20
+ * Last Updated: 2016.02.29
  * Author: youngjin song
  * ------------------------------------------------------------ */
 
@@ -857,7 +857,7 @@ footer a:hover {
 }
 #about-wrap #column-containter {
 	margin: 0 auto 20px;
-  width: 57%;
+  width: 61%;
 }
 #about-wrap #column-containter .content {
 	margin-bottom: 40px;
@@ -903,6 +903,7 @@ footer a:hover {
 }
 #about-wrap #column-containter li {
 	margin: 7px 0;
+	color: #4a4a4a;
 }
 #about-wrap #column-containter .date {
   margin-right: 10px;
@@ -916,7 +917,8 @@ footer a:hover {
 .grid {
 	position: relative;
 	margin: 0 auto;
-}x
+	width: 100% !important;
+}
 
 .js .grid::after {
 	content: '';
@@ -935,16 +937,16 @@ footer a:hover {
 	opacity: 0;
 }
 .grid__item {
-	/*width: 310px;*/
-	width: 600px;
-	padding: 10px;
+	/*width: 600px;*/
+	width: 33%;
+	padding: 0;
 }
 .grid__item img:hover {
-	border: 4px solid #fa443f;
-	-webkit-transition: border .3s ease-in-out;
-  -moz-transition: border .3s ease-in-out;
-  -ms-transition: border .3s ease-in-out;z
-  transition: border .3s ease-in-out;
+	opacity: .83;
+	-webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;z
+  transition: all .3s ease-in-out;
 }
 .grid__item--current {
 	opacity: 0 !important;
@@ -958,8 +960,7 @@ footer a:hover {
 }
 .img-wrap img {
 	display: block;
-	max-width: 100%;
-	border-radius: 4px;
+	width: 100%;
 }
 .preview {
 	position: fixed;
@@ -1629,6 +1630,9 @@ footer a:hover {
 	#design-wrap {
 		margin: 56px auto 30px;
 	}
+	.grid__item {
+		width: 49%;
+	}
 }
 @media screen and (max-width: 660px) {
 	#main-header {
@@ -1668,7 +1672,7 @@ footer a:hover {
 	#about-wrap {
 		margin: 66px auto 0;
 		padding: 0;
-    width: 90%;
+    width: 95%;
 	}
 	#about-wrap #profile-card .profile-pic {
 		width: 40%;
@@ -1727,7 +1731,7 @@ footer a:hover {
 		margin: 60px auto 0;
 	}
 	.grid__item {
-		width: auto;
+		width: 100%;
 	}
 	
 }
