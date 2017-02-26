@@ -2,11 +2,10 @@
 /*!------------------------------------------------------------ *
  * ColorBridge.css
  * first Updated: 2014.12.24
- * Last Updated: 2016.02.29
+ * Last Updated: 2017.2.26
  * Author: youngjin song
  * ------------------------------------------------------------ */
 
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 @font-face {
   font-family: 'FontAwesome';
@@ -38,11 +37,15 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{di
 	overflow-y: scroll;
 }*/
 body {
-  font-family: Apple SD Gothic Neo,'Apple SD 산돌고딕 Neo', Calibri, Verdana,Arial, sans-serif;
-  font-weight: 300;
-  font-size: 15px;
+  font-family: 'Alegreya Sans', "Malgun Gothic", Arial, sans-serif;
   color: rgba(51, 51, 51, 0.74);
   -webkit-font-smoothing: antialiased;
+  background: #fff;
+}
+.height-100 {
+	position: fixed;
+	height: 100%;
+	overflow: hidden;
 }
 button, img {
 	border: none;
@@ -62,20 +65,28 @@ li {
   top: 0;
   z-index: 101;
   width: 100%;
-  height: 80px;
+  height: 15px;
   background-color: rgba(255, 255, 255, 0.93);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all .5s ease;
 }
-#main-header nav {
+#main-header h1 {
+	display: block;
+  margin: 40px auto 0;
+  width: 205px;
+}
+#main-header h1 img {
+  width: 100%;
+}
+/*#main-header nav {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
+}*/
 body.sticky-header #main-header {
-  height: 60px;
+  height: 150px;
   border-bottom: 1px solid gainsboro;
 }
 #page-project {
@@ -85,7 +96,7 @@ body.sticky-header #main-header {
 /* nav */
 .overlay-menu ul {
 	margin: 0 auto;
-  padding: 20px 0;
+  padding: 5px 0;
   text-align: center;
 }
 .overlay-menu ul li {
@@ -97,7 +108,7 @@ body.sticky-header #main-header {
 	content: ""
 }
 .overlay-menu a {
-  padding: 0 20px;
+  padding: 0 10px;
 	font-size: 17px;
 	transition: 0.2s ease;
 	text-transform: uppercase;
@@ -107,7 +118,7 @@ body.sticky-header #main-header {
 }
 .overlay-menu a.selected {
 	font-weight: bold;
-	color: #fa443f;
+	color: #000;
 }
 .button_container {
 	display: none;
@@ -121,7 +132,7 @@ footer {
 	z-index: 98;
 	padding: 0 0 6px 10px;
 	width: 100%;
-	color: #666;
+	color: #ccc;
 }
 footer a {
 	-webkit-transition: all 300ms linear;
@@ -139,9 +150,9 @@ footer a:hover {
 }
 #top {
 	opacity: 0;
-	position: absolute;
-	bottom: 10px;
-  right: 25px;
+	position: fixed;
+	bottom: 3%;
+  right: 3%;
 	z-index: 100;
 	visibility: hidden;
   padding: 2px 6px;
@@ -174,42 +185,8 @@ footer a:hover {
 	-o-transform: scale(1);
 	transform: scale(1);
 }
-#ft-icon-info {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	padding: 0 22px 6px 0;
-	text-align: right;
-	font-size: 1.8em;
-	z-index: 98;
-}
-#ft-icon-info a {
-	color: #8B8080;
-}
-#ft-icon-info a:hover {
-	color: #f152a1;
-}
-#ft-iconlist {
-	display: none;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	z-index: 98;
-	padding: 4px 22px 4px 0;
-	width: 100%;
-	background: #333;
-	font-size: 1.5em;
-	text-align: right;
-}
-#ft-iconlist li {
-	display: inline;
-}
-#ft-iconlist a {
-	margin: 0 2px;
-	color: #eee;
-}
-#ft-iconlist a:hover {
-	color: #5dcaea;
+#content {
+	margin-top: 170px;
 }
 
 /* index */
@@ -219,9 +196,9 @@ footer a:hover {
 	left: 50%;
 }
 .balloon {
-	margin: 0 0 -40px -98px;
+	margin: 0 0 -90px -98px;
 	width: 210px;
-	height: 363px;
+	height: 360px;
 	background: url('../img/motion-balloon.svg') left center;
 	background-size: 2100px 363px;
   -ms-animation: balloon 4s steps(10) infinite;
@@ -242,7 +219,7 @@ footer a:hover {
 	100% { background-position: -2100px; }
 }
 .sheep {
-	margin: 0 0 -60px -98px;
+	margin: 0 0 -90px -98px;
 	width: 240px;
 	height: 363px;
   background: url('../img/motion-sheep.svg') 0 50%;
@@ -266,7 +243,7 @@ footer a:hover {
 }
 
 .drawing {
-	margin: 0 0 -40px -79px;
+	margin: 0 0 -70px -99px;
 	width: 210px;
 	height: 289px;
 	background: url('../img/motion-drawing.svg') left center;
@@ -289,7 +266,7 @@ footer a:hover {
 	100% { background-position: -2730px; }
 }
 .apple {
-	margin: 0 0 -40px -69px;
+	margin: 0 0 -80px -69px;
 	width: 150px;
 	height: 291px;
 	background: url('../img/motion-apple.svg') left center;
@@ -312,7 +289,7 @@ footer a:hover {
 	100% { background-position: -1500px; }
 }
 .gallery {
-	margin: 0 0 -58px -119px;
+	margin: 0 0 -90px -119px;
 	width: 207px;
 	height: 363px;
 	background: url('../img/motion-gallery.svg') left center;
@@ -377,8 +354,9 @@ footer a:hover {
 	position: relative;
 }
 .container.demo-1 {
-	height: 100%;
 	position: absolute;
+	margin-top: -170px;
+	height: 100%;
 }
 .content-wrapper p {
 	padding-top: 30px;
@@ -406,7 +384,7 @@ footer a:hover {
 	height: 100%;
 	top: 0;
 	left: 0;
-} 
+}
 .sl-slide {
 	z-index: 1;
 }
@@ -545,6 +523,14 @@ footer a:hover {
 	margin: 3px;
 	background: rgba(150,150,150,0.4);
 	cursor: pointer;
+	-webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  transition: all .3s linear;
+}
+.nav-dots span:hover {
+	background: #fa443f;
 }
 .nav-dots span.nav-dot-current {
 	width: 33px;
@@ -557,14 +543,13 @@ footer a:hover {
 	position: absolute;
 	left: 10%;
 	bottom: 50%;
-	margin: 0 0 -118px 0;
+	margin: 0 0 -160px 0;
 	padding: 20px;
 	width: 80%;
 	font-size: 24px;
-	letter-spacing: 6px;
-	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-transform: capitalize;
 	text-align: center;
-	line-height: 50px;
 }
 .demo-1 .sl-slide h2 span {
   display: inline-block;
@@ -590,7 +575,7 @@ footer a:hover {
 	position: absolute;
 	bottom: 50%;
 	left: 0;
-	margin: 0 0 -164px 0;
+	margin: 0 0 -222px 0;
 	width: 100%;
 	height: 70px;
 	text-align: center;
@@ -650,13 +635,6 @@ footer a:hover {
 .demo-1 .bg-3 .sl-slide-inner,
 .demo-1 .bg-3 .sl-content-slice {
 	background: #fff;
-}
-.demo-1 .bg-3 h2,
-.demo-1 .bg-3 blockquote {
-	color: #373737;
-}
-.demo-1 .bg-3 blockquote:before {
-	color: #c46c96;
 }
 /* Forth Slide */
 .demo-1 .bg-4 .sl-slide-inner,
@@ -833,31 +811,32 @@ footer a:hover {
 }
 #about-wrap #profile-card .profile-pic {
   margin: 0 auto;
-  width: 135px;
+  width: 115px;
 }
 #about-wrap #profile-card .profile-pic img {
 	width: 100%;
 }
 
 #about-wrap #profile-card h2 {
-  margin: 5px 0 0;
+  margin: 5px 0;
 	text-transform: uppercase;
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   color: #3A3A3A;
 }
 #about-wrap #profile-card h3 {
-  margin-top: 5px;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: normal;
+}
+#about-wrap #profile-card h3 a {
+	color: rgba(160, 76, 74, 0.84);
 }
 #about-wrap #profile-card h3 a:hover {
 	color: #fa443f;
 }
 #about-wrap #column-containter {
 	margin: 0 auto 20px;
-  width: 61%;
+  width: 80%;
 }
 #about-wrap #column-containter .content {
 	margin-bottom: 40px;
@@ -873,7 +852,7 @@ footer a:hover {
 #about-wrap #column-containter h4 {
 	position: relative;
   float: left;
-  padding-top: 10px;
+  padding: 10px 0 0 20px;
   width: 33.3333%;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -902,11 +881,11 @@ footer a:hover {
   text-transform: uppercase;
 }
 #about-wrap #column-containter li {
-	margin: 7px 0;
+	margin: 9px 0 11px;
 	color: #4a4a4a;
 }
 #about-wrap #column-containter .date {
-  margin-right: 10px;
+  margin-right: 5px;
   color: rgba(102, 102, 102, 0.65);
 }
 
@@ -1080,11 +1059,11 @@ footer a:hover {
 
 /* Close button */
 .action {
-	font-size: 2.5em;
 	margin: 0;
 	padding: 0;
+	font-size: 1.4em;
+	color: #fff;
 	cursor: pointer;
-	color: #fa443f;
 }
 .action:hover,
 .action:focus {
@@ -1123,11 +1102,11 @@ footer a:hover {
 
 /* projects */
 #projects-wrap {
-	margin: 70px auto 50px;
+
 }
 #projects-wrap .row {
-	margin: 0 auto 50px;
-	width: 80%;
+	padding: 84px 4%;
+	border-bottom: 1px solid #eee;
 }
 #projects-wrap .row:after {
 	display: block;
@@ -1136,24 +1115,33 @@ footer a:hover {
 }
 #projects-wrap .row .img-wrap {
 	float: right;
-	width: 64%;
+	width: 54%;
 }
 #projects-wrap .row img {
   width: 100%;
 }
 #projects-wrap .row .content {
-	float: right;
-  padding-right: 4%;
-  width: 36%;
+  float: left;
+  margin: 0 auto;
+  width: 43%;
+}
+#projects-wrap .row:first-child {
+  padding-top: 10px;
+}
+#projects-wrap .row:last-child {
+	border-bottom: none;
 }
 #projects-wrap .row h2 {
-	font-size: 27px;
-	text-transform: uppercase;
-	color: rgba(250, 68, 63, 0.84);
+	font-size: 40px;
+  text-transform: uppercase;
+  /* color: rgba(250, 68, 63, 0.84); */
+  color: #000;
 }
 #projects-wrap .row h2 + p {
-	margin-bottom: 40px;
-	text-transform: uppercase;
+  margin: 4px 0 40px;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-family: "Maison Neue Book",Calibri,Arial,Roboto,sans-serif;
 }
 #projects-wrap .row h2 + p:after {
   display: block;
@@ -1167,12 +1155,11 @@ footer a:hover {
 }
 #projects-wrap .row h3 {
 	margin-top: 10px;
-	color: rgba(32,32,32,.67);
+  font-size: 15px;
 }
 #projects-wrap .row li {
 	display: inline-block;
 	line-height: 22px;
-	text-transform: capitalize;
 }
 #projects-wrap .row li:after {
 	margin: 0 0 0 4px;
@@ -1224,7 +1211,8 @@ footer a:hover {
 #projects-wrap .date {
 	display: block;
   margin-top: 4px;
-	font-size: 90%;
+  font-size: 80%;
+  color: rgba(51, 51, 51, 0.77);
 }
 #projects-wrap .role {
 	display: block;
@@ -1242,20 +1230,15 @@ footer a:hover {
 }
 #old-browser-wrap #content {
   margin: 0 auto;
-  width: 660px;
+  /*width: 660px;*/
   text-align: center;
-	letter-spacing: 1px;
 }
-#old-browser-wrap p {
-  line-height: 20px;
-  font-weight: bold;
+#old-browser-wrap p a {
+	font-weight: bold;
+	text-decoration: underline;
+  color: #43A3BF;
 }
-#old-browser-wrap p strong {
-	display: block;
-  margin: 20px 0;
-  color: #202020;
-}
-#old-browser-wrap ul:after {
+/*#old-browser-wrap ul:after {
 	display: block;
 	content: "";
 	clear: both;
@@ -1268,14 +1251,14 @@ footer a:hover {
 #old-browser-wrap li a {
   display: block;
   padding: 20px;
-  color: #43A3BF;	
+  color: #43A3BF;
 }
 #old-browser-wrap li:hover {
 	font-weight: bold;
 }
 #old-browser-wrap li a img {
   width: 100px;
-}
+}*/
 
 @media screen and (max-width: 1190px) {
 	/* index */
@@ -1288,29 +1271,43 @@ footer a:hover {
 @media screen and (max-width: 1024px) {
 /*@media (min-width: 768px) and (max-width: 1024px) {*/
 	/*.overlay-menu ul { background: red !important; }*/
-	
+
 	/* index */
 	.cbp-rfgrid li {
 		width: 33.33333333333333%; /* Fallback */
 		width: -webkit-calc(100% / 3);
 		width: calc(100% / 3);
 	}
+
+	/* project */
+	#projects-wrap .row h2 {
+		font-size: 30px;
+	}
+	#projects-wrap .row h2 + p {
+		font-size: 14px;
+	}
 }
 
 @media screen and (max-width: 767px) {
+	#content {
+		margin-top: 70px;
+	}
 	/*.overlay-menu ul { background: orange !important; }*/
-	
+
 	.overlay-menu a:hover {
 	  padding: 6px 0;
 		border-top: none;
 	  border-bottom: none;
 	}
-	
+
 	body.sticky-header #main-header {
 		height: 66px;
 	}
-	
+
 	/* nav */
+	#main-header h1 {
+		display: none;
+	}
 	.button_container {
 		display: block;
 	  position: fixed;
@@ -1343,7 +1340,7 @@ footer a:hover {
 	  background: #FFF;
 	}
 	.button_container span {
-	  background: #fa443f;
+	  background: #2c2c2c;
 	  border: none;
 	  height: 5px;
 	  width: 100%;
@@ -1362,7 +1359,7 @@ footer a:hover {
 	.button_container span:nth-of-type(3) {
 	  top: 22px;
 	}
-	
+
 	.nav-overlay {
 		display: block;
 	  position: fixed;
@@ -1428,7 +1425,7 @@ footer a:hover {
 	  opacity: 0;
 	}
 	.nav-overlay ul li a {
-	  display: block;
+	  display: inline-block;
 	  position: relative;
 	  font-size: 30px;
 	  color: #FFF;
@@ -1439,7 +1436,6 @@ footer a:hover {
 	}
 	.overlay-menu a.selected {
 		font-weight: bold;
-		color: #fff;
 	}
 	.nav-overlay ul li a:hover:after,
 	.nav-overlay ul li a:focus:after,
@@ -1480,7 +1476,7 @@ footer a:hover {
 	    left: 0;
 	  }
 	}
-	
+
 	/* index */
 	.cbp-rfgrid li {
 		width: 50%; /* Fallback */
@@ -1598,7 +1594,7 @@ footer a:hover {
 	@keyframes t-gallery {
 		100% { background-position: -1900px; }
 	}
-	
+
 	/* about */
 	#about-wrap {
 		margin: 80px auto 30px;
@@ -1607,25 +1603,51 @@ footer a:hover {
 	#about-wrap #column-containter {
 		width: 90%;
 	}
-	
-	/* project */
-	#projects-wrap {
-		margin: 20px auto;
-	}
-	#projects-wrap .row a {
-    padding: 11px 28px;
-    font-size: 90%;
-	}
-	#projects-wrap .row h2 {
-    margin-bottom: 7px;
-    font-size: 21px;
-	}
 	#about-wrap #profile-card .profile-pic .gallery {
 		height: 290px;
 		background-size: 1500px 290px;
 	}
-	
-	
+
+	/* project */
+	#projects-wrap {
+		margin: 40px auto 0;
+		width: 100%;
+	}
+	#projects-wrap .row {
+    padding: 0;
+		width: 100%;
+		border: none;
+	}
+	#projects-wrap .row:first-child {
+		border-top: none;
+	}
+	#projects-wrap .row h2 {
+		margin-top: 15px;
+    font-size: 25px;
+	}
+	#projects-wrap .row h2 + p {
+		margin-bottom: 20px;
+    font-size: 17px;
+	}
+	#projects-wrap .row h2 + p:after {
+		display: none;
+	}
+	#projects-wrap .row h3 {
+		margin-top: 15px;
+	}
+	#projects-wrap .row .content {
+		margin: 4% auto 6%;
+		float: none;
+		width: 90%;
+	}
+	#projects-wrap .row a {
+		margin-top: 13px;
+	}
+	#projects-wrap .row .img-wrap {
+		float: none;
+    width: 100%;
+	}
+
 	/* design */
 	#design-wrap {
 		margin: 56px auto 30px;
@@ -1641,19 +1663,20 @@ footer a:hover {
 	body.sticky-header #main-header {
 		height: 64px;
 	}
-	
+
 	/* index */
+	.nav-arrows span {
+    top: 64%;
+	}
 	.container.demo-1 {
 		min-height: 500px;
 	}
 	.demo-1 .sl-slide blockquote {
-		margin-bottom: -176px;
+		margin-bottom: -196px;
 	}
 	.demo-1 .sl-slide h2 {
-		line-height: 22px;
-		font-size: 16px;
-		margin-bottom: -114px;
-		letter-spacing: 8px;
+		margin-bottom: -143px;
+		font-size: 20px;
 	}
 	.demo-1 .sl-slide blockquote p:before {
 		line-height: 10px;
@@ -1662,12 +1685,12 @@ footer a:hover {
 		font-size: 120px;
 		left: -45px;
 	}
-	
+
 	/* footer */
 	#ft-icon-info {
 		padding: 0 10px 4px 0;
 	}
-	
+
 	/* about */
 	#about-wrap {
 		margin: 66px auto 0;
@@ -1675,10 +1698,10 @@ footer a:hover {
     width: 95%;
 	}
 	#about-wrap #profile-card .profile-pic {
-		width: 40%;
+		width: 33%;
 	}
 	#about-wrap #column-containter h4 {
-    padding-bottom: 30px;
+		padding: 0 0 30px 0;
     width: 100%;
 	}
 	#about-wrap #column-containter ul {
@@ -1692,40 +1715,6 @@ footer a:hover {
 		display: block;
 	}
 
-	/* project */
-	#projects-wrap {
-		margin: 40px auto 0;
-	}
-	#projects-wrap .row {
-    margin: 3% auto 7%;
-		width: 100%;
-	}
-	#projects-wrap .row h2 {
-		margin-top: 15px;
-	}
-	#projects-wrap .row h2 + p {
-		margin-bottom: 20px;
-	}
-	#projects-wrap .row h2 + p:after {
-		display: none;
-	}
-	#projects-wrap .row h3 {
-		margin-top: 15px;
-	}
-	#projects-wrap .row .content {
-		float: none;
-		margin: 5% auto 10%;
-		width: 93%;
-	}
-	#projects-wrap .row a {
-		margin-top: 13px;
-	}
-	#projects-wrap .row .img-wrap {
-		float: none;
-    width: 100%;
-    margin-top: 20px;
-	}
-	
 	/* weekly drawing */
 	#design-wrap {
 		margin: 60px auto 0;
@@ -1733,7 +1722,7 @@ footer a:hover {
 	.grid__item {
 		width: 100%;
 	}
-	
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1743,11 +1732,15 @@ footer a:hover {
 	}*/
 	#color-wrap {
 		display: block;
+		letter-spacing: 8px;
 	}
-	
+
 	/* index */
+	.nav-dots {
+		bottom: 0;
+	}
 	.balloon {
-		margin: 0 0 -36px -63px;
+		margin: 0 0 -120px -63px;
 		width: 120px;
 		height: 232px;
 		background-size: 1200px 2532px;
@@ -1769,7 +1762,7 @@ footer a:hover {
 		100% { background-position: -1200px; }
 	}
 	.sheep {
-		margin: 0 0 -79px -85px;
+		margin: 0 0 -169px -85px;
     width: 190px;
     height: 343px;
     background-size: 1900px 343px;
@@ -1788,8 +1781,15 @@ footer a:hover {
 	@keyframes m-sheep {
 		100% { background-position: -1900px 0; }
 	}
+	.demo-1 .sl-slide blockquote {
+    margin-bottom: -260px;
+   }
+	.demo-1 .sl-slide h2 {
+    margin-bottom: -198px;
+    font-size: 17px;
+	}
 	.drawing {
-		margin: 0 0 -30px -58px;
+		margin: 0 0 -110px -58px;
 		width: 130px;
 		height: 179px;
 		background-size: 1690px 179px;
@@ -1811,7 +1811,7 @@ footer a:hover {
 		100% { background-position: -1690px; }
 	}
 	.apple {
-		margin: 0 0 -32px -45px;
+		margin: 0 0 -122px -45px;
 		width: 100px;
 		height: 194px;
 		background-size: 1000px 194px;
@@ -1833,7 +1833,7 @@ footer a:hover {
 		100% { background-position: -1000px; }
 	}
 	.gallery {
-		margin: 0 0 -100px -89px;
+		margin: 0 0 -180px -89px;
 		width: 150px;
 		height: 363px;
 		background-size: 1500px 363px;
@@ -1854,12 +1854,12 @@ footer a:hover {
 	@keyframes m-gallery {
 		100% { background-position: -1500px; }
 	}
-	
+
 	/* about */
 	#about-wrap #profile-card {
 		margin-bottom: 30px;
 	}
-	
+
 	/* project */
 }
 @media screen and (max-width: 320px) {
