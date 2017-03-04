@@ -26,9 +26,7 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		$('#overlay').toggleClass('open');
 	});
-	
-	
-	
+
   /* top */
 	$(window).on('scroll', function() {
 		if ( $this.scrollTop() < 600 ) {
@@ -73,6 +71,7 @@ $(document).ready(function() {
 
 			currentHash = menuName;
 			location.hash = currentHash;
+			$('title').html('colorbridge - ' + menuName.replace('-', ' '));
 		});
 
 		return false;
@@ -80,7 +79,6 @@ $(document).ready(function() {
 
 	$(window).bind('hashchange', function() {
 		var hash = location.hash.split('#')[1];
-		console.log(hash)
 
 		if (!currentHash || currentHash != hash) {
 			$('#nav-' + hash).click();

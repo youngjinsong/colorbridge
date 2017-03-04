@@ -1102,10 +1102,9 @@ footer a:hover {
 
 /* projects */
 #projects-wrap {
-
 }
 #projects-wrap .row {
-	padding: 84px 4%;
+	padding: 80px 4%;
 	border-bottom: 1px solid #eee;
 }
 #projects-wrap .row:after {
@@ -1113,12 +1112,31 @@ footer a:hover {
 	content: "";
 	clear: both;
 }
-#projects-wrap .row .img-wrap {
+#projects-wrap .row .projects-img {
 	float: right;
-	width: 54%;
+  position: relative;
+	width: 56%;
+  background: green;
 }
-#projects-wrap .row img {
+#projects-wrap .row .main-image {
+  width: 78%;
+}
+#projects-wrap .thumbnail-wrap {
+  position: absolute;
+  width: 22%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  font-size: 0px;
+}
+#projects-wrap .row .thubmnail {
+  display: inline-block;
+  margin: 1%;
   width: 100%;
+  height: 32%;
+}
+#projects-wrap .row .thumbnail:last-child {
+  margin-right: 0;
 }
 #projects-wrap .row .content {
   float: left;
@@ -1643,12 +1661,12 @@ footer a:hover {
 	#projects-wrap .row a {
 		margin-top: 13px;
 	}
-	#projects-wrap .row .img-wrap {
+	#projects-wrap .row .projects-img {
 		float: none;
     width: 100%;
 	}
 
-	/* design */
+	/* weekly-drawing */
 	#design-wrap {
 		margin: 56px auto 30px;
 	}
@@ -1723,6 +1741,19 @@ footer a:hover {
 		width: 100%;
 	}
 
+  /* porjects */
+  #projects-wrap .row .main-image {
+    width: 100%;
+  }
+  #projects-wrap .thumbnail-wrap {
+  position: static;
+  width: 100%;
+  }
+  #projects-wrap .row .thubmnail {
+    margin: 0 1%;
+    width: 31.1%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 480px) {
