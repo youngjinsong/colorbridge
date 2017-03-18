@@ -2,7 +2,7 @@
 /*!------------------------------------------------------------ *
  * ColorBridge.css
  * first Updated: 2014.12.24
- * Last Updated: 2017.2.26
+ * Last Updated: 2017.3.18
  * Author: youngjin song
  * ------------------------------------------------------------ */
 
@@ -29,15 +29,15 @@
 	margin: 0;
 }
 ::selection {
-	background: #b8e5d0;
+	background: #ffbab8;
 	color: #000;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;margin:0;padding:0}
-/*html {
+html {
 	overflow-y: scroll;
-}*/
+}
 body {
-  font-family: 'Alegreya Sans', "Malgun Gothic", Arial, sans-serif;
+  font-family: 'PT Sans', "Malgun Gothic", Arial, sans-serif;
   color: rgba(51, 51, 51, 0.74);
   -webkit-font-smoothing: antialiased;
   background: #fff;
@@ -108,7 +108,7 @@ body.sticky-header #main-header {
 	content: ""
 }
 .overlay-menu a {
-  padding: 0 10px;
+  padding: 0 15px;
 	font-size: 17px;
 	transition: 0.2s ease;
 	text-transform: uppercase;
@@ -804,6 +804,7 @@ footer a:hover {
 /* about */
 #about-wrap {
   margin: 110px auto 50px;
+  max-width: 960px;
 }
 #about-wrap #profile-card {
   margin-bottom: 40px;
@@ -852,7 +853,6 @@ footer a:hover {
 #about-wrap #column-containter h4 {
 	position: relative;
   float: left;
-  padding: 10px 0 0 20px;
   width: 33.3333%;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -881,11 +881,19 @@ footer a:hover {
   text-transform: uppercase;
 }
 #about-wrap #column-containter li {
-	margin: 9px 0 11px;
-	color: #4a4a4a;
+  margin: 0 0 13px;
+  color: #4a4a4a;
+  line-height: 21px;
+}
+#about-wrap #column-containter li a {
+  text-decoration: underline;
+}
+
+#about-wrap #column-containter li a:hover {
+  color: #fa443f;
 }
 #about-wrap #column-containter .date {
-  margin-right: 5px;
+  display: block;
   color: rgba(102, 102, 102, 0.65);
 }
 
@@ -1116,27 +1124,9 @@ footer a:hover {
 	float: right;
   position: relative;
 	width: 56%;
-  background: green;
 }
 #projects-wrap .row .main-image {
-  width: 78%;
-}
-#projects-wrap .thumbnail-wrap {
-  position: absolute;
-  width: 22%;
-  height: 100%;
-  right: 0;
-  top: 0;
-  font-size: 0px;
-}
-#projects-wrap .row .thubmnail {
-  display: inline-block;
-  margin: 1%;
   width: 100%;
-  height: 32%;
-}
-#projects-wrap .row .thumbnail:last-child {
-  margin-right: 0;
 }
 #projects-wrap .row .content {
   float: left;
@@ -1743,15 +1733,6 @@ footer a:hover {
 
   /* porjects */
   #projects-wrap .row .main-image {
-  }
-  #projects-wrap .thumbnail-wrap {
-  position: static;
-  width: 100%;
-  }
-  #projects-wrap .row .thubmnail {
-    margin: 0 1%;
-    width: 31.1%;
-    height: auto;
   }
 }
 
