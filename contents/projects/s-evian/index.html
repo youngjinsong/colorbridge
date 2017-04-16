@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html><html lang="en">
+<head>
+<title>SONG YOUNG JIN</title>
+<meta charset="utf-8">
+<!--[if lte IE 8]>
+<script type="text/javascript" src="../js/HTML5forIE.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js" type="text/javascript"></script>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/ie7-squish.js" type="text/javascript"></script>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="/contents/js/google-analytics.js"></script>
+</head>
+
+<body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+			<script type="text/javascript">
+				$(function() {
+
+					$('#sdt_menu > li').bind('mouseenter', function() {
+						var $elem = $(this);
+						$elem.find('img').stop(true).animate({
+							'width' : '170px',
+							'height' : '170px',
+							'left' : '0px'
+						}, 400, 'easeOutBack').andSelf().find('.sdt_wrap').stop(true).animate({
+							'top' : '100px'
+						}, 500, 'easeOutBack').andSelf().find('.sdt_active').stop(true).animate({
+							'height' : '50px'
+						}, 300, function() {
+							var $sub_menu = $elem.find('.sdt_box');
+							if ($sub_menu.length) {
+								var left = '170px';
+								if ($elem.parent().children().length == $elem.index() + 1)
+									left = '-170px';
+								$sub_menu.show().animate({
+									'left' : left
+								}, 200);
+							}
+						});
+					}).bind('mouseleave', function() {
+						var $elem = $(this);
+						var $sub_menu = $elem.find('.sdt_box');
+						if ($sub_menu.length)
+							$sub_menu.hide().css('left', '0px');
+
+						$elem.find('.sdt_active').stop(true).animate({
+							'height' : '0px'
+						}, 300).andSelf().find('img').stop(true).animate({
+							'width' : '0px',
+							'height' : '0px',
+							'left' : '85px'
+						}, 400).andSelf().find('.sdt_wrap').stop(true).animate({
+							'top' : '25px'
+						}, 500);
+					});
+					$('#relatedPosts').toggle(function() {
+						$('#rp_list').animate({
+							'bottom' : '10px'
+						}, 500);
+					}, function() {
+						$('#rp_list').animate({
+							'bottom' : '-50px'
+						}, 500);
+					});
+
+				});
+			</script>
+
+<div id="wrap">
+	<header>
+	<a href="index.html" title="home"><img class="logo" src="img/logo1.png" alt="첫 화면가기" title="첫 화면가기"></a>
+		<nav>
+			<ul>
+				<li><a href="sub1.html" title="에비앙 이야기">evian Story</a></li>
+				<li><a href="sub2.html" title="콜라보레이션">collaboration</a></li>
+				<li><a href="sub3.html" title="에비앙 샵">evianShop</a></li>
+				<li><a href="sub4.html" title="에비앙 효능">evian-balance</a></li>
+				<li><a href="sub5.html" title="자주 듣는 질문">a question</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="null"></div>
+
+<section><img src="img/ban01.png" alt=""></section>
+
+	<article class="container1">
+			<ul id="sdt_menu" class="sdt_menu">
+				<li><a href="sub1.html" title="에비앙 이야기"><img src="img/pic02.gif" alt=""><span class="sdt_active"></span><span class="sdt_wrap"><span class="sdt_link">about evian</span> <span class="sdt_descr">water story</span></span></a></li>
+				<li><a href="sub2.html" title="에비앙 브랜드"><img src="img/pic08.gif" alt=""><span class="sdt_active"></span><span class="sdt_wrap"><span class="sdt_link">collaboration</span><span class="sdt_descr">The brand</span></span></a></li>
+				<li><a href="sub3.html" title="에비앙 샵"><img src="img/pum02.png" alt=""><span class="sdt_active"></span><span class="sdt_wrap"> <span class="sdt_link">evian shop</span> <span class="sdt_descr">Helth water line</span></span></a></li>
+				<li><a href="sub4.html" title="자주 듣는 질문"><img src="img/pic13.gif" alt=""><span class="sdt_active"></span><span class="sdt_wrap"> <span class="sdt_link">a question</span>	<span class="sdt_descr">New board!!</span></span></a></li>
+			</ul>
+	</article>
+
+<footer>
+&copy; 2012 S/S ssong's project<br><span>이 홈페이지는 학습용으로 만든 개인용 포트폴리오입니다. 1024*768 해상도에 최적화 되었습니다.</span><br><span class="red">브라우져 Explorer 에서는 본문이 원활히 보이지 않습니다.</span><br><span>브라우져 크롬, 사파리, 파이어폭스, 오페라를 이용해주시기 바랍니다.</span>
+</footer></div></body></html>

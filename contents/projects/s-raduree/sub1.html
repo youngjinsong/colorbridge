@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" />
+<title>SONG YOUNG JIN</title>
+<link rel ="stylesheet" type = "text/css" href = "style.css">
+<link rel="shortcut icon" href="img/favicon.ico" />
+<!--[if lte IE 8]><script type="text/javascript"src="../js/HTML5forIE.js"></script><![endif]-->
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/default.js" type="text/javascript"></script>
+<script type="text/javascript" src="/contents/js/google-analytics.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("ul.panel li:not("+$("ul.tab li a.selected").attr("href")+")").hide();
+	$("ul.tab li a").click(function() {
+	$("ul.tab li a").removeClass("selected");
+	$(this).addClass("selected");
+	$("ul.panel li").slideUp("fast");
+	$($(this).attr("href")).slideDown("fast");
+	return false;
+	});
+	});
+</script>
+</head>
+
+<body>
+<div id="wrap">
+<div id="qmenu">
+<ul>
+	<li><a href="#">Top</a></li>
+</ul>
+</div>
+
+<header>
+<nav>
+<ul>
+<a href="index.html"><img class="logo" src="img/logo1.jpg" alt="image" title="image"></a>
+<li class="menu"><a href="sub1.html" class="mi1" title="menu">About</a></li>
+<li class="menu"><a href="sub2.html" class="mi2" title="menu">Collection</a></li>
+<li class="menu"><a href="sub3.html" class="mi3" title="menu">Flavors</a></li>
+<li class="menu"><a href="sub4.html" class="mi4" title="menu">Recipe</a></li>
+<li class="menu"><a href="sub5.html" class="mi5" title="menu">Faq</a></li>
+</ul></nav></header>
+<div class="clear"></div>
+
+<article class="wraper1">
+<table id="sub1ban">
+<tr>
+<td><img src="img/pic1.jpg" class="sub1banimg" alt=""></td>
+<td><span class="stylefont">Solon de the LADUREE on grand macaron du prirtemps<br>Conmet de Voyage LADUREE</span></td>
+</tr>
+</table>
+</article>
+
+<section class="container2">
+<ul class="tab">
+<li><a href="#tab1" class="selected">About Us</a></li><li><a href="#tab2">Brand History</a></li><li><a href="#tab3">Laduree story</a></li></ul>
+
+<ul class="panel">
+<li id="tab1">
+<table id="aboutus"><tr><td class="headbox"><p class="heading">Pastries of an angel</p><p class="bonmun">가장 아름다운 도시 파리에서...<br>낭만과 달콤함의 접선 장소로 당신을 초대합니다.<br>200년간 지켜온 변치 않는 그 맛, <br>풍미와 질감의 완벽한 균형을,<br>한결같이 그대로 그렇게,<br>당신께 맛과 멋으로 전하겠습니다.</p></td></tr></table></li>
+
+<li id="tab2">
+<table id="historymap">
+<tr><td><img class="mapimg" src="img/hspic1.png" alt=""><span class="heading">1989</span><br><span class="bonmun">Laduree 회장 데이비드 홀더의 탄생.</span></td>
+<td><img class="mapimg" src="img/hspic2.png" alt=""><span class="heading">1871</span><span class="bonmun">황태자의 대학에서 경영, 금융 석사를 취득.<br>도제 제빵사로 홀더에 합류했습니다.</span></td></tr>
+<tr><td><span class="heading">1991</span><span class="bonmun">UC 버클리 대학에서 그의 석사 학위 취득.<br>미국으로 떠남.</span></td><td><span class="heading">1992</span><span class="bonmun">홀더 그룹의 국내 및 국제 개발의 방향에 임명되었다.<br>그 뒤 프랑스로 귀환.</span></td></tr>
+<tr><td><span class="heading">1993</span><span class="bonmun">데이비드 홀더는 파리의 티 룸 Laduree 을 기획.<br>폴 빵집의 새로운 개념의 창조에 참가.</span></td>
+<td><img class="mapimg" src="img/hspic3.png" alt=""><span class="heading">1997</span><span class="bonmun">Laduree 샹젤리제, 파리 VIII, Laduree<br>쁘렝땅 드 라 모드 개관.</span></td></tr>
+<tr><td><span class="heading">2000</span><br><span class="bonmun">그룹의 전략 담당 홀더 그룹의 부회장으로 임명.</span></td><td><span class="heading">2002</span><span class="bonmun">티 룸 Laduree 계좌 보나 파 르트, 파리 VI 열기.데이비드 홀더와 함께 국제적으로 개방, 글로벌 마케팅 시도.</span></td></tr>
+<tr><td><img class="mapimg" src="img/hspic4.png" alt=""><span class="heading">2005</span><br><span class="bonmun">고급 상점 해로드에서 런던 Laduree 오픈.</span></td><td><span class="heading">2006</span><br><span class="bonmun">제네바 Laduree, Laduree Hausmann</span></td></tr>
+<tr><td><span class="heading">2007</span><span class="bonmun">벌링턴 아케이드 (런던), 로잔, Laduree 열기.</span></td><td><img class="mapimg" src="img/hspic5.png" alt=""><span class="heading">2008</span>
+<span class="bonmun">일본 '긴자'에 Laduree의 오픈.<br>새로운 도전의 시작.</span></td></tr>
+<tr><td><span class="heading">2009</span><span class="bonmun">베르사유, Laduree Hausmann, 취리히 Ladurée의 왕립 재판소에서 Laduree 개설.<br>나고야 Ladurée의 개관.</span></td><td><span class="heading">2010</span><span class="bonmun">밀라노, 두바이, 리야드, 베이루트, 룩셈부르크, 이스탄불,<br> 쿠웨이트, Laduree 상점 오픈.</span></td></tr>
+<tr><td><img class="mapimg" src="img/hspic6.png" alt=""><span class="heading">2011</span><span class="bonmun">코벤트 가든, 런던시 오픈.<br>매디슨에있는 뉴욕의 Laduree 오픈. </span></td><td><span class="heading">2012</span><span class="bonmun">찰스 드골 공항에 Laduree 오픈. 신주쿠 Laduree의 개관,<br>스톡홀름, 스웨덴에 Laduree 개설</span></td></tr>
+</table></li>
+
+<li id="tab3">
+<table id="japumsoga">
+<tr><td><img src="img/pum2.png" class="left" alt=""><p class="heading">Women are always welcome</p>
+<p class="bonmun">Laduree 마카롱의 이야기는 20세기 중반 마카롱 쉘 고명을 고집했던<br>루이 어니스트 Laduree으로 부터 시작되었습니다.<br>그리고 그 날 이후 오늘날까지도 제조법은 변경되지 않았습니다.<br>Laduree의 "실험실"에서는 매일 아침 엄격한 준비 단계를 거칩니다.<br> 아몬드, 계란, 설탕, 핀치와 환상적인 페이스트리 요리를 손질해 놓은 후<br>마카롱의 풍미와 질감의 완벽한 균형에 도달하기 위해 판매 전<br>고객님을 위해 48시간 기다립니다.<br>매 시즌 선보이는 Laduree의 제품은 항상 고객님께 맛과 멋의 풍미<br>그리고 다양한 볼거리를 제공합니다.</p></td></tr></table></li></ul>
+</section>
+
+<footer>
+<img class="iconfooter" src="img/ficon.gif" alt="">
+<span class="copyright">&copy; 2012 S/S ssong's project</span><br>
+<span>이 홈페이지는 학습용으로 만든 개인용 포트폴리오입니다. 1024*768 해상도에 최적화 되었습니다.</span><br>
+<span class="red">브라우져 Explorer 에서는 본문이 원활히 보이지 않습니다.</span><br><span>브라우져 크롬, 사파리, 파이어폭스, 오페라를 이용해주시기 바랍니다.</span>
+</footer>
+</div></body></html>

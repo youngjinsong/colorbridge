@@ -1263,7 +1263,7 @@ footer a:hover {
 
 }
 #projects-wrap .column--right .column__text {
-	color: #b0adad;
+	color: #666;
 }
 
 /* Individual effects */
@@ -1302,6 +1302,14 @@ footer a:hover {
 	opacity: 1;
 }
 
+/* project-design */
+header.projects-design-theme01 {
+  background: red;
+  color: #fff;
+}
+
+
+
 /* old-browser */
 #old-browser-wrap {
   width: 700px;
@@ -1321,27 +1329,6 @@ footer a:hover {
 	text-decoration: underline;
   color: #43A3BF;
 }
-/*#old-browser-wrap ul:after {
-	display: block;
-	content: "";
-	clear: both;
-}
-#old-browser-wrap li {
-  float: left;
-  width: 165px;
-  text-align: center;
-}
-#old-browser-wrap li a {
-  display: block;
-  padding: 20px;
-  color: #43A3BF;
-}
-#old-browser-wrap li:hover {
-	font-weight: bold;
-}
-#old-browser-wrap li a img {
-  width: 100px;
-}*/
 
 @media screen and (max-width: 1190px) {
 	/* index */
