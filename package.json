@@ -1,22 +1,22 @@
 {
-	"name": "colorbridge",
-	"description": "blog",
-	"version": "1.0.0",
-	"dependencies": {
-		"ejs": "*",
-		"express": "4.*.*"
-  },
-	"devDependencies": {
-		"gulp": "~3.9.0",
-    "gulp-concat": "~2.6.0",
-    "gulp-uglify": "~1.5.1",
-    "gulp-minify-css": "~1.2.3",
-    "gulp-watch": "~4.3.5",
-    "gulp-livereload": "~3.8.1",
-    "gulp-imagemin": "~2.4.0",
-    "imagemin-pngquant": "~4.2.0"
-  },
-  "engines": {
-		"node": "0.12.x"
-	}
+ "name": "colorbridge",
+ "description": "blog",
+ "version": "1.0.0",
+ "dependencies": {
+  "ejs": "*",
+  "express": "4.*.*"
+ },
+ "devDependencies": {
+  "gulp": "~3.9.0",
+  "gulp-concat": "~2.6.0",
+  "gulp-uglify": "~1.5.1",
+  "gulp-minify-css": "~1.2.3",
+  "gulp-watch": "~4.3.5",
+  "gulp-livereload": "~3.8.1",
+  "gulp-imagemin": "~2.4.0",
+  "imagemin-pngquant": "~4.2.0"
+ },
+ "engines": {
+  "node": "0.12.x"
+ }
 }
