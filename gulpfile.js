@@ -1,74 +1,153 @@
 /**
- * Client source build manager
+ * Client source task manager with BrowserSync
  *
  * @author dodortus (dodortus@gmail.com)
- * @fileOverview 클라이언트 정적파일 빌드 및 감지 메니저
- * @REF http://programmingsummaries.tistory.com/356
+ * @fileOverview 클라이언트 정적파일 빌드 및 변경 감지 매니저
+ * @Git https://github.com/dodortus/gulp-browser-sync
  */
-
-// modules
 const gulp = require('gulp');
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
-const minifyCSS = require('gulp-minify-css');
-const imagemin = require('gulp-imagemin');
-const pngquant = require('imagemin-pngquant');
+const concat = require('gulp-concat');                // 파일 합치기
+const uglify = require('gulp-uglify');                // JS 난독화
+const minifyCSS = require('gulp-clean-css');          // CSS 압축
+const autoprefixer = require('gulp-autoprefixer');    // CSS prefix 삽입
+const imagemin = require('gulp-imagemin');            // 이미지 압축
+const browserSync = require('browser-sync').create(); // browser-sync 호출
 
-// watch
-const watch = require('gulp-watch');
-const livereload = require('gulp-livereload');  // chrome livereload plugin 설치 필요.
-
-// target directory
-const src = 'contents/';   // source directory path
-const dist = 'dist'; // result directory path
+// Target path
+const src = './contents';   // source directory path
 const paths = {
-	js: src + '/js/*.js',
-	css: src + '/css/*.css',
-	img: src + '/img/*'
+  js: src + '/js/*.js',
+  css: src + '/css/*.css',
+  img: src + '/img/*',
+  html: '*.html'
 };
 
 /**
- * 자바스크립트 파일을 하나로 합치고 압축한다.
- * 개별파일설정  gulp.src([file1.js', file2.js'])
+ * HTML 변화를 감지하고 갱신한다.
  */
-gulp.task('combine-js', function() {
-	return gulp.src(paths.js)
-		.pipe(concat('script.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest(dist + '/js'))
-		.pipe(livereload());
+gulp.task('html', function () {
+  return gulp.src(paths.html)
+  // 변경된 파일을 browserSync를 통해 브라우저에 반영
+  .pipe(browserSync.reload(
+    {stream : true}
+  ));
 });
 
-// CSS 압축
-gulp.task('combine-css', function() {
+/**
+ * JS 변화를 감지하고 갱신한다.
+ */
+gulp.task('js', function () {
+  return gulp.src(paths.js)
+  // 변경된 파일을 browserSync를 통해 브라우저에 반영
+  .pipe(browserSync.reload(
+    {stream : true}
+  ));
+});
+
+/**
+ * css 로 컴파일한다.
+ */
+gulp.task('css', function() {
   return gulp.src(paths.css)
-    .pipe(concat('main.css'))
-    .pipe(minifyCSS({keepBreaks:true}))
-    .pipe(gulp.dest(dist + '/css'))
-    .pipe(livereload());
+  // 변경된 파일을 browserSync를 통해 브라우저에 반영
+  .pipe(browserSync.reload(
+    {stream : true}
+  ));
 });
 
-// image 최적화 압축
-gulp.task('combine-img', function() {
-  return gulp.src(paths.img + '*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: false }],
-      use: [pngquant()],
-    }))
-    .pipe(gulp.dest(dist + '/img'));
+/**
+ * 배포: JS
+ */
+gulp.task('build-js', function() {
+  return gulp.src(paths.js)   // 개별 우선순위 설정 gulp.src([file1.js', file2.js'])
+  .pipe(concat('all.js'))   // 소스머지
+  .pipe(uglify({            // 난독화
+    output: {
+      comments: /^!/
+    }
+  }))
+  .pipe(gulp.dest(buildDir + '/contents/js'))  // build 디렉토리에 파일 생성
 });
 
-// 파일 변경 감지
+/**
+ * 배포: CSS
+ */
+gulp.task('build-css', ['scss'], function() {
+  return gulp.src(paths.scss.buildTarget)
+  // REF: https://github.com/browserslist/browserslist
+  // 크로스브라우징 코드 삽입 (default: > 0.5%, last 2 versions, Firefox ESR, not dead).
+  .pipe(autoprefixer(["last 4 versions", "> 0.5%", "not dead"]))
+  .pipe(concat('all.css'))                    // 소스머지
+  .pipe(minifyCSS({keepBreaks:true}))         // 최소화
+  .pipe(gulp.dest(buildDir + '/contents/css'))   // build 디렉토리에 파일 생성
+});
+
+/**
+ * 배포: 이미지
+ */
+gulp.task('build-img', function() {
+  return gulp.src(paths.img)
+  .pipe(imagemin())
+  .pipe(gulp.dest(buildDir + '/contents/img'));
+});
+
+/**
+ * 배포 환경의 소스로 index 파일을 생성한다.
+ */
+gulp.task('build-index', function () {
+  const target = gulp.src(srcDir + '/index.html');
+  const sources = gulp.src([buildDir + '/contents/js/*.js', buildDir + '/contents/css/*.css'], {read: false});
+
+  return target.pipe(inject(sources, {
+      ignorePath: "/build/",
+      addRootSlash: false
+    })
+  ).pipe(gulp.dest(buildDir));
+});
+
+/**
+ * 배포: 기존 폴더 제거
+ */
+gulp.task('build-clean', function() {
+  return gulp.src(buildDir, {read: false})
+  .pipe(clean());
+});
+
+/**
+ * 브라우저 싱크 서버 초기화
+ */
+gulp.task('browserSync', ['html', 'js', 'css'], function() {
+  return browserSync.init({
+    //proxy: "localhost:8080"   // 다른 개발 서버와 연동하여 브라우저 싱크 사용시 프록시를 통해 사용 가능하다.
+    port : 7001,
+    server: {
+      baseDir: './'
+    }
+  });
+});
+
+/**
+ * 파일 변경 감지
+ */
 gulp.task('watch', function() {
-  livereload.listen();
-
-  watch(paths.css).on('change', livereload.changed);
-	watch(paths.js).on('change', livereload.changed);
+  gulp.watch(paths.html, ['html']);
+  gulp.watch(paths.js, ['js']);
+  gulp.watch(paths.css, ['css']);
 });
 
-// 소스 압축
-gulp.task('combine', ['combine-js', 'combine-css']);
+/**
+ * 배포 소스 빌드
+ * 동기로 실행하기 위해 runSequence()로 순차적 수행
+ */
+gulp.task('build', function() {
+  runSequence(
+    'build-clean',
+    ['build-js', 'build-css', 'build-img'],
+    'build-index'
+  );
+});
 
-// 기본 task 설정
-gulp.task('default', ['watch']);
+/**
+ * 기본 개발용 task 실행
+ */
+gulp.task('default', ['browserSync', 'watch']);
