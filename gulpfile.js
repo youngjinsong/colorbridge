@@ -136,6 +136,7 @@ gulp.task('watch', function() {
 });
 
 /**
+ * TODO 배포 환경 미설정
  * 배포 소스 빌드
  * 동기로 실행하기 위해 runSequence()로 순차적 수행
  */
