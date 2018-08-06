@@ -19,7 +19,7 @@ const paths = {
   js: src + '/js/*.js',
   css: src + '/css/*.css',
   img: src + '/img/*',
-  html: '*.html'
+  html: './views/*.html'
 };
 
 /**
