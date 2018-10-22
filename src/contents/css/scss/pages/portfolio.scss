@@ -1,0 +1,41 @@
+#page-portfolio {
+  li {
+    float: left;
+    margin-bottom: 60px;
+    width: 48.7%;
+
+    &:nth-child(odd) {
+      margin-right: 2.6%;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 18px;
+    min-height: 100px;
+  }
+
+  strong {
+    margin-bottom: 5px;
+    color: #222;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  p {
+    color: #999;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  &:after {
+    clear: both;
+    display: block;
+    content: "";
+  }
+}

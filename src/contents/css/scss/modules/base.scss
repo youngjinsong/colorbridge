@@ -1,0 +1,57 @@
+#layout-wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#gnb {
+  margin-top: 38px;
+  margin-bottom: 60px;
+  display: flex;
+
+  a {
+    color: #222;
+  }
+
+  #bi, #menus {
+    flex-basis: 50%;
+  }
+
+  #menus {
+    text-align: right;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+
+#bi {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+#content {
+  margin-bottom: 50px;
+  min-height: 550px;
+}
+
+footer {
+  display: flex;
+  margin-bottom: 50px;
+  font-size: 12px;
+
+  span, nav {
+    flex-basis: 50%;
+  }
+
+  nav {
+    text-align: right;
+
+    a {
+      margin-right: 15px;
+    }
+  }
+}
