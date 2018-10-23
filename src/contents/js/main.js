@@ -7,47 +7,66 @@
 $(function() {
   var $body = $('body');
   var $content = $('#content');
-  var currentHash = null; // hashchange 이벤트에 중복으로 ajax 요청하는것을 막기 위해 비교값 선언
 
-  $body.on('click', '#menus a', function() {
-    var $this = $(this);
-    var url = $this.attr('href');
-    var menuName = url.replace('views/', '').replace('.html', '');
+  /**
+   * 메뉴 활성화 처리
+   * @param name
+   */
+  function setFocusMenu(name) {
+    console.log('setFocusMenu', arguments);
 
-    // menu selected
     $('#menus .selected').removeClass('selected');
-    $('#menus a[href*="' + menuName + '"]').addClass('selected'); // for slide link selection
-    // $('.nav-overlay.open').removeClass('open');
-    // $('.button_container').removeClass('active');
+    $('#menus a[href*="' + name + '"]').addClass('selected');
+    $('title').html('COLOR BRIDGE - ' + name.replace('-', ' '));
+  }
+
+  /**
+   * 페이지 호출 처리
+   * @param url
+   */
+  function getPage(url) {
+    console.log('getPage', arguments);
 
     $.get(url, function(data) {
       $content.html(data);
-
-      currentHash = menuName;
-      location.hash = currentHash;
-      $('title').html('colorbridge - ' + menuName.replace('-', ' '));
     });
+  }
 
-    return false;
-  });
+  /**
+   * 해쉬 변경에 따른 처리
+   * @param hash
+   */
+  function handleHash(hash) {
+    console.log('handleHash', arguments);
 
+    if (hash) {
+      var viewPath = '/views/' + hash + '.html';
+      var menuName = hash.replace('views/', '').replace('.html', '');
+
+      // 2depth path 처리
+      if (menuName.match('/')) {
+        menuName = menuName.split('/')[0];
+      }
+      
+      setFocusMenu(menuName);
+      getPage(viewPath);
+
+    } else if (location.pathname === '/') {
+      getPage('/views/home.html');
+    } else {
+      $('#bi').click();
+    }
+  }
+  
   $(window).bind('hashchange', function() {
     var hash = location.hash.split('#')[1];
-
-    if (!currentHash || currentHash !== hash) {
-      $('#menus a[href*="' + hash + '"]').click();
-    }
+    handleHash(hash);
   });
 
   function init() {
     var hash = location.hash;
-
-    if (hash) {
-      hash = hash.split('#')[1];
-      $('#menus a[href*="' + hash + '"]').click();
-    } else {
-      $('#bi').click();
-    }
+    hash = hash ? hash.split('#')[1] : null;
+    handleHash(hash);
   }
   init();
 });

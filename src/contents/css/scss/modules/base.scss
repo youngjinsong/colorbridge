@@ -8,6 +8,10 @@
   margin-bottom: 60px;
   display: flex;
 
+  .selected {
+    font-weight: bold;
+  }
+
   a {
     color: #222;
   }
@@ -30,6 +34,7 @@
 #bi {
   font-size: 18px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 
@@ -54,4 +59,9 @@ footer {
       margin-right: 15px;
     }
   }
+}
+
+ul.circle {
+  list-style: disc;
+  margin-left: 30px;
 }
