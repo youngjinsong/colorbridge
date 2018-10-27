@@ -7,6 +7,7 @@
 $(function() {
   var $body = $('body');
   var $content = $('#content');
+  var $menus = $('#menus');
 
   /**
    * 메뉴 활성화 처리
@@ -15,8 +16,8 @@ $(function() {
   function setFocusMenu(name) {
     console.log('setFocusMenu', arguments);
 
-    $('#menus .selected').removeClass('selected');
-    $('#menus a[href*="' + name + '"]').addClass('selected');
+    $menus.find('.selected').removeClass('selected');
+    $menus.find('a[href*="' + name + '"]').addClass('selected');
     $('title').html('COLOR BRIDGE - ' + name.replace('-', ' '));
   }
 
