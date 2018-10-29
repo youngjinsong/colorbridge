@@ -1,12 +1,15 @@
 #layout-wrap {
-  width: 960px;
+  position: relative;
   margin: 0 auto;
+  width: 960px;
 }
 
 #gnb {
-  margin-top: 38px;
+  position: relative;
+  padding-top: 38px;
   margin-bottom: 60px;
   display: flex;
+  z-index: 100;
 
   .selected {
     font-weight: bold;

@@ -5,69 +5,39 @@
  *
  */
 $(function() {
-  var $body = $('body');
-  var $content = $('#content');
-  var $menus = $('#menus');
+  var that = this;
+  var pageHandler = new PageHandler();
+  var weeklyDrawing = new WeeklyDrawing(that);
 
-  /**
-   * 메뉴 활성화 처리
-   * @param name
-   */
-  function setFocusMenu(name) {
-    console.log('setFocusMenu', arguments);
+  this.loader = {
+    append: function($target) {
+      console.log('loader', $target);
 
-    $menus.find('.selected').removeClass('selected');
-    $menus.find('a[href*="' + name + '"]').addClass('selected');
-    $('title').html('COLOR BRIDGE - ' + name.replace('-', ' '));
-  }
-
-  /**
-   * 페이지 호출 처리
-   * @param url
-   */
-  function getPage(url) {
-    console.log('getPage', arguments);
-
-    $.get(url, function(data) {
-      $content.html(data);
-    });
-  }
-
-  /**
-   * 해쉬 변경에 따른 처리
-   * @param hash
-   */
-  function handleHash(hash) {
-    console.log('handleHash', arguments);
-
-    if (hash) {
-      var viewPath = '/views/' + hash + '.html';
-      var menuName = hash.replace('views/', '').replace('.html', '');
-
-      // 2depth path 처리
-      if (menuName.match('/')) {
-        menuName = menuName.split('/')[0];
-      }
-      
-      setFocusMenu(menuName);
-      getPage(viewPath);
-
-    } else if (location.pathname === '/') {
-      getPage('/views/home.html');
-    } else {
-      $('#bi').click();
+      $target.append([
+        '<div class="loader-wrap">',
+          ' <div class="loader">Loading...</div>',
+        '</div>'
+      ].join('\n'));
+    },
+    show: function() {
+      $('.loader-wrap').show();
+    },
+    hide: function() {
+      $('.loader-wrap').hide();
     }
-  }
-  
-  $(window).bind('hashchange', function() {
-    var hash = location.hash.split('#')[1];
-    handleHash(hash);
-  });
+  };
 
   function init() {
-    var hash = location.hash;
-    hash = hash ? hash.split('#')[1] : null;
-    handleHash(hash);
+    that.loader.append($('#layout-wrap'));
+
+    pageHandler.init();
+    pageHandler.loaded = function(url) {
+      that.loader.hide();
+
+      if (url.match('weekly-drawing')) {
+        weeklyDrawing.init();
+      }
+    };
   }
   init();
 });

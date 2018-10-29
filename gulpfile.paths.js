@@ -15,7 +15,7 @@ module.exports = function() {
     img: contentsDir + '/img/*',
     html: [
       srcDir + '/*.html',
-      srcDir + '/views/*.html'
+      srcDir + '/views/**/*.html'
     ]
   };
 
