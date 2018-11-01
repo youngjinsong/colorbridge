@@ -94,6 +94,30 @@ function Portfolio() {
     $target.html("<ul>" + listHTML + "</ul>");
   }
 
+  function findIndex(arr, currentPage) {
+    console.log('findIndex', arguments);
+
+    var i;
+
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i].path === currentPage) {
+        break;
+      }
+    }
+
+    return i;
+  }
+
+  /**
+   * 기본적으로 배열의 양 옆을 추출 한다.
+   * 하지만 처음과 마지막의 경우 근접 2개의 값을 추출 한다.
+   * @param arr
+   * @param currentPage
+   */
+  function filterData(arr, currentPage) {
+
+  }
+
   function init(options) {
     console.log('init', arguments);
 
@@ -104,6 +128,7 @@ function Portfolio() {
     if (renderType === 'all') {
       renderList($target, list);
     } else {
+      console.log('확인 인덱스', findIndex(list, currentPage));
       renderList($target, list);
     }
   }
