@@ -1,71 +1,15 @@
 /**
- *
+ * Portfolio
  * @constructor
  */
 function Portfolio() {
-  var list = [
-    {
-      name: "iPortfolio",
-      path: "iportfolio",
-      imageURL: "/contents/img/portfolio/ipf.png",
-      description: "Responsive Web Design/Development"
-    },
-    {
-      name: "EBS Reading Club",
-      path: "ebsrc",
-      imageURL: "/contents/img/portfolio/ebsrc.png",
-      description: "Product UI/UX Design, Web/App Design"
-    },
-    {
-      name: "POP Reader",
-      path: "popleader",
-      imageURL: "/contents/img/portfolio/popleader.png",
-      description: "Product UI/UX Design, Web/App Design"
-    },
-    {
-      name: "Big Reading Club",
-      path: "brc",
-      imageURL: "/contents/img/portfolio/brc.png",
-      description: "Product UI/UX Design, Web/App Design"
-    },
-    {
-      name: "AR",
-      path: "ar",
-      imageURL: "/contents/img/portfolio/ar.png",
-      description: "Product UI/UX Design, iOS Design"
-    },
-    {
-      name: "ERA",
-      path: "popleader",
-      imageURL: "/contents/img/portfolio/era.png",
-      description: "Product UI/UX Design, App Design"
-    },
-    {
-      name: "Mom Talk",
-      path: "momtalk",
-      imageURL: "/contents/img/portfolio/momtalk.png",
-      description: "Responsive Web Design/Development"
-    },
-    {
-      name: "Mobizen",
-      path: "mobizen",
-      imageURL: "/contents/img/portfolio/mobizen.png",
-      description: "Frontend Development (Back Up, Setting, Help)"
-    },
-    {
-      name: "Mobizen Help",
-      path: "mobizen-help",
-      imageURL: "/contents/img/portfolio/mobizen-help.png",
-      description: "Frontend Development"
-    },
-    {
-      name: "Knowre",
-      path: "knowre",
-      imageURL: "/contents/img/portfolio/knowre.png",
-      description: "Responsive Web Design/Development"
-    }
-  ];
+  var list = getPortfolioList();
 
+  /**
+   * 템플릿을 반환한다.
+   * @param data
+   * @returns {string}
+   */
   function getTemplate(data) {
     var name = data.name;
     var path = data.path;
@@ -83,10 +27,14 @@ function Portfolio() {
     ].join('\n');
   }
 
+  /**
+   * 리스트를 렌더링 한다.
+   * @param $target
+   * @param arr
+   */
   function renderList($target, arr) {
-    console.log('renderList', arguments);
-
     var listHTML = '';
+
     arr.map(function(data, i) {
       listHTML += getTemplate(data);
     });
@@ -94,9 +42,13 @@ function Portfolio() {
     $target.html("<ul>" + listHTML + "</ul>");
   }
 
+  /**
+   * 배열중 현재 페이지의 index를 반환한다.
+   * @param arr
+   * @param currentPage
+   * @returns {*}
+   */
   function findIndex(arr, currentPage) {
-    console.log('findIndex', arguments);
-
     var i;
 
     for (i = 0; i < arr.length; i++) {
@@ -112,10 +64,28 @@ function Portfolio() {
    * 기본적으로 배열의 양 옆을 추출 한다.
    * 하지만 처음과 마지막의 경우 근접 2개의 값을 추출 한다.
    * @param arr
-   * @param currentPage
+   * @param index
    */
-  function filterData(arr, currentPage) {
+  function filterData(arr, index) {
+    var result = [];
+    var one;
+    var two;
 
+    if (index === 0) {
+      one = index + 1;
+      two = index + 2;
+    } else if ((arr.length - 1) === index) {
+      one = index - 2;
+      two = index - 1;
+    } else {
+      one = index - 1;
+      two = index + 1;
+    }
+
+    result.push(arr[one]);
+    result.push(arr[two]);
+
+    return result;
   }
 
   function init(options) {
@@ -128,8 +98,9 @@ function Portfolio() {
     if (renderType === 'all') {
       renderList($target, list);
     } else {
-      console.log('확인 인덱스', findIndex(list, currentPage));
-      renderList($target, list);
+      var index = findIndex(list, currentPage);
+      var data = filterData(list, index);
+      renderList($target, data);
     }
   }
 
