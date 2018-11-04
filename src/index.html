@@ -10,12 +10,12 @@
 
   <link rel="shortcut icon" href="contents/img/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="contents/css/main.css" />
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"><!-- webfont -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 </head>
 
 <body>
-  <div id="layout-wrap">
-    <header id="gnb">
+  <header id="gnb">
+    <div class="fixed-wrap">
       <a href="/" id="bi">COLOR BRIDGE</a>
 
       <ul id="menus">
@@ -23,22 +23,20 @@
         <li><a href="#weekly-drawing" title="Weekly Drawing">Weekly Drawing</a></li>
         <li><a href="#about" title="About">About</a></li>
       </ul>
-    </header>
+    </div>
+  </header>
 
-    <main id="content"></main>
+  <main id="content"></main>
 
-    <footer>
-      <span>
-        &copy; Colorbridge 2018. All rights reserved.
-      </span>
+  <footer id="site-footer" class="fixed-wrap">
+    <span>&copy; Colorbridge 2018. All rights reserved.</span>
 
-      <nav>
-        <a href="mailto:ssongki@gmail.com" title="Email">Email</a>
-        <a href="https://www.linkedin.com/in/colorbridge" title="LinkdIn" target="_blank">LinkdIn</a>
-        <a href="https://www.instagram.com/colorbridge_" title="Instagram" target="_blank">Instagram</a>
-      </nav>
-    </footer>
-  </div>
+    <nav>
+      <a href="mailto:ssongki@gmail.com" title="Email">Email</a>
+      <a href="https://www.linkedin.com/in/colorbridge" title="LinkdIn" target="_blank">LinkdIn</a>
+      <a href="https://www.instagram.com/colorbridge_" title="Instagram" target="_blank">Instagram</a>
+    </nav>
+  </footer>
 
   <script src="/contents/js/lib/jquery.js"></script>
   <script src="/contents/js/modules/loader.js"></script>

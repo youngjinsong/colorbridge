@@ -1,6 +1,7 @@
-#layout-wrap {
-  position: relative;
-  margin: 0 auto;
+
+.fixed-wrap {
+  margin-left: auto;
+  margin-right: auto;
   width: 1150px;
 }
 
@@ -8,8 +9,11 @@
   position: relative;
   padding-top: 38px;
   margin-bottom: 60px;
-  display: flex;
   z-index: 100;
+
+  .fixed-wrap {
+    display: flex;
+  }
 
   .selected {
     font-weight: bold;
@@ -46,7 +50,7 @@
   min-height: 550px;
 }
 
-footer {
+#site-footer {
   display: flex;
   margin-bottom: 50px;
   font-size: 12px;
