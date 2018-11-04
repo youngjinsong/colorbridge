@@ -13,7 +13,7 @@ $(function() {
   var portfolio = new Portfolio(that);
 
   function init() {
-    that.loader.append($('#layout-wrap'));
+    that.loader.append($('body'));
 
     pageHandler.init();
     pageHandler.loaded = function(url) {
