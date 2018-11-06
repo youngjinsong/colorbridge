@@ -1,0 +1,121 @@
+// pc 1150
+// <= 1024
+// <= 768
+// <= 425
+// >= 320
+
+@media screen and (max-width: 1149px) {
+  #page-home {
+    width: calc(100vw - 10vw);
+  }
+
+  .fixed-wrap {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 425px) {
+  #gnb {
+    padding-top: 20px;
+
+    .fixed-wrap {
+      display: block;
+    }
+
+    #bi, #menus {
+      display: block;
+      text-align: center;
+    }
+
+    #bi {
+      margin-bottom: 10px;
+    }
+  }
+
+  #site-footer {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    height: 50px;
+
+    span, nav {
+      display: block;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      text-align: center;
+    }
+
+    nav {
+      top: 0;
+    }
+
+    span {
+      bottom: 0;
+    }
+  }
+
+  // 메인
+  #page-home {
+    height: calc(100vh - 260px);
+    background-position-y: 10%;
+  }
+
+  // 포트폴리오 상세
+  .portfolio-details {
+    margin-top: -144px;
+
+    header {
+      height: calc(100vh - 260px);
+
+      p {
+        font-size: 2rem;
+      }
+
+      h2 {
+        margin-bottom: 40px;
+        font-size: 5rem;
+      }
+    }
+
+    article {
+      padding-top: 120px;
+
+      dl {
+        margin-bottom: 50px;
+      }
+
+      h3 {
+        font-size: 4rem;
+      }
+    }
+
+    #overview {
+      display: block;
+    }
+
+    .description {
+      margin-bottom: 30px;
+    }
+
+    .visual {
+      min-height: auto;
+      padding: 20px;
+
+      .fixed-wrap {
+        padding: 0;
+      }
+    }
+
+    section,
+    #the-project .description {
+      margin-bottom: 80px;
+    }
+  }
+}

@@ -1,4 +1,6 @@
 #page-home {
-  min-height: 680px;
+  height: calc(100vh - 245px);
+  min-height: 300px;
   background: url("/contents/img/main.png") no-repeat 50% 50%;
+  background-size: contain;
 }

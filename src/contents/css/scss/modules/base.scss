@@ -34,26 +34,29 @@
   li {
     display: inline-block;
     margin-right: 20px;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 }
 
 
 #bi {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
 }
 
-
 #content {
   margin-bottom: 50px;
-  min-height: 550px;
+  min-height: 300px;
 }
 
 #site-footer {
   display: flex;
   margin-bottom: 50px;
-  font-size: 12px;
+  font-size: 1.2rem;
 
   span, nav {
     flex-basis: 50%;
