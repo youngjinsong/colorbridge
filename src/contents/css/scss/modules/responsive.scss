@@ -4,6 +4,10 @@
 // <= 425
 // >= 320
 
+@media screen and (min-width: 1150px) {
+
+}
+
 @media screen and (max-width: 1149px) {
   #page-home {
     width: calc(100vw - 10vw);
@@ -17,7 +21,9 @@
 }
 
 @media screen and (max-width: 768px) {
-
+  .rolling-frame-border {
+    height: calc(70.65% - (4.4% * 2));
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -72,7 +78,7 @@
     margin-top: -144px;
 
     header {
-      height: calc(100vh - 260px);
+      height: calc(100vh - 38vh);
 
       p {
         font-size: 2rem;
@@ -117,5 +123,9 @@
     #the-project .description {
       margin-bottom: 80px;
     }
+  }
+
+  .rolling-frame-border {
+    height: calc(70.2% - (4.4% * 2));
   }
 }

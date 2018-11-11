@@ -39,7 +39,7 @@ function Portfolio() {
       listHTML += getTemplate(data);
     });
 
-    $target.html("<ul>" + listHTML + "</ul>");
+    return $target.html("<ul>" + listHTML + "</ul>");
   }
 
   /**

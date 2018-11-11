@@ -2,81 +2,60 @@
 .rolling-wrap {
   position: relative;
   margin: 0 auto;
-  width: 830px;
-  height: 688px;
   overflow: hidden;
+  max-width: 830px;
+  max-height: 688px;
 }
 
-.rolling-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(/contents/img/portfolio/ipf/bg-monitor.png) no-repeat 50% 50%;
-  background-size: contain;
+.rolling-frame-bg {
+  position: relative;
   z-index: 2;
 }
 
 .rolling-frame-border {
-  position: relative;
-  margin-left: 31px;
-  width: 765px;
+  position: absolute;
+  top: 4.4%;
+  left: 3.9%;
+  width: calc(100% - (3.9% * 2));
+  height: calc(71.3% - (4.4% * 2));
+  overflow: hidden;
 }
 
 .rolling-content {
-  position: absolute;
-  width: 4590px;
-  left: 0;
-  top: 31px;
-  animation: 15s sliding ease 3s infinite;
+  //display: none; // TODO
+  position: relative;
+  width: calc(100% * 6.2);
+  height: 100%;
   z-index: 1;
+  animation: 15s sliding ease 3s infinite;
 
   li {
-    display: block;
     float: left;
-    width: 765px;
-    height: 430px;
-
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    display: block;
+    height: 100%;
   }
 
-  .item1 {
-    background-image: url(/contents/img/portfolio/ipf/slide1.png);
-  }
-  .item2 {
-    background-image: url(/contents/img/portfolio/ipf/slide2.png);
-  }
-  .item3 {
-    background-image: url(/contents/img/portfolio/ipf/slide3.png);
-  }
-  .item4 {
-    background-image: url(/contents/img/portfolio/ipf/slide4.png);
-  }
-  .item5 {
-    background-image: url(/contents/img/portfolio/ipf/slide5.png);
-  }
-  .item6 {
-    background-image: url(/contents/img/portfolio/ipf/slide1.png);
+  img {
+    width: auto !important;
+    height: 100%;
   }
 }
 
 @keyframes sliding {
-  0% { left: 0; }
+  0% { margin-left: 0; }
 
-  10% { left: calc(-765px * 1); }
-  20% { left: calc(-765px * 1); }
+  10% { margin-left: calc(-100% * 1); }
+  20% { margin-left: calc(-100% * 1); }
 
-  30% { left: calc(-765px * 2); }
-  40% { left: calc(-765px * 2); }
+  30% { margin-left: calc(-100% * 2); }
+  40% { margin-left: calc(-100% * 2); }
 
-  50% { left: calc(-765px * 3); }
-  60% { left: calc(-765px * 3); }
+  50% { margin-left: calc(-100% * 3); }
+  60% { margin-left: calc(-100% * 3); }
 
-  70% { left: calc(-765px * 4); }
-  80% { left: calc(-765px * 4); }
+  70% { margin-left: calc(-100% * 4); }
+  80% { margin-left: calc(-100% * 4); }
 
-  90% { left: calc(-765px * 5); }
-  100% { left: calc(-765px * 5); }
+  90% { margin-left: calc(-100% * 5); }
+  100% { margin-left: calc(-100% * 5); }
 }
