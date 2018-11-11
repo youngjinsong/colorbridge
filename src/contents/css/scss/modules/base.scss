@@ -23,8 +23,12 @@
     color: #222;
   }
 
-  #bi, #menus {
-    flex-basis: 50%;
+  #bi {
+    flex-basis: 32%;
+  }
+
+  #menus {
+    flex-basis: 68%;
   }
 
   #menus {

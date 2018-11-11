@@ -4,10 +4,7 @@
 // <= 425
 // >= 320
 
-@media screen and (min-width: 1150px) {
-
-}
-
+// PC
 @media screen and (max-width: 1149px) {
   #page-home {
     width: calc(100vw - 10vw);
@@ -18,15 +15,46 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .portfolio-details {
+    article {
+      padding-top: calc(20vw);
+    }
+
+    section {
+      margin-bottom: 120px;
+    }
+  }
 }
 
+// Tablet
 @media screen and (max-width: 768px) {
+  // 포트폴리오 상세
+  .portfolio-details {
+    header {
+      height: calc(86vw);
+    }
+
+    article {
+      padding-top: 24vw;
+    }
+
+    section {
+      margin-bottom: 100px;
+    }
+
+    #overview dl {
+      flex-basis: 30%;
+    }
+  }
+
   .rolling-frame-border {
     height: calc(70.65% - (4.4% * 2));
   }
 }
 
-@media screen and (max-width: 425px) {
+// Mobile L 425 (작은 브라우저 화면에도 포함하기 위해 500이하로 적용)
+@media screen and (max-width: 500px) {
   #gnb {
     padding-top: 20px;
 
@@ -40,7 +68,7 @@
     }
 
     #bi {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
   }
 
@@ -73,12 +101,23 @@
     background-position-y: 10%;
   }
 
+  .portfolio-list {
+    li {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
   // 포트폴리오 상세
   .portfolio-details {
     margin-top: -144px;
 
+    h3 {
+      font-size: 4rem;
+    }
+
     header {
-      height: calc(100vh - 38vh);
+      height: calc(110vw);
 
       p {
         font-size: 2rem;
@@ -91,14 +130,10 @@
     }
 
     article {
-      padding-top: 120px;
+      padding-top: 80px;
 
       dl {
         margin-bottom: 50px;
-      }
-
-      h3 {
-        font-size: 4rem;
       }
     }
 
@@ -127,5 +162,23 @@
 
   .rolling-frame-border {
     height: calc(70.2% - (4.4% * 2));
+  }
+}
+
+// Mobile M
+@media screen and (max-width: 375px) {
+  .portfolio-details {
+    header {
+      height: calc(116vw);
+    }
+  }
+}
+
+// Mobile S
+@media screen and (max-width: 320px) {
+  .portfolio-details {
+    header {
+      height: calc(128vw);
+    }
   }
 }
