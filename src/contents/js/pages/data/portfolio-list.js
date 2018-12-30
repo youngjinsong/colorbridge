@@ -17,6 +17,18 @@ function getPortfolioList() {
       description: "Product UI/UX Design, Web/App Design"
     },
     {
+      name: "AR",
+      path: "ar",
+      imageURL: "/contents/img/portfolio/ar.png",
+      description: "Product UI/UX Design, iOS Design"
+    },
+    {
+      name: "ERA",
+      path: "era",
+      imageURL: "/contents/img/portfolio/era.png",
+      description: "Product UI/UX Design, App Design"
+    },
+    {
       name: "POP Reader",
       path: "popleader",
       imageURL: "/contents/img/portfolio/popleader.png",
@@ -27,18 +39,6 @@ function getPortfolioList() {
       path: "brc",
       imageURL: "/contents/img/portfolio/brc.png",
       description: "Product UI/UX Design, Web/App Design"
-    },
-    {
-      name: "AR",
-      path: "ar",
-      imageURL: "/contents/img/portfolio/ar.png",
-      description: "Product UI/UX Design, iOS Design"
-    },
-    {
-      name: "ERA",
-      path: "popleader",
-      imageURL: "/contents/img/portfolio/era.png",
-      description: "Product UI/UX Design, App Design"
     },
     {
       name: "Mom Talk",

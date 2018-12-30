@@ -62,7 +62,11 @@ $strong-color: #222;
   }
 
   .visual {
-    padding: 60px;
+    font-size: 0;
+
+    &:not(.wide) {
+      padding: 60px;
+    }
 
     img {
       width: 100%;
