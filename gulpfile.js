@@ -148,8 +148,8 @@ gulp.task('browserSync', ['html', 'js', 'scss'], function() {
     //proxy: "localhost:8080"   // 다른 개발 서버와 연동하여 브라우저 싱크 사용시 프록시를 통해 사용 가능하다.
     port: 8001,
     server: {
-      baseDir: paths.build.root
-      // baseDir: paths.srcDir
+      // baseDir: paths.build.root
+      baseDir: paths.srcDir
     }
   });
 });
