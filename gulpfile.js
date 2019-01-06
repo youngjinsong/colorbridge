@@ -18,6 +18,7 @@ const inject = require('gulp-inject');                // HTML injection (개발�
 const clean = require('gulp-clean');                  // 배포시 이전 파일, 폴더 삭제
 const runSequence = require('run-sequence');          // 배포시 동기 수행
 const changed = require('gulp-changed');              // 배포시 변경된 파일만 빌드
+const rename = require("gulp-rename");                // 파일명 rename
 const paths = require('./gulpfile.paths.js')();       // 경로 설정 모듈
 
 // SCSS config (REF: http://webclub.tistory.com/470)
@@ -90,6 +91,7 @@ gulp.task('build-css', ['scss'], function() {
   .pipe(autoprefixer(["last 4 versions", "> 0.5%", "not dead"]))
   // .pipe(concat('all.css'))                    // 소스머지
   .pipe(minifyCSS({ keepBreaks: true }))         // 최소화
+  .pipe(rename('main.bundle.css'))               // 파일명 변경
   .pipe(gulp.dest(paths.build.root + '/contents/css'))   // build 디렉토리에 파일 생성
 });
 
@@ -110,8 +112,8 @@ gulp.task('build-img', function() {
 gulp.task('build-html', function () {
   const target = gulp.src(paths.build.html.main);
   const sources = gulp.src([
-    paths.build.root + '/contents/js/main.bundle.js',
-    paths.build.root + '/contents/css/main.css'
+    paths.build.root + '/contents/css/main.bundle.css',
+    paths.build.root + '/contents/js/main.bundle.js'
   ], { read: false });
 
   return target.pipe(inject(sources, {
@@ -127,15 +129,7 @@ gulp.task('build-html', function () {
  */
 gulp.task('build-sub-html', function () {
   const target = gulp.src(paths.build.html.partial);
-  const sources = gulp.src([
-    paths.build.root + '/contents/css/main.css'
-  ], { read: false });
-
-  return target.pipe(inject(sources, {
-      ignorePath: "/build/",
-      addRootSlash: false
-    })
-  ).pipe(gulp.dest(paths.build.root + '/views'));
+  return target.pipe(gulp.dest(paths.build.root + '/views'));
 });
 
 /**
@@ -154,8 +148,8 @@ gulp.task('browserSync', ['html', 'js', 'scss'], function() {
     //proxy: "localhost:8080"   // 다른 개발 서버와 연동하여 브라우저 싱크 사용시 프록시를 통해 사용 가능하다.
     port: 8001,
     server: {
-      // baseDir: paths.build.root
-      baseDir: paths.srcDir
+      baseDir: paths.build.root
+      // baseDir: paths.srcDir
     }
   });
 });

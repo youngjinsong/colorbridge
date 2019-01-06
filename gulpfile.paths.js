@@ -24,13 +24,16 @@ module.exports = function() {
     root: './build',
     js: [
       contentsDir + '/js/lib/*.js',
+      contentsDir + '/js/modules/*.js',
+      contentsDir + '/js/pages/*/*.js',
+      contentsDir + '/js/pages/*.js',
       contentsDir + '/js/*.js'
     ],
     css: contentsDir + '/css/*.css',
     img: contentsDir + '/img/**',
     html: {
       main: srcDir + '/index.html',
-      partial: srcDir + '/views/*.html'
+      partial: srcDir + '/views/**/*.html'
     }
   };
 
