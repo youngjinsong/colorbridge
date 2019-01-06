@@ -1,9 +1,23 @@
 #ebsrc {
   header {
-    background-image: linear-gradient(116deg, #a9f200, #d5e969);
+    background-color: #fafafa;
   }
 
   .visual {
-    background-image: linear-gradient(to bottom, greenyellow, #fff);
+    background-color: #f9f9f9;
+  }
+
+  #design {
+    .image-pieces {
+      li {
+        border: 0;
+      }
+      li:nth-child(1n) {
+        flex-basis: 36%;
+      }
+      li:nth-child(2n) {
+        flex-basis: 13%;
+      }
+    }
   }
 }

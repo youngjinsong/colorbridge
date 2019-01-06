@@ -15,9 +15,18 @@
     }
   }
 
-  .introduce {
+  .introduction {
     margin-bottom: 85px;
-    line-height: 1.5;
+    line-height: 1.8;
+
+    a {
+      text-decoration: none;
+      border-bottom: solid 3px rgba(74, 144, 226, 0.16);
+
+      &:hover {
+        border-color: #4a90e2;
+      }
+    }
   }
 
   #visual {
@@ -25,12 +34,12 @@
 
     img:first-child {
       margin-right: 75px;
-      width: 275px;
+      width: 27%;
       vertical-align: top;
     }
 
     img:last-child {
-      width: 701px;
+      width: 65%;
     }
   }
 
@@ -55,7 +64,7 @@
 
     p {
       color: #666;
-      line-height: 1.4;
+      line-height: 1.5;
       font-weight: 300;
     }
   }

@@ -36,6 +36,10 @@ $strong-color: #222;
 
   .fixed-wrap {
     position: relative;
+
+    &.wide {
+      padding: 0;
+    }
   }
 
   article {
@@ -129,6 +133,12 @@ $strong-color: #222;
     display: block;
     width: 100%;
     min-height: 100px;
+  }
+
+  &.piece3 {
+    li {
+      flex-basis: 33.2%;
+    }
   }
 }
 

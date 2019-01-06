@@ -1,6 +1,8 @@
 /**
  * WeeklyDrawing
  * @constructor
+ *
+ * @REF https://apps.elfsight.com/panel/applications/instashow/
  */
 function WeeklyDrawing(parent) {
   console.log('Loaded WeeklyDrawing');

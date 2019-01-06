@@ -22,6 +22,18 @@ $(function() {
   }
 
   /**
+   * 테마 변경
+   * @param $target
+   */
+  function changeThema($target) {
+    if ($target.attr('data-thema') === 'white') {
+      $body.addClass('thema-white');
+    } else {
+      $body.removeClass('thema-white');
+    }
+  }
+
+  /**
    * 페이지 비동기 로드 완료 후 처리
    * @param url
    */
@@ -43,12 +55,15 @@ $(function() {
         moveScrollTop();
       }
 
+      // 하단 페이지네이션
       portfolio.init({
         $appendTarget: $('.portfolio-list'),
         renderType: isTwoDepth ? "pagination" : "all",
         currentPage: currentPage
       });
     }
+
+    changeThema($body.find('.portfolio-details'));
   }
 
   function init() {
