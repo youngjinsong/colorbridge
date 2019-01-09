@@ -19,7 +19,7 @@ function Portfolio() {
     return [
       '<li>',
         '<a href="#portfolio/' + path + '" title="' + name + '">',
-          '<img src="' + imageURL + '" alt="' + name + '" />',
+          '<span class="image-wrap"><img src="' + imageURL + '" alt="' + name + '" /></span>',
           '<strong>' + name + '</strong>',
           '<p>' + description + '</p>',
         '</a>',
