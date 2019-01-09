@@ -88,25 +88,22 @@ function Portfolio() {
     return result;
   }
 
-  function setScrollReveal() {
-    console.log('setScrollReveal', document.querySelectorAll('article section'));
+  /**
+   * 스크롤 에니메이션 바인딩
+   */
+  function bindScrollReveal() {
+    console.log('setScrollReveal');
+
     var headerDOM = document.querySelectorAll(
       '.portfolio-details header h2, ' +
       '.portfolio-details header p, ' +
-      '.portfolio-details header img'
+      '.portfolio-details header .fixed-wrap'
     );
-    var contentDOM = document.querySelectorAll('article section');
+    var contentDOM = document.querySelectorAll('article section, .portfolio-details footer');
     var SR = ScrollReveal({ reset: false });
 
-    SR.reveal(headerDOM, { delay: 100, distance: '30px', duration: 500 });
-    //SR.reveal(contentDOM, { delay: 300, distance: '50px'});
-    //SR.reveal(contentDOM, {
-    //  duration: 1000,
-    //  delay: 200,
-    //  distance: '100px',
-    //  mobile: true,
-    //  origin: 'top'
-    //});
+    SR.reveal(headerDOM, { delay: 100, distance: '50px', duration: 500 });
+    SR.reveal(contentDOM, { delay: 300, distance: '100px'});
   }
 
   function init(options) {
@@ -124,7 +121,7 @@ function Portfolio() {
       renderList($target, data);
     }
 
-    setScrollReveal();
+    setTimeout(bindScrollReveal, 100);
   }
 
   $.extend(this, {
