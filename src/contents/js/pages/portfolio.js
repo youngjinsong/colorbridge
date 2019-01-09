@@ -88,6 +88,27 @@ function Portfolio() {
     return result;
   }
 
+  function setScrollReveal() {
+    console.log('setScrollReveal', document.querySelectorAll('article section'));
+    var headerDOM = document.querySelectorAll(
+      '.portfolio-details header h2, ' +
+      '.portfolio-details header p, ' +
+      '.portfolio-details header img'
+    );
+    var contentDOM = document.querySelectorAll('article section');
+    var SR = ScrollReveal({ reset: false });
+
+    SR.reveal(headerDOM, { delay: 100, distance: '30px', duration: 500 });
+    //SR.reveal(contentDOM, { delay: 300, distance: '50px'});
+    //SR.reveal(contentDOM, {
+    //  duration: 1000,
+    //  delay: 200,
+    //  distance: '100px',
+    //  mobile: true,
+    //  origin: 'top'
+    //});
+  }
+
   function init(options) {
     console.log('init', arguments);
 
@@ -102,6 +123,8 @@ function Portfolio() {
       var data = filterData(list, index);
       renderList($target, data);
     }
+
+    setScrollReveal();
   }
 
   $.extend(this, {

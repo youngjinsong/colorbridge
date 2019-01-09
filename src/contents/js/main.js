@@ -39,7 +39,12 @@ $(function() {
    */
   function onLoaded(url) {
     console.log('url', url);
+
     that.loader.hide();
+    $body.removeClass('loaded');
+    setTimeout(function() {
+      $body.addClass('loaded');
+    }, 10);
 
     if (url.match('weekly-drawing')) {
       weeklyDrawing.init();
