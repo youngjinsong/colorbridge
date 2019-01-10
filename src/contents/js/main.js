@@ -22,6 +22,22 @@ $(function() {
   }
 
   /**
+   * 스크롤 에니메이션 바인딩
+   */
+  function bindScrollReveal() {
+    console.log('setScrollReveal');
+
+    var SR = ScrollReveal({ reset: false });
+    var v1 = document.querySelectorAll('.sa-v1');
+    var v2 = document.querySelectorAll('.sa-v2');
+    var v3 = document.querySelectorAll('.sa-v3');
+
+    SR.reveal(v1, { delay: 100, distance: '30px' });
+    SR.reveal(v2, { delay: 300, distance: '80px'});
+    SR.reveal(v3, { delay: 400, distance: '100px'});
+  }
+
+  /**
    * 테마 변경
    * @param $target
    */
@@ -69,6 +85,7 @@ $(function() {
     }
 
     changeThema($body.find('.portfolio-details'));
+    setTimeout(bindScrollReveal, 10);
   }
 
   function init() {

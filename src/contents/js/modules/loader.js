@@ -1,5 +1,5 @@
 /**
- *
+ * Loader
  * @constructor
  */
 function Loader() {

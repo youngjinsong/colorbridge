@@ -88,24 +88,6 @@ function Portfolio() {
     return result;
   }
 
-  /**
-   * 스크롤 에니메이션 바인딩
-   */
-  function bindScrollReveal() {
-    console.log('setScrollReveal');
-
-    var headerDOM = document.querySelectorAll(
-      '.portfolio-details header h2, ' +
-      '.portfolio-details header p, ' +
-      '.portfolio-details header .fixed-wrap'
-    );
-    var contentDOM = document.querySelectorAll('article section, .portfolio-details footer');
-    var SR = ScrollReveal({ reset: false });
-
-    SR.reveal(headerDOM, { delay: 100, distance: '50px', duration: 500 });
-    SR.reveal(contentDOM, { delay: 300, distance: '100px'});
-  }
-
   function init(options) {
     console.log('init', arguments);
 
@@ -120,8 +102,6 @@ function Portfolio() {
       var data = filterData(list, index);
       renderList($target, data);
     }
-
-    setTimeout(bindScrollReveal, 100);
   }
 
   $.extend(this, {
