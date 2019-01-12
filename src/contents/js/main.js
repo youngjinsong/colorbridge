@@ -50,6 +50,13 @@ $(function() {
   }
 
   /**
+   * 푸터 연도 설정
+   */
+  function setYear($year) {
+    $year.text(new Date().getFullYear());
+  }
+
+  /**
    * 페이지 비동기 로드 완료 후 처리
    * @param url
    */
@@ -90,7 +97,7 @@ $(function() {
 
   function init() {
     that.loader.append($body);
-
+    setYear($('#year'));
     pageHandler.init();
     pageHandler.loaded = onLoaded;
   }
