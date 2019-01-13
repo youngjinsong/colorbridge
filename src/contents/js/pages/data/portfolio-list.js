@@ -5,16 +5,16 @@
 function getPortfolioList() {
   return [
     {
-      name: "iPortfolio",
-      path: "iportfolio",
-      imageURL: "/contents/img/portfolio/ipf@2x.png",
-      description: "Responsive Web Design/Development"
-    },
-    {
       name: "EBS Reading Club",
       path: "ebsrc",
       imageURL: "/contents/img/portfolio/ebsrc@2x.png",
       description: "Product UI/UX Design, Web/App Design"
+    },
+    {
+      name: "iPortfolio",
+      path: "iportfolio",
+      imageURL: "/contents/img/portfolio/ipf@2x.png",
+      description: "Responsive Web Design/Development"
     },
     {
       name: "AR",

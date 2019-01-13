@@ -34,7 +34,7 @@ $(function() {
 
     SR.reveal(v1, { delay: 100, distance: '30px' });
     SR.reveal(v2, { delay: 300, distance: '80px'});
-    SR.reveal(v3, { delay: 400, distance: '100px'});
+    SR.reveal(v3, { delay: 500, distance: '100px'});
   }
 
   /**
