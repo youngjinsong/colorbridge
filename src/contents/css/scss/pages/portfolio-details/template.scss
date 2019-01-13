@@ -30,16 +30,12 @@ $strong-color: #222;
       //left: 0;
       //z-index: 2;
       width: 100%;
-      box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2);
     }
   }
 
   .fixed-wrap {
     position: relative;
-
-    &.wide {
-      padding: 0;
-    }
   }
 
   article {
@@ -50,6 +46,7 @@ $strong-color: #222;
     color: $strong-color;
     font-size: 5.0rem;
     margin-bottom: 15px;
+    line-height: 1.2;
   }
 
   section {
@@ -62,6 +59,7 @@ $strong-color: #222;
 
     p {
       color: $normal-color;
+      letter-spacing: -0.4px;
     }
   }
 
@@ -74,6 +72,12 @@ $strong-color: #222;
 
     img {
       width: 100%;
+    }
+  }
+
+  footer {
+    h3 {
+      font-size: 3rem;
     }
   }
 }
@@ -109,7 +113,7 @@ $strong-color: #222;
 
 #the-project {
   p {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 
   .description {

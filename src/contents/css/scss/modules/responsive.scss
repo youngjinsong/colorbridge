@@ -66,6 +66,7 @@
 @media screen and (max-width: 500px) {
   #gnb {
     padding-top: 20px;
+    margin-bottom: 20px;
 
     .fixed-wrap {
       display: block;
@@ -81,13 +82,17 @@
     }
   }
 
+  #content {
+    margin-bottom: 20px;
+  }
+
   #site-footer {
     display: block;
     position: relative;
     margin-bottom: 10px;
     height: 50px;
 
-    span, nav {
+    div, nav {
       display: block;
       width: 100%;
       position: absolute;
@@ -97,23 +102,31 @@
 
     nav {
       top: 0;
+
+      a:last-child {
+        margin: 0;
+      }
     }
 
-    span {
+    div {
       bottom: 0;
     }
   }
 
   // 메인
   #page-home {
-    height: calc(100vh - 260px);
     background-position-y: 10%;
   }
 
+  // 포트폴리오 리스트
   .portfolio-list {
     li {
       margin-right: 0;
       width: 100%;
+    }
+
+    .image-wrap {
+      margin-bottom: 6px;
     }
   }
 
@@ -126,28 +139,38 @@
     }
 
     header {
-      height: calc(110vw);
+      height: calc(90vw);
 
       p {
-        font-size: 2rem;
+        margin-top: 20px;
+        font-size: 1.8rem;
       }
 
       h2 {
-        margin-bottom: 40px;
-        font-size: 3.8rem;
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+        line-height: 1;
       }
     }
 
     article {
-      padding-top: 80px;
+      padding-top: 110px;
+    }
 
-      dl {
-        margin-bottom: 50px;
-      }
+    .button {
+      width: 100%;
     }
 
     #overview {
       display: block;
+
+      dt, h1 {
+        font-size: 1.4rem;
+      }
+
+      h1 {
+        margin-bottom: 6px;
+      }
     }
 
     .description {
@@ -166,8 +189,10 @@
       }
     }
 
-    section,
     #the-project .description {
+      margin-bottom: 40px;
+    }
+    section {
       margin-bottom: 80px;
     }
   }
@@ -178,20 +203,30 @@
 
   // 프로필
   #page-about {
-    h1 span {
-      font-size: 3.6rem;
+    h1 {
+      .profile {
+        display: block;
+        width: 50%;
+        margin: 20px auto;
+      }
+
+      text-align: center;
+    }
+
+    .introduction {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .graph {
+      width: 100% !important;
     }
 
     #visual {
       text-align: center;
 
-      #profile {
-        width: 50%;
-        margin: 0 0 50px 0;
-      }
-
-      #graph {
-        width: 100%;
+      .profile {
+        display: none;
       }
     }
   }
@@ -199,11 +234,11 @@
 
 // Mobile M
 @media screen and (max-width: 375px) {
-  .portfolio-details {
-    header {
-      height: calc(116vw);
-    }
-  }
+  //.portfolio-details {
+  //  header {
+  //    height: calc(116vw);
+  //  }
+  //}
 
   // 프로필
   #page-about {
@@ -215,9 +250,9 @@
 
 // Mobile S
 @media screen and (max-width: 320px) {
-  .portfolio-details {
-    header {
-      height: calc(128vw);
-    }
-  }
+  //.portfolio-details {
+  //  header {
+  //    height: calc(128vw);
+  //  }
+  //}
 }

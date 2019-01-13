@@ -1,6 +1,5 @@
 #page-home {
-  height: calc(100vh - 245px);
-  min-height: 300px;
+  height: $minCalcHeight;
   background: url("/contents/img/main.png") no-repeat 50% 50%;
   background-size: contain;
 }

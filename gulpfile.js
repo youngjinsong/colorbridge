@@ -87,8 +87,7 @@ gulp.task('build-js', function() {
 gulp.task('build-css', ['scss'], function() {
   return gulp.src(paths.build.css)
   // REF: https://github.com/browserslist/browserslist
-  // 크로스브라우징 코드 삽입 (default: > 0.5%, last 2 versions, Firefox ESR, not dead).
-  .pipe(autoprefixer(["last 4 versions", "> 0.5%", "not dead"]))
+  .pipe(autoprefixer(["last 4 versions", "> 5%", "not dead"]))
   // .pipe(concat('all.css'))                    // 소스머지
   .pipe(minifyCSS({ keepBreaks: true }))         // 최소화
   .pipe(rename('main.bundle.css'))               // 파일명 변경
@@ -136,7 +135,7 @@ gulp.task('build-sub-html', function () {
  * 배포: 기존 폴더 제거
  */
 gulp.task('build-clean', function() {
-  return gulp.src(paths.build.root + '/*', { read: false })
+  return gulp.src(paths.build.root + '/contents/*', { read: false })
   .pipe(clean());
 });
 
@@ -169,7 +168,7 @@ gulp.task('watch', function() {
  */
 gulp.task('build-all', function() {
   runSequence(
-    //'build-clean',
+    // 'build-clean',
     [
       'build-js',
       'build-css',
