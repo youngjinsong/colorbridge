@@ -168,13 +168,12 @@ gulp.task('watch', function() {
  */
 gulp.task('build-all', function() {
   runSequence(
-    // 'build-clean',
+    'build-clean',
     [
       'build-js',
       'build-css',
       'build-img'
     ],
-
     'build-html',
     'build-sub-html'
   );
