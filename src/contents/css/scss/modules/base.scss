@@ -9,8 +9,14 @@
   }
 
   #bi {
+    display: inline-block;
     flex-basis: 32%;
+    height: 28px;
     color: #222;
+    background: url("/contents/img/logo.svg") no-repeat 0 center;
+    font-size: 0;
+    font-weight: bold;
+    text-decoration: none;
   }
 
   #menus {
@@ -50,12 +56,6 @@
       }
     }
   }
-}
-
-#bi {
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 #content {
