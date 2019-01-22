@@ -6,4 +6,14 @@
   .visual {
     background-image: linear-gradient(to bottom, #f2e9dc, #d1c1ad);
   }
+
+  #idea-sketch {
+    li:first-child {
+      flex-basis: 62.8%;
+    }
+
+    li:last-child {
+      flex-basis: 36.2%;
+    }
+  }
 }

@@ -148,6 +148,12 @@ $strong-color: #222;
       flex-basis: 33.2%;
     }
   }
+
+  &.no-border {
+    li {
+      border: none;
+    }
+  }
 }
 
 
