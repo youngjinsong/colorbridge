@@ -23,7 +23,7 @@ body {
   position: relative;
   overflow: scroll;
   overflow-x: hidden;
-  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 button,
