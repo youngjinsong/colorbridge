@@ -8,7 +8,15 @@ function Loader() {
 
     $target.append([
       '<div class="loader-wrap">',
-      ' <div class="loader">Loading...</div>',
+        '<div class="loading">',
+          '<div class="loading-bar"></div>',
+          '<div class="loading-bar"></div>',
+          '<div class="loading-bar"></div>',
+          '<div class="loading-bar"></div>',
+          '<div class="loading-bar"></div>',
+          '<div class="loading-bar"></div>',
+          '<div class="loading-bar"></div>',
+        '</div>',
       '</div>'
     ].join('\n'));
   };
