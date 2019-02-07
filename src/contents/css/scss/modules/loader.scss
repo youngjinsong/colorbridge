@@ -10,8 +10,8 @@
 
 .loading {
   position: absolute;
-  top: 30%;
-  left: 50%;
+  top: 280px;
+  left: calc(50% - 25px);
 }
 .loading-bar {
   display: inline-block;
