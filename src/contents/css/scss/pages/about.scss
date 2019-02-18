@@ -53,6 +53,7 @@
       margin-bottom: 10px;
       font-size: 1.6rem;
       line-height: 24px;
+      text-transform: uppercase;
     }
 
     strong {
@@ -71,6 +72,59 @@
   #work-experience {
     .description {
       margin-bottom: 70px;
+    }
+  }
+
+  #skills {
+    h3 {
+      margin-bottom: 20px;
+    }
+    ul {
+      margin-bottom: 50px;
+
+      &::after {
+        clear: both;
+      }
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 34px;
+
+      span {
+        display: block;
+        margin: 0 auto 5px;
+        width: 76px;
+        height: 76px;
+        border: solid 1px #eeeeee;
+        border-radius: 2px;
+
+        background: url("/contents/img/about/skills.png") no-repeat 0 0;
+        background-size: 724px 153px;
+
+        &.sketch        { background-position: 0 0; }
+        &.zeplin        { background-position: -83px 0; }
+        &.invision      { background-position: -164px 0; }
+        &.principle     { background-position: -244px 0; }
+        &.illustrator   { background-position: -325px 0; }
+        &.photoshop     { background-position: -406px 0; }
+        &.after-effect  { background-position: -487px 0; }
+        &.premiere      { background-position: -568px 0; }
+        &.indesign      { background-position: -649px 0; }
+
+        &.html5         { background-position: 0 -81px; }
+        &.css3          { background-position: -83px -81px; }
+        &.sass          { background-position: -164px -81px; }
+        &.javascript    { background-position: -244px -81px; }
+        &.jquery        { background-position: -325px -81px; }
+        &.git           { background-position: -406px -81px; }
+      }
+
+      p {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        text-align: center;
+      }
     }
   }
 }
