@@ -97,9 +97,13 @@
 
 .thema-white {
   #gnb {
-    #bi, #menus a {
+    #bi {
+      background-image: url("/contents/img/logo-wh.svg");
+    }
+    #menus a {
       color: #fff;
     }
+
   }
 }
 

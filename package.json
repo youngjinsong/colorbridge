@@ -1,8 +1,8 @@
 {
 	"name": "colorbridge",
-	"version": "2.0.0",
+	"version": "2.0.2",
 	"author": "ssongki",
-	"description": "blog",
+	"description": "personal site",
 	"devDependencies": {
 		"browser-sync": "^2.24.4",
 		"gulp": "^3.9.1",
