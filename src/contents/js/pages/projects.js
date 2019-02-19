@@ -1,9 +1,9 @@
 /**
- * Portfolio
+ * Projects
  * @constructor
  */
-function Portfolio() {
-  var list = getPortfolioList();
+function Projects() {
+  var list = getProjectList();
 
   /**
    * 템플릿을 반환한다.
@@ -18,7 +18,7 @@ function Portfolio() {
 
     return [
       '<li>',
-        '<a href="#portfolio/' + path + '" title="' + name + '">',
+        '<a href="#projects/' + path + '" title="' + name + '">',
           '<span class="image-wrap"><img src="' + imageURL + '" alt="' + name + '" /></span>',
           '<strong>' + name + '</strong>',
           '<p>' + description + '</p>',

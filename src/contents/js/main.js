@@ -10,7 +10,7 @@ $(function() {
 
   var pageHandler = new PageHandler();
   var weeklyDrawing = new WeeklyDrawing(that);
-  var portfolio = new Portfolio(that);
+  var projects = new Projects(that);
   var $win = $(window);
   var $body = $('body');
 
@@ -71,27 +71,27 @@ $(function() {
 
     if (url.match('weekly-drawing')) {
       weeklyDrawing.init();
-    } else if (url.match('portfolio')) {
+    } else if (url.match('projects')) {
       var isTwoDepth = false;
       var currentPage;
 
-      if (url.match('/portfolio/')) {
+      if (url.match('/projects/')) {
         isTwoDepth = true;
-        currentPage = url.split('/views/portfolio/')[1];
+        currentPage = url.split('/views/projects/')[1];
         currentPage = currentPage.split('.html')[0];
 
         moveScrollTop();
       }
 
       // 하단 페이지네이션
-      portfolio.init({
-        $appendTarget: $('.portfolio-list'),
+      projects.init({
+        $appendTarget: $('.projects-list'),
         renderType: isTwoDepth ? "pagination" : "all",
         currentPage: currentPage
       });
     }
 
-    changeThema($body.find('.portfolio-details'));
+    changeThema($body.find('.projects-detail'));
     setTimeout(bindScrollReveal, 10);
   }
 

@@ -16,7 +16,7 @@
     padding-right: 20px;
   }
 
-  .portfolio-details {
+  .projects-detail {
     article {
       padding-top: calc(20vw);
     }
@@ -30,7 +30,7 @@
 // Tablet
 @media screen and (max-width: 768px) {
   // 포트폴리오 상세
-  .portfolio-details {
+  .projects-detail {
     header {
       height: calc(86vw);
     }
@@ -55,7 +55,7 @@
   // 프로필
   #page-about {
     #visual {
-      #profile {
+      img.profile {
         margin-right: 46px;
       }
     }
@@ -121,8 +121,8 @@
     background-position-y: 10%;
   }
 
-  // 포트폴리오 리스트
-  .portfolio-list {
+  // 프로젝트 리스트
+  .projects-list {
     li {
       margin-right: 0;
       width: 100%;
@@ -133,8 +133,8 @@
     }
   }
 
-  // 포트폴리오 상세
-  .portfolio-details {
+  // 프로젝트 상세
+  .projects-detail {
     margin-top: -144px;
 
     h3 {
@@ -257,7 +257,7 @@
 
 // Mobile M
 @media screen and (max-width: 375px) {
-  //.portfolio-details {
+  //.projects-detail {
   //  header {
   //    height: calc(116vw);
   //  }
@@ -273,7 +273,7 @@
 
 // Mobile S
 @media screen and (max-width: 320px) {
-  //.portfolio-details {
+  //.projects-detail {
   //  header {
   //    height: calc(128vw);
   //  }
