@@ -72,14 +72,16 @@
       display: block;
     }
 
-    #bi, #menus {
+    #bi {
       display: block;
+      margin-bottom: 12px;
       text-align: center;
+      background-position-x: center;
     }
 
-    #bi {
-      margin-bottom: 12px;
-      background-position-x: center;
+    #menus {
+      display: flex;
+      justify-content: space-around;
     }
   }
 
@@ -228,6 +230,26 @@
 
       .profile {
         display: none;
+      }
+    }
+
+    #skills {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+          margin-right: 0;
+
+          &:last-child {
+            justify-self: start;
+          }
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
       }
     }
   }
