@@ -1,14 +1,15 @@
 .button {
   display: inline-block;
-  padding: 20px 50px;
+  padding: 18px 50px;
+  min-width: 208px;
   border-radius: 2px;
   border: solid 1px #979797;
-  background-color: #fff;
-  line-height: 24px;
+  background-color: #ffffff;
   color: #222;
 
   &:hover {
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.1);
+    color: #4a90e2;
+    border-color: #4a90e2;
   }
 }
