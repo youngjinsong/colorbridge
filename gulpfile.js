@@ -72,10 +72,13 @@ gulp.task('scss', function() {
  */
 gulp.task('build-js', function() {
   return gulp.src(paths.build.js)   // 개별 우선순위 설정 gulp.src([file1.js', file2.js'])
-  .pipe(concat('main.bundle.js'))      // 소스머지
-  .pipe(uglify({                        // 난독화
+  .pipe(concat('main.bundle.js'))   // 소스머지
+  .pipe(uglify({                    // 난독화
     output: {
-      comments: /^!/
+      comments: /^!/,
+      compress: {
+        drop_console: true
+      }
     }
   }))
   .pipe(gulp.dest(paths.build.root + '/contents/js'))  // build 디렉토리에 파일 생성
