@@ -1,0 +1,7 @@
+/**
+ * ScrollHandler
+ * @constructor
+ */
+function ScrollHandler() {
+
+}

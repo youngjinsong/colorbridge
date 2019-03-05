@@ -13,12 +13,43 @@ $(function() {
   var projects = new Projects(that);
   var $win = $(window);
   var $body = $('body');
+  var $btnTop = null;
 
   /**
-   * 스크롤 상단 이동
+   * 스크롤 이동 합니다.
+   * @param top
+   * @param hasAnimation
    */
-  function moveScrollTop() {
-    return $win.scrollTop(0);
+  function moveScrollTop(top, hasAnimation) {
+    if (hasAnimation) {
+      $("html, body").animate({
+        scrollTop: top
+      }, 500);
+    } else {
+      $win.scrollTop(top);
+    }
+  }
+
+  /**
+   * 스크롤 이벤트 핸들링
+   */
+  function onScroll() {
+    var winTop = $win.scrollTop();
+
+    // Scroll Top Button
+    $btnTop[winTop > 600 ? 'addClass' : 'removeClass']('shown');
+  }
+
+  /**
+   * Top 버튼 바인딩
+   */
+  function appendTopButton($target) {
+    $target.append('<button id="btn-top" class="shown">TOP</button>');
+    $btnTop = $('#btn-top');
+    $btnTop.on('click', function() {
+      moveScrollTop(0, true);
+      $btnTop.removeClass('shown');
+    });
   }
 
   /**
@@ -80,7 +111,7 @@ $(function() {
         currentPage = url.split('/views/projects/')[1];
         currentPage = currentPage.split('.html')[0];
 
-        moveScrollTop();
+        moveScrollTop(0);
       }
 
       // 하단 페이지네이션
@@ -93,6 +124,7 @@ $(function() {
 
     changeThema($body.find('.projects-detail'));
     setTimeout(bindScrollReveal, 10);
+    onScroll();
   }
 
   function init() {
@@ -100,6 +132,8 @@ $(function() {
     setYear($('#year'));
     pageHandler.init();
     pageHandler.loaded = onLoaded;
+    appendTopButton($body);
+    $win.scroll(onScroll);
   }
 
   init();
