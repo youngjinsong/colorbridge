@@ -2,7 +2,7 @@
  * PageHandler
  * @constructor
  */
-function PageHandler() {
+function PageHandler(parent) {
   console.log('Loaded PageHandler');
 
   var that = this;
@@ -32,6 +32,13 @@ function PageHandler() {
       $content.html(data);
       that.loaded(url);
     });
+
+    // 위클리 드로잉은 자체 로더 컨트롤
+    if (!url.match('weekly-drawing')) {
+      setTimeout(function() {
+        parent.loader.hide();
+      }, 200);
+    }
   }
 
   /**
@@ -58,6 +65,8 @@ function PageHandler() {
     } else {
       $('#bi').click();
     }
+
+    parent.loader.show();
   }
 
   /**

@@ -66,6 +66,8 @@
 #site-footer {
   display: flex;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 100;
 
   div, nav {
     flex-basis: 50%;

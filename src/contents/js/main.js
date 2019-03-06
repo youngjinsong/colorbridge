@@ -5,10 +5,9 @@
  *
  */
 $(function() {
+  this.loader = new Loader();
   var that = this;
-  that.loader = new Loader();
-
-  var pageHandler = new PageHandler();
+  var pageHandler = new PageHandler(that);
   var weeklyDrawing = new WeeklyDrawing(that);
   var projects = new Projects(that);
   var $win = $(window);
@@ -94,7 +93,6 @@ $(function() {
   function onLoaded(url) {
     console.log('url', url);
 
-    that.loader.hide();
     $body.removeClass('loaded');
     setTimeout(function() {
       $body.addClass('loaded');
@@ -102,6 +100,7 @@ $(function() {
 
     if (url.match('weekly-drawing')) {
       weeklyDrawing.init();
+      return false;
     } else if (url.match('projects')) {
       var isTwoDepth = false;
       var currentPage;
