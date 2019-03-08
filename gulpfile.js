@@ -20,6 +20,17 @@ const runSequence = require('run-sequence');          // 배포시 동기 수행
 const changed = require('gulp-changed');              // 배포시 변경된 파일만 빌드
 const rename = require("gulp-rename");                // 파일명 rename
 const paths = require('./gulpfile.paths.js')();       // 경로 설정 모듈
+const header = require('gulp-header');                // 배포시 inject header
+const pkg = require('./package.json');                // using data from package.json
+const comment = [
+  '/**',
+  ' * ColorBridge',
+  ' * @author ssongki (ssongki@gmail.com)',
+  ' * @version v<%= pkg.version %>',
+  ' * @homepage <%= pkg.homepage %>',
+  ' */',
+  ''
+].join('\n');
 
 // SCSS config (REF: http://webclub.tistory.com/470)
 const scssOpts = {
@@ -75,12 +86,13 @@ gulp.task('build-js', function() {
   .pipe(concat('main.bundle.js'))   // 소스머지
   .pipe(uglify({                    // 난독화
     output: {
-      comments: /^!/,
-      compress: {
-        drop_console: true
-      }
+      //comments: /^!/
+    },
+    compress: {
+      drop_console: true
     }
   }))
+  .pipe(header(comment, { pkg : pkg } ))
   .pipe(gulp.dest(paths.build.root + '/contents/js'))  // build 디렉토리에 파일 생성
 });
 
