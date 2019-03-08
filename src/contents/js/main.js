@@ -47,7 +47,6 @@ $(function() {
     $btnTop = $('#btn-top');
     $btnTop.on('click', function() {
       moveScrollTop(0, true);
-      $btnTop.removeClass('shown');
     });
   }
 
@@ -100,7 +99,6 @@ $(function() {
 
     if (url.match('weekly-drawing')) {
       weeklyDrawing.init();
-      return false;
     } else if (url.match('projects')) {
       var isTwoDepth = false;
       var currentPage;
