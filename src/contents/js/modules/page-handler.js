@@ -31,13 +31,21 @@ function PageHandler(parent) {
     $.get(url, function(data) {
       $content.html(data);
       that.loaded(url);
+      hideLoaderPending(url, 200);
     });
+  }
 
+  /**
+   * 페이지가 시각적으로 부드럽게 전환되도록 로더를 일정시간 노출후 제거한다.
+   * @param url
+   * @param timeout
+   */
+  function hideLoaderPending(url, timeout) {
     // 위클리 드로잉은 자체 로더 컨트롤
     if (!url.match('weekly-drawing')) {
       setTimeout(function() {
         parent.loader.hide();
-      }, 200);
+      }, timeout);
     }
   }
 
