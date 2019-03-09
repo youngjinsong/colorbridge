@@ -32,7 +32,7 @@ module.exports = function() {
     css: contentsDir + '/css/*.css',
     img: contentsDir + '/img/**',
     html: {
-      main: srcDir + '/index.html',
+      main: srcDir + '/*.html',
       partial: srcDir + '/views/**/*.html'
     }
   };
