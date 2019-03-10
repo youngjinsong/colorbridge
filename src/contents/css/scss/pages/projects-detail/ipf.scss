@@ -1,6 +1,8 @@
 #ipf {
   header {
-    background-color: #fbfbfb;
+    &::after {
+      background-color: #fbfbfb;
+    }
   }
 
   .visual {
@@ -8,12 +10,48 @@
   }
 
   #idea-sketch {
-    li:first-child {
-      flex-basis: 62.8%;
+    .image-pieces {
+      flex-wrap: nowrap;
+    }
+
+    li {
+      flex-basis: 38.2%;
+
+      img {
+        height: 100%;
+      }
     }
 
     li:last-child {
-      flex-basis: 36.2%;
+      flex-basis: 20%;
+    }
+  }
+
+  #website-design {
+    ol {
+      flex-wrap: nowrap;
+    }
+
+    li {
+      flex-basis: auto;
+
+      &:first-child {
+        flex-basis: 28% !important;
+        margin-right: 4%;
+      }
+
+      &:last-child {
+        flex-basis: 72% !important;
+      }
+
+      p {
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      img {
+        box-shadow: 0 15px 36px 0 rgba(0, 0, 0, 0.2);
+      }
     }
   }
 }

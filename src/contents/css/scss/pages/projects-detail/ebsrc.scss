@@ -1,6 +1,8 @@
 #ebsrc {
   header {
-    background-color: #fafafa;
+    &::after {
+      background-color: #fafafa;
+    }
   }
 
   .visual {

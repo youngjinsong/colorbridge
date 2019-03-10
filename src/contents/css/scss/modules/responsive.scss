@@ -17,10 +17,6 @@
   }
 
   .projects-detail {
-    article {
-      padding-top: calc(20vw);
-    }
-
     section {
       margin-bottom: 120px;
     }
@@ -32,11 +28,13 @@
   // 포트폴리오 상세
   .projects-detail {
     header {
-      height: calc(86vw);
+      &::after {
+        height: 85vw;
+      }
     }
 
-    article {
-      padding-top: 24vw;
+    h3 {
+      font-size: 4rem;
     }
 
     section {
@@ -44,7 +42,8 @@
     }
 
     #overview dl {
-      flex-basis: 30%;
+      flex-basis: 25%;
+      margin-right: 20px;
     }
   }
 
@@ -62,8 +61,8 @@
   }
 }
 
-// Mobile L 425 (작은 브라우저 화면에도 포함하기 위해 500이하로 적용)
-@media screen and (max-width: 500px) {
+// PC samll, Mobile bic (작은 브라우저, 큰 스마트폰 화면에도 포함하기 위해 720이하로 적용)
+@media screen and (max-width: 720px) {
   #gnb {
     padding-top: 20px;
     margin-bottom: 20px;
@@ -137,27 +136,28 @@
   .projects-detail {
     margin-top: -144px;
 
-    h3 {
-      font-size: 3rem;
-    }
-
     header {
-      height: calc(90vw);
+      margin-bottom: 40px;
+
+      &::after {
+        height: 78vw;
+      }
 
       p {
         margin-top: 20px;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
       }
 
       h2 {
         margin-bottom: 30px;
-        font-size: 2.5rem;
-        line-height: 1;
+        font-size: 3.4rem;
+        line-height: 1.5;
       }
     }
 
-    article {
-      padding-top: 110px;
+    h3,
+    footer h3 {
+      font-size: 2.4rem;
     }
 
     .button {
@@ -255,13 +255,28 @@
   }
 }
 
+// Mobile L
+@media screen and (max-width: 425px) {
+  // 프로젝트 상세
+  .projects-detail {
+    header {
+      &::after {
+        height: 90vw;
+      }
+    }
+  }
+}
+
 // Mobile M
 @media screen and (max-width: 375px) {
-  //.projects-detail {
-  //  header {
-  //    height: calc(116vw);
-  //  }
-  //}
+  // 프로젝트 상세
+  .projects-detail {
+    header {
+      &::after {
+        height: 98vw;
+      }
+    }
+  }
 
   // 프로필
   #page-about {
@@ -273,9 +288,11 @@
 
 // Mobile S
 @media screen and (max-width: 320px) {
-  //.projects-detail {
-  //  header {
-  //    height: calc(128vw);
-  //  }
-  //}
+  .projects-detail {
+    header {
+      &::after {
+        height: 110vw;
+      }
+    }
+  }
 }
