@@ -23,7 +23,7 @@ function getProjectList() {
       description: "Product UI/UX Design, iOS Design"
     },
     {
-      name: "ERA",
+      name: "English Road App",
       path: "era",
       imageURL: "/contents/img/projects/era@2x.jpg",
       description: "Product UI/UX Design, App Design"
