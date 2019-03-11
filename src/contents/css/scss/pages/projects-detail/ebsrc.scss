@@ -9,16 +9,176 @@
     background-color: #f9f9f9;
   }
 
-  #design {
+  .no-margin {
+    margin: 0;
+  }
+
+  #the-project {
     .image-pieces {
       li {
-        border: 0;
+        flex-basis: 35%;
       }
-      li:nth-child(1n) {
-        flex-basis: 36%;
+
+      li:nth-child(2) {
+        flex-basis: 30%;
+        text-align: center;
+
+        img {
+          display: inline-block;
+          width: 180px;
+          height: 180px;
+        }
       }
-      li:nth-child(2n) {
-        flex-basis: 13%;
+    }
+  }
+
+  #concept {
+    text-align: left;
+    color: #222;
+
+    & > p {
+      margin-bottom: 60px;
+    }
+
+    h4 {
+      margin-bottom: 0;
+      font-size: 5rem;
+      text-transform: none;
+    }
+
+    .pieces {
+      display: flex;
+      justify-content: space-between;
+
+      & > div {
+        flex-basis: 50%;
+      }
+
+      h5 {
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+    }
+
+    #concept-color {
+      ul {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      li {
+        font-size: 1.4rem;
+
+        &::before {
+          display: block;
+          content: "";
+          margin-right: 15px;
+          margin-bottom: 7px;
+          width: 100px;
+          height: 100px;
+          background-color: #78cd13;
+          border: solid 1px #eee;
+        }
+
+        &:nth-child(2) {
+          &::before {
+            background-color: #1f2d5f;
+          }
+        }
+
+        &:nth-child(3) {
+          &::before {
+            background-color: #fff;
+          }
+        }
+
+        &:nth-child(4) {
+          &::before {
+            background-color: #bcab74;
+          }
+        }
+      }
+    }
+
+    #concept-font {
+      li {
+        margin-bottom: 20px;
+        text-align: left;
+        font-size: 1.8rem;
+      }
+
+      li:nth-child(2) {
+        font-weight: 500;
+      }
+
+      li:nth-child(3) {
+        font-weight: 800;
+      }
+    }
+  }
+
+  #site-flow {
+    margin-bottom: 0;
+
+    img {
+      vertical-align: bottom;
+    }
+  }
+
+  #features {
+    .fixed-wrap {
+      padding-top: 170px;
+    }
+    h3 {
+      font-size: 12rem;
+      font-family: Anton;
+      font-weight: normal;
+      line-height: 1;
+      text-transform: none;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+
+    #bookshelf {
+      background: #f9f9f9;
+    }
+
+    #attendance {
+      p {
+        margin-bottom: 100px;
+      }
+    }
+
+    #medal {
+      .image-pieces li {
+        margin-right: 20px;
+      }
+
+      .process {
+        padding-top: 100px;
+      }
+    }
+
+    .absolute-wrap {
+      position: relative;
+
+      h3, p {
+        position: absolute;
+        z-index: 1;
+      }
+
+      h3 {
+        top: 170px;
+      }
+
+      p {
+        top: 340px;
+      }
+
+      img {
+        vertical-align: bottom;
       }
     }
   }
