@@ -25,8 +25,8 @@
 
         img {
           display: inline-block;
-          width: 180px;
-          height: 180px;
+          max-width: 180px;
+          max-height: 180px;
         }
       }
     }
@@ -62,6 +62,8 @@
     }
 
     #concept-color {
+      padding-right: 20px;
+
       ul {
         display: flex;
         justify-content: flex-start;
@@ -146,9 +148,7 @@
     }
 
     #attendance {
-      p {
-        margin-bottom: 100px;
-      }
+
     }
 
     #medal {
@@ -158,27 +158,172 @@
 
       .process {
         padding-top: 100px;
+
+        h4 {
+          line-height: 1;
+        }
+      }
+    }
+
+    #viewer {
+      img {
+        width: 100%;
       }
     }
 
     .absolute-wrap {
       position: relative;
+      padding-top: 0;
 
-      h3, p {
+      .content {
         position: absolute;
+        top: 120px;
+        left: 0;
         z-index: 1;
-      }
-
-      h3 {
-        top: 170px;
-      }
-
-      p {
-        top: 340px;
+        padding: 0 20px;
       }
 
       img {
         vertical-align: bottom;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ebsrc {
+    #the-project {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+    #features {
+      h3 {
+        font-size: 8rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+
+      .absolute-wrap {
+        .content {
+          top: 12vh;
+        }
+      }
+
+      #bookshelf .absolute-wrap,
+      #attendance .absolute-wrap {
+        padding-top: 100px;
+      }
+
+      #medal {
+        .fixed-wrap {
+          padding-top: 80px;
+        }
+
+        .process {
+          li {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #ebsrc {
+    #the-project {
+      .image-pieces {
+        padding-top: 20px;
+        flex-wrap: wrap;
+
+        li {
+          flex-basis: 50%;
+        }
+
+        li:nth-child(2) {
+          flex-basis: 100%;
+          order: -1;
+
+          img {
+            margin-bottom: 20px;
+            max-width: 150px;
+            max-height: 150px;
+          }
+        }
+      }
+    }
+
+    #concept {
+      h4 {
+        font-size: 2.4rem;
+      }
+
+      .pieces {
+        flex-wrap: wrap;
+
+        h5 {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+        }
+
+        & > div {
+          flex-basis: 100%;
+        }
+
+        #concept-color {
+          margin-bottom: 50px;
+
+          li {
+            &::before {
+              margin-right: 10px;
+              max-width: 60px;
+              max-height: 60px;
+            }
+          }
+        }
+
+        #concept-font {
+          li {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    #features {
+      h3 {
+        font-size: 4rem;
+      }
+
+      .process {
+        padding-top: 50px !important;
+
+        h4 {
+          font-size: 1.8rem;
+        }
+      }
+
+      #bookshelf .absolute-wrap,
+      #attendance .absolute-wrap {
+        padding-top: 320px;
+      }
+      #viewer .absolute-wrap {
+        padding-top: 220px;
+      }
+
+      #medal {
+        .image-pieces {
+          flex-wrap: wrap;
+
+          li {
+            flex-basis: 50%;
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
       }
     }
   }

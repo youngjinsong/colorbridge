@@ -177,6 +177,10 @@
     #overview {
       display: block;
 
+      dl {
+        margin-bottom: 20px;
+      }
+
       dt, h1 {
         font-size: 1.4rem;
       }
