@@ -27,6 +27,12 @@ function getProjectList() {
       path: "era",
       imageURL: "/contents/img/projects/era@2x.jpg",
       description: "Product UI/UX Design, App Design"
+    },
+    {
+      name: "Learning Management System",
+      path: "lms",
+      imageURL: "/contents/img/projects/lms@2x.jpg",
+      description: "Product UI/UX Design, Web Design"
     }
     // {
     //   name: "POP Reader",

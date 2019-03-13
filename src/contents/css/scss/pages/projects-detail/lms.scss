@@ -1,0 +1,109 @@
+#lms {
+  header {
+    p, h2 {
+      color: #fff;
+    }
+
+    &::after {
+      background-color: #060714;
+    }
+
+    img {
+      box-shadow: none;
+    }
+  }
+
+  .main-visual,
+  .features {
+    background-color: #060714;
+
+    h4,
+    p {
+      color: #fff;
+    }
+  }
+
+  .main-visual {
+    padding-bottom: 170px;
+    text-align: center;
+    background-image: url("/contents/img/projects/lms/bg-pattern1.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    h2 {
+      margin-bottom: 20px;
+      color: #313349;
+      font-size: 9rem;
+      font-family: Anton;
+      font-weight: normal;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .features {
+    background-image: url("/contents/img/projects/lms/bg-pattern2.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    overflow: hidden;
+
+    > ul {
+      display: flex;
+      margin-bottom: 170px;
+
+      h4 {
+        margin-top: 50px;
+        display: block;
+        text-transform: none;
+        font-weight: normal;
+        font-size: 3rem;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+
+      > li {
+        &:nth-child(1) {
+          flex-basis: 50%;
+          margin-right: 5%;
+        }
+
+        &:nth-child(2) {
+          flex-basis: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+
+      ul {
+        margin-left: 26px;
+        list-style: disc;
+        color: #fff;
+      }
+
+      //&:nth-child(1) {
+      //  li {
+      //    text-align: right;
+      //  }
+      //}
+
+      &:nth-child(2) {
+        li:nth-child(1) {
+          order: 1
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
