@@ -91,6 +91,17 @@
     #menus {
       display: flex;
       justify-content: space-around;
+
+
+      li {
+        margin: 0;
+        flex-basis: 24%;
+        text-align: center;
+
+        &:nth-child(2) {
+          flex-basis: 52%;
+        }
+      }
     }
   }
 
@@ -145,6 +156,7 @@
   // 프로젝트 상세
   .projects-detail {
     margin-top: -144px;
+    font-size: 1.4rem;
 
     header {
       margin-bottom: 40px;
@@ -155,13 +167,13 @@
 
       p {
         margin-top: 20px;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
+        font-weight: 500;
       }
 
       h2 {
         margin-bottom: 30px;
         font-size: 3.4rem;
-        line-height: 1.5;
       }
     }
 
@@ -172,6 +184,8 @@
 
     .button {
       width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
     }
 
     #overview {
@@ -179,6 +193,7 @@
 
       dl {
         margin-bottom: 20px;
+        font-size: 1.4rem;
       }
 
       dt, h1 {
