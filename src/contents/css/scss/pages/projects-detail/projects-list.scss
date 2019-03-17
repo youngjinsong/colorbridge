@@ -1,0 +1,21 @@
+// 721 이상에서만 3개 목록으로 보이도록
+.projects-detail {
+  @media screen and (min-width: 721px) {
+    .projects-list {
+      li {
+        float: left;
+        margin: 0 0 60px 0;
+        width: 32%;
+
+        &:nth-child(even) {
+          margin-left: 2%;
+          margin-right: 2%;
+        }
+
+        .image-wrap {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

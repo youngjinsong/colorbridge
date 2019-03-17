@@ -61,29 +61,48 @@ function Projects() {
   }
 
   /**
-   * 기본적으로 배열의 양 옆을 추출 한다.
-   * 하지만 처음과 마지막의 경우 근접 2개의 값을 추출 한다.
+   * 기본적으로 배열의 앞, 뒤 값을 추출 한다.
    * @param arr
-   * @param index
+   * @param insertedIndex
    */
-  function filterData(arr, index) {
+  function filterData(arr, insertedIndex) {
+    var length = 3;
     var result = [];
-    var one;
-    var two;
+    var indexArr = [];
 
-    if (index === 0) {
-      one = index + 1;
-      two = index + 2;
-    } else if ((arr.length - 1) === index) {
-      one = index - 2;
-      two = index - 1;
+    // 첫번째 (1, 2, 3)
+    if (insertedIndex === 0) {
+      const startIndex = 1;
+      for (let i = startIndex; i <= length; i++) {
+        indexArr.push(insertedIndex + i);
+      }
+      // 마지막 (-3, -2, -1)
+    } else if (insertedIndex === (arr.length - 1)) {
+      const startIndex = -3;
+      for (let i = startIndex; i <= startIndex + (length - 1); i++) {
+        indexArr.push(insertedIndex + i);
+      }
+      // 마지막에서 두번째 (-2, -1, 1)
+    } else if (insertedIndex === (arr.length - 2)) {
+      const startIndex = -2;
+      for (let i = startIndex; i <= startIndex + length; i++) {
+        if (i !== 0) {
+          indexArr.push(insertedIndex + i);
+        }
+      }
+      // 기본 양 옆 (-1, 1, 2)
     } else {
-      one = index - 1;
-      two = index + 1;
+      const startIndex = -1;
+      for (let i = startIndex; i <= startIndex + length; i++) {
+        if (i !== 0) {
+          indexArr.push(insertedIndex + i);
+        }
+      }
     }
 
-    result.push(arr[one]);
-    result.push(arr[two]);
+    indexArr.map((item) => {
+      result.push(arr[item]);
+    });
 
     return result;
   }
@@ -95,8 +114,11 @@ function Projects() {
     var renderType = options.renderType;
     var currentPage = options.currentPage;
 
+    // 전체목록
     if (renderType === 'all') {
       renderList($target, list);
+
+    // 페이지네이션
     } else {
       var index = findIndex(list, currentPage);
       var data = filterData(list, index);
