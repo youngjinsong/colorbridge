@@ -29,7 +29,12 @@
     background-image: url("/contents/img/projects/lms/bg-pattern1.png");
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: cover;
+    background-size: contain;
+
+    .description {
+      margin-bottom: 0 !important;
+      padding-bottom: 0;
+    }
 
     img {
       margin-bottom: 100px;
@@ -130,7 +135,9 @@
   }
 }
 
-
+/*******************************************************************
+  반응형
+ *******************************************************************/
 @media screen and (max-width: 1439px) {
   .fixed-wrap {
     width: 100%;
@@ -191,10 +198,6 @@
 // PC samll, Mobile bic (작은 브라우저, 큰 스마트폰 화면에도 포함하기 위해 720이하로 적용)
 @media screen and (max-width: 720px) {
   #lms {
-    header h2 {
-      font-size: 2.3rem;
-    }
-
     .main-visual {
       padding-bottom: 100px;
       margin-bottom: -1px;

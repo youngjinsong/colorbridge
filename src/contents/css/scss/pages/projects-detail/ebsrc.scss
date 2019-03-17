@@ -149,21 +149,35 @@
       font-family: Anton;
       font-weight: normal;
       line-height: 1;
-      //text-transform: u;
-
     }
+
     p {
       font-size: 1.6rem;
     }
 
-    #bookshelf {
-      background: #f9f9f9;
+    .content,
+    img {
+      position: relative;
     }
 
-    #attendance {
+    .content {
+      z-index: 2;
+    }
+
+    img {
+      z-index: 1;
+    }
+
+    #bookshelf .content,
+    #attendance .content  {
+      margin-bottom: 50px;
+    }
+
+    #bookshelf {
+      background: #f9f9f9;
+
       img {
-        display: inline-block;
-        margin-top: 40px;
+        vertical-align: bottom;
       }
     }
 
@@ -189,28 +203,40 @@
         width: 100%;
       }
     }
+  }
 
-    .absolute-wrap {
-      position: relative;
-      padding-top: 0;
 
-      .content {
-        position: absolute;
-        top: 120px;
-        left: 0;
-        z-index: 1;
-        padding: 0 20px;
+  /*******************************************************************
+    반응형
+   *******************************************************************/
+  @media screen and (min-width: 1025px) {
+    #features {
+      #bookshelf {
+        img {
+          margin-top: -320px;
+          vertical-align: bottom;
+        }
       }
 
-      img {
-        vertical-align: bottom;
+      #viewer {
+        img {
+          margin-top: -80px;
+        }
       }
     }
   }
-}
 
-@media screen and (max-width: 768px) {
-  #ebsrc {
+  @media screen and (max-width: 1024px) {
+    #the-project {
+      p {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
     #the-project {
       p {
         font-size: 1.4rem;
@@ -221,27 +247,35 @@
       h3 {
         font-size: 8rem;
       }
+
       p {
         font-size: 1.4rem;
       }
 
-      .absolute-wrap {
-        .content {
-          top: 12vh;
+      .fixed-wrap {
+        padding-top: 12vh;
+      }
+
+      #bookshelf {
+        img {
+          margin-left: -12%;
+          width: 120%;
         }
       }
 
-      #bookshelf .absolute-wrap,
-      #attendance .absolute-wrap {
-        padding-top: 100px;
+      #attendance {
+        img {
+          margin-left: -12%;
+          width: 124%;
+        }
       }
 
       #medal {
-        .fixed-wrap {
-          padding-top: 80px;
-        }
+        padding-bottom: 80px;
 
         .process {
+          padding-top: 80px;
+
           li {
             margin-bottom: 0;
           }
@@ -249,10 +283,8 @@
       }
     }
   }
-}
 
-@media screen and (max-width: 720px) {
-  #ebsrc {
+  @media screen and (max-width: 720px) {
     #the-project {
       .image-pieces {
         padding-top: 20px;
@@ -268,8 +300,8 @@
 
           img {
             margin-bottom: 20px;
-            max-width: 150px;
-            max-height: 150px;
+            max-width: 100px;
+            max-height: 100px;
           }
         }
 
@@ -290,6 +322,7 @@
         h5 {
           font-size: 1.8rem;
           margin-bottom: 20px;
+          font-weight: bold;
         }
 
         & > div {
@@ -324,18 +357,13 @@
 
       .process {
         padding-top: 50px !important;
+      }
 
-        h4 {
-          font-size: 1.8rem;
+      #bookshelf {
+        img {
+          margin-left: -58%;
+          width: 174%;
         }
-      }
-
-      #bookshelf .absolute-wrap,
-      #attendance .absolute-wrap {
-        padding-top: 320px;
-      }
-      #viewer .absolute-wrap {
-        padding-top: 220px;
       }
 
       #medal {
@@ -353,4 +381,6 @@
       }
     }
   }
+
 }
+

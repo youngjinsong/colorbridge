@@ -133,3 +133,76 @@
     }
   }
 }
+
+/*******************************************************************
+  반응형
+ *******************************************************************/
+@media screen and (max-width: 768px) {
+  #page-about {
+    #visual {
+      img.profile {
+        margin-right: 46px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #page-about {
+    h1 {
+      .profile {
+        display: block;
+        width: 50%;
+        margin: 20px auto;
+      }
+
+      text-align: center;
+    }
+
+    .introduction {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .graph {
+      width: 100% !important;
+    }
+
+    #visual {
+      text-align: center;
+
+      .profile {
+        display: none;
+      }
+    }
+
+    #skills {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+          margin-right: 0;
+
+          &:last-child {
+            justify-self: start;
+          }
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+// Mobile M
+@media screen and (max-width: 375px) {
+  #page-about {
+    h1 span {
+      font-size: 3.2rem;
+    }
+  }
+}
