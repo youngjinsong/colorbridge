@@ -69,38 +69,39 @@ function Projects() {
     var length = 3;
     var result = [];
     var indexArr = [];
+    var startIndex;
 
     // 첫번째 (1, 2, 3)
     if (insertedIndex === 0) {
-      const startIndex = 1;
-      for (let i = startIndex; i <= length; i++) {
+      startIndex = 1;
+      for (var i = startIndex; i <= length; i++) {
         indexArr.push(insertedIndex + i);
       }
       // 마지막 (-3, -2, -1)
     } else if (insertedIndex === (arr.length - 1)) {
-      const startIndex = -3;
-      for (let i = startIndex; i <= startIndex + (length - 1); i++) {
+      startIndex = -3;
+      for (var i = startIndex; i <= startIndex + (length - 1); i++) {
         indexArr.push(insertedIndex + i);
       }
       // 마지막에서 두번째 (-2, -1, 1)
     } else if (insertedIndex === (arr.length - 2)) {
-      const startIndex = -2;
-      for (let i = startIndex; i <= startIndex + length; i++) {
+      startIndex = -2;
+      for (var i = startIndex; i <= startIndex + length; i++) {
         if (i !== 0) {
           indexArr.push(insertedIndex + i);
         }
       }
       // 기본 양 옆 (-1, 1, 2)
     } else {
-      const startIndex = -1;
-      for (let i = startIndex; i <= startIndex + length; i++) {
+      startIndex = -1;
+      for (var i = startIndex; i <= startIndex + length; i++) {
         if (i !== 0) {
           indexArr.push(insertedIndex + i);
         }
       }
     }
 
-    indexArr.map((item) => {
+    indexArr.map(function(item) {
       result.push(arr[item]);
     });
 
