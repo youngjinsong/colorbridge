@@ -1,4 +1,7 @@
+@import '../modules/variables';
+
 #page-home {
+  min-height: $minHeight;
   height: $minCalcHeight;
   background: url("/contents/img/main.jpg") no-repeat 50% 50%;
   background-size: contain;
