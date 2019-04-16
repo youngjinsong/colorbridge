@@ -1,0 +1,74 @@
+#rebranding {
+  header {
+    &::after {
+      background-color: #fdfdfd;
+    }
+  }
+
+  .process-content {
+    padding-top: 70px;
+    height: 768px;
+
+    > .fixed-wrap {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h4 {
+      line-height: 1.8;
+      font-size: 2rem;
+      border-bottom: solid 1px #d8d8d8;
+    }
+
+    .description {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  #logo-design {
+    .visual {
+      max-height: 720px;
+      padding: 110px 0;
+      background-color: #303e46;
+
+      img {
+        max-width: 645px;
+        max-height: 503px;
+      }
+    }
+  }
+
+  #motif {
+    background-color: #fdfdfd;
+
+    img {
+      margin-bottom: 50px;
+      max-width: 840px;
+      max-height: 110px;
+    }
+  }
+
+  #symbol {
+    background-color: #f9f9f9;
+
+    img {
+      max-width: 282px;
+      max-height: 282px;
+    }
+  }
+
+  #type {
+    background-color: #efefef;
+
+    img {
+      max-width: 634px;
+      max-height: 190px;
+    }
+  }
+}

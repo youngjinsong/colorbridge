@@ -11,22 +11,28 @@ function getProjectList() {
       description: "Product UI/UX Design, Web/App Design"
     },
     {
+      name: "ReBranding, Logo Design",
+      path: "rebranding",
+      imageURL: "/contents/img/projects/readingand@2x.png",
+      description: "Graphic Design"
+    },
+    {
       name: "iPortfolio",
       path: "iportfolio",
       imageURL: "/contents/img/projects/ipf@2x.jpg",
       description: "Responsive Web Design/Development"
     },
     {
-      name: "AR",
-      path: "ar",
-      imageURL: "/contents/img/projects/ar@2x.jpg",
-      description: "Product UI/UX Design, iOS Design"
-    },
-    {
       name: "English Road App",
       path: "era",
       imageURL: "/contents/img/projects/era@2x.jpg",
       description: "Product UI/UX Design, App Design"
+    },
+    {
+      name: "AR",
+      path: "ar",
+      imageURL: "/contents/img/projects/ar@2x.jpg",
+      description: "Product UI/UX Design, iOS Design"
     },
     {
      name: "Learning Management System",
