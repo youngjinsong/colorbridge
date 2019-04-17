@@ -18,6 +18,7 @@
     h4 {
       line-height: 1.8;
       font-size: 2rem;
+      font-weight: 500;
       border-bottom: solid 1px #d8d8d8;
     }
 
@@ -28,6 +29,17 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+    }
+  }
+
+  #before-logo {
+    .description {
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: 668px;
+      max-height: 399px;
     }
   }
 
@@ -63,12 +75,113 @@
     }
   }
 
-  #type {
+  #basic {
     background-color: #efefef;
 
     img {
       max-width: 634px;
       max-height: 190px;
+    }
+  }
+
+  #logo-type {
+    height: 100%;
+    margin-bottom: 150px;
+
+    h4 {
+      margin-bottom: 90px;
+    }
+
+    #cards {
+      margin-bottom: 150px;
+
+      li {
+        flex-basis: 31.8%;
+        margin-bottom: 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      img {
+        margin-bottom: 38px;
+      }
+    }
+  }
+
+  #color-system {
+    display: flex;
+
+    li:nth-child(1) {
+      flex-basis: 34%;
+      text-align: left;
+
+      h5 {
+        margin-bottom: 30px;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .color-wrap {
+      flex-basis: 66%;
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        flex-basis: 50%;
+        margin-bottom: 35px;
+        font-size: 1.6rem;
+
+        &::before {
+          float: left;
+          content: "";
+          display: block;
+          width: 141px;
+          height: 141px;
+          margin-right: 40px;
+          border-radius: 5px;
+        }
+
+        &:nth-child(1) {
+          &::before {
+            background-color: #303e46;
+          }
+        }
+
+        &:nth-child(2) {
+          &::before {
+            background-color: #61b97e;
+          }
+        }
+
+        &:nth-child(3) {
+          &::before {
+            border: solid 1px #cccccc;
+            background-color: #ffffff;
+          }
+        }
+
+        &:nth-child(4) {
+          &::before {
+            background-color: #0c9eda;
+          }
+        }
+
+        .title {
+          display: inline-block;
+          margin-bottom: 59px;
+        }
+
+        p {
+          strong {
+            display: inline-block;
+            width: 80px;
+          }
+        }
+
+
+      }
+
     }
   }
 }
