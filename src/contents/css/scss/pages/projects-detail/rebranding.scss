@@ -48,7 +48,7 @@
   #logo-design {
     .visual {
       max-height: 720px;
-      padding: 110px 0;
+      padding: 110px 20px;
       background-color: #303e46;
 
       img {
@@ -88,7 +88,7 @@
 
   #logo-type {
     height: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 170px;
 
     h4 {
       margin-bottom: 90px;
@@ -102,6 +102,10 @@
         margin-bottom: 0;
         text-align: center;
         text-transform: uppercase;
+
+        strong {
+          font-size: 2rem;
+        }
       }
 
       img {
@@ -115,6 +119,7 @@
 
     li:nth-child(1) {
       flex-basis: 34%;
+      padding-right: 2.5%;
       text-align: left;
 
       h5 {
@@ -128,6 +133,10 @@
       flex-basis: 66%;
       display: flex;
       flex-wrap: wrap;
+
+      strong {
+        font-weight: 500;
+      }
 
       div {
         flex-basis: 48%;
@@ -188,13 +197,15 @@
   }
 
   #tails {
+    padding: 0;
+
     ul {
       display: flex;
       flex-wrap: wrap;
     }
 
     li {
-      padding: 20px;
+      padding: 60px;
       flex-basis: 50%;
       max-height: 378px;
       height: 40vw;
@@ -224,6 +235,111 @@
 
       &:nth-child(4) {
         background-color: #0c9eda;
+      }
+    }
+  }
+
+
+  /*******************************************************************
+    반응형
+   *******************************************************************/
+  @media screen and (max-width: 768px) {
+    .process-content {
+      height: 550px;
+    }
+
+    #logo-type {
+      margin-bottom: 100px;
+
+      #cards {
+        margin-bottom: 100px;
+
+        li {
+          img {
+            margin-bottom: 10px;
+          }
+          strong {
+            font-size: 1.6rem;
+            font-weight: 500;
+          }
+        }
+      }
+
+      #color-system {
+        display: block;
+
+        li:nth-child(1) {
+          margin-bottom: 50px;
+
+          h5 {
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+          }
+
+          p br:nth-child(2) {
+            display: none;
+          }
+        }
+
+        .color-wrap {
+          p strong {
+            width: 50px;
+          }
+        }
+      }
+    }
+
+    #tails {
+      height: auto;
+
+      li {
+        height: 25vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .process-content {
+      height: 500px;
+    }
+
+    #before-logo {
+      height: 500px;
+    }
+
+    #logo-type {
+      height: auto;
+
+      #cards {
+        display: block;
+
+        li {
+          margin-bottom: 50px;
+        }
+
+        img {
+          min-height: auto;
+        }
+      }
+
+      #color-system {
+        .color-wrap {
+          div {
+            &::before {
+              float: none;
+              margin-bottom: 20px;
+              width: 100%;
+            }
+
+            .title {
+              margin-bottom: 10px;
+            }
+
+            strong {
+              font-size: 1.4rem;
+            }
+          }
+        }
       }
     }
   }
