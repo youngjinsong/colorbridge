@@ -34,6 +34,7 @@
 
   #before-logo {
     height: 720px;
+    background: #fdfdfd;
 
     .description {
       margin-bottom: 0;
@@ -230,7 +231,7 @@
       }
 
       &:nth-child(3) {
-        background-color: #ffffff;
+        background-color: #f9f9f9;
       }
 
       &:nth-child(4) {
@@ -244,15 +245,17 @@
     반응형
    *******************************************************************/
   @media screen and (max-width: 768px) {
+    $margin-bottom-default: 100px;
+
     .process-content {
       height: 550px;
     }
 
     #logo-type {
-      margin-bottom: 100px;
+      margin-bottom: $margin-bottom-default;
 
       #cards {
-        margin-bottom: 100px;
+        margin-bottom: $margin-bottom-default;
 
         li {
           img {
@@ -269,7 +272,7 @@
         display: block;
 
         li:nth-child(1) {
-          margin-bottom: 50px;
+          margin-bottom: 30px;
 
           h5 {
             margin-bottom: 10px;
@@ -299,22 +302,42 @@
   }
 
   @media screen and (max-width: 720px) {
+    $margin-bottom-default: 50px;
+
     .process-content {
       height: 500px;
+
+      h4 {
+        font-weight: 500;
+        font-size: 1.8rem;
+      }
     }
 
     #before-logo {
       height: 500px;
     }
 
+    #logo-design {
+      .visual {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+
     #logo-type {
       height: auto;
+      margin-bottom: $margin-bottom-default;
+
+      h4 {
+        margin-bottom: $margin-bottom-default;
+      }
 
       #cards {
         display: block;
+        margin-bottom: 10px;
 
         li {
-          margin-bottom: 50px;
+          margin-bottom: $margin-bottom-default;
         }
 
         img {
@@ -327,7 +350,7 @@
           div {
             &::before {
               float: none;
-              margin-bottom: 20px;
+              margin-bottom: 10px;
               width: 100%;
             }
 
@@ -339,6 +362,35 @@
               font-size: 1.4rem;
             }
           }
+        }
+      }
+    }
+  }
+
+  // Mobile L
+  @media screen and (max-width: 425px) {
+    .process-content {
+      padding-top: 50px;
+    }
+
+    #before-logo,
+    .process-content {
+      height: 400px;
+    }
+
+    #symbol img {
+      max-width: 180px;
+      max-height: 180px;
+    }
+
+    #color-system {
+      h5 {
+        font-size: 1.6rem;
+      }
+
+      .color-wrap {
+        div::before {
+          height: 120px;
         }
       }
     }
