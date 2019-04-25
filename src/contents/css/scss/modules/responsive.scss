@@ -4,6 +4,20 @@
 // <= 425
 // >= 320
 // PC
+@media screen and (max-width: 1440px) {
+  .projects-detail {
+    .description {
+      p {
+        text-align: left;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1149px) {
   #page-home {
     width: calc(100vw - 10vw);
@@ -24,7 +38,6 @@
 
 @media screen and (max-width: 1024px) {
   .projects-detail {
-    .description,
     .content {
       p {
         text-align: left;
