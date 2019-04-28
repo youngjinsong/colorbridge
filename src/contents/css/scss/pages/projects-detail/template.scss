@@ -6,6 +6,10 @@ $strong-color: #222;
   width: 100%;
   color: $normal-color;
 
+  * {
+    letter-spacing: -0.4px;
+  }
+
   header {
     position: relative;
     margin-bottom: 80px;

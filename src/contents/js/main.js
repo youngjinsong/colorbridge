@@ -10,6 +10,7 @@ $(function() {
   var pageHandler = new PageHandler(that);
   var weeklyDrawing = new WeeklyDrawing(that);
   var projects = new Projects(that);
+  var utils = new Utils(that);
   var $win = $(window);
   var $body = $('body');
   var $btnTop = null;
@@ -86,6 +87,13 @@ $(function() {
   }
 
   /**
+   * DOM 환경 설정
+   */
+  function setEnv() {
+    $body.attr('data-os', utils.getOS().toLowerCase());
+  }
+
+  /**
    * 페이지 비동기 로드 완료 후 처리
    * @param url
    */
@@ -125,8 +133,9 @@ $(function() {
   }
 
   function init() {
-    that.loader.append($body);
+    setEnv();
     setYear($('#year'));
+    that.loader.append($body);
     pageHandler.init();
     pageHandler.loaded = onLoaded;
     appendTopButton($body);
