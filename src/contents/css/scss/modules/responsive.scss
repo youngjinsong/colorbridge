@@ -9,10 +9,6 @@
     .description {
       p {
         text-align: left;
-
-        br {
-          display: none;
-        }
       }
     }
   }
@@ -21,6 +17,14 @@
 @media screen and (max-width: 1149px) {
   #page-home {
     width: calc(100vw - 10vw);
+  }
+
+  #overview {
+    > div div {
+      br {
+        display: none;
+      }
+    }
   }
 
   .fixed-wrap {
@@ -32,6 +36,12 @@
   .projects-detail {
     section {
       margin-bottom: 120px;
+    }
+
+    .description {
+      br {
+        display: none;
+      }
     }
   }
 }
@@ -49,6 +59,16 @@
     }
   }
 }
+
+
+@media screen and (max-width: 850px) {
+  .fixed-wrap {
+    &.w850 {
+      width: 100%;
+    }
+  }
+}
+
 
 // Tablet
 @media screen and (max-width: 768px) {

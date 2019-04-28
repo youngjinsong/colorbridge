@@ -16,14 +16,22 @@
 
     li {
       flex-basis: 38.2%;
+      margin-bottom: 0;
 
       img {
         height: 100%;
       }
-    }
 
-    li:last-child {
-      flex-basis: 20%;
+      &:last-child {
+        flex-basis: 20%;
+      }
+    }
+  }
+
+  #concept {
+    li:nth-child(5),
+    li:nth-child(6) {
+      margin-bottom: 0;
     }
   }
 
