@@ -39,6 +39,12 @@ function getProjectList() {
      path: "lms",
      imageURL: "/contents/img/projects/lms@2x.jpg",
      description: "Product UI/UX Design, Web Design"
+    },
+    {
+      name: "MomTalk",
+      path: "momtalk",
+      imageURL: "/contents/img/projects/lms@2x.jpg",
+      description: "Responsive Web Design/Development"
     }
     // {
     //   name: "POP Reader",
@@ -51,12 +57,6 @@ function getProjectList() {
     //   path: "brc",
     //   imageURL: "/contents/img/projects/brc@2x.jpg",
     //   description: "Product UI/UX Design, Web/App Design"
-    // },
-    // {
-    //   name: "Mom Talk",
-    //   path: "momtalk",
-    //   imageURL: "/contents/img/projects/momtalk@2x.jpg",
-    //   description: "Responsive Web Design/Development"
     // },
     // {
     //   name: "Mobizen",
