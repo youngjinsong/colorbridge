@@ -1,11 +1,11 @@
 #momtalk {
   header {
     p, h2 {
-      color: #fff;
+      color: #222222;
     }
 
     &::after {
-      background-image: linear-gradient(to bottom, #6642dd, #885de9 44%, #718fe2);
+      background-color: #ffda03;
     }
   }
 }
