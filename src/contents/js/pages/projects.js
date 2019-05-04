@@ -14,14 +14,22 @@ function Projects() {
     var name = data.name;
     var path = data.path;
     var imageURL = data.imageURL;
+    var subtitle = data.type;
     var description = data.description;
+    var meta = data.date + ' · ' + data.role;
 
     return [
       '<li>',
         '<a href="#projects/' + path + '" title="' + name + '">',
-          '<span class="image-wrap"><img src="' + imageURL + '" alt="' + name + '" /></span>',
-          '<strong>' + name + '</strong>',
-          '<p>' + description + '</p>',
+          '<span class="image-wrap">',
+            '<img src="' + imageURL + '" alt="' + name + '" />',
+          '</span>',
+          '<span class="description-wrap">',
+            '<p class="meta">' + meta + '</p>',
+            '<strong class="title">' + name + '</strong>',
+            '<p class="subtitle">' + subtitle + '</p>',
+            '<p class="body">' + description + '</p>',
+          '</span>',
         '</a>',
       '</li>'
     ].join('\n');

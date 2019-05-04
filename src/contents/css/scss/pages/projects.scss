@@ -1,12 +1,10 @@
-.projects-list {
+
+// 카드타입은 페이지 네이션으로 사용됨
+.projects-list.card-view {
   li {
     float: left;
     margin-bottom: 60px;
     width: 48.7%;
-
-    &:nth-child(odd) {
-      margin-right: 2.6%;
-    }
 
     &:hover {
       img {
@@ -26,33 +24,209 @@
     font-size: 0;
     margin-bottom: 18px;
     overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      min-height: 100px;
+      transition: all 3s ease-out;
+    }
   }
 
-  img {
-    display: block;
-    width: 100%;
-    min-height: 100px;
-    transition: all 3s ease-out;
-  }
+  .description-wrap {
+    display: flex;
+    flex-direction: column;
 
-  strong {
-    margin-bottom: 5px;
-    color: #222;
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 24px;
-    text-transform: uppercase;
-  }
+    .meta {
+      font-size: 1.3rem;
+      color: #7D7D80;
+      order: 2;
+    }
 
-  p {
-    color: #999;
-    font-size: 1.3rem;
-    font-weight: 300;
+    .title {
+      color: #222;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 24px;
+      text-transform: uppercase;
+      order: 1;
+    }
+
+    .subtitle, .body {
+      display: none;
+    }
   }
 
   &:after {
     clear: both;
     display: block;
     content: "";
+  }
+
+
+  /*******************************************************************
+    반응형
+   *******************************************************************/
+  // PC samll, Mobile bic (작은 브라우저, 큰 스마트폰 화면에도 포함하기 위해 720이하로 적용)
+  @media screen and (max-width: 720px) {
+    li {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .image-wrap {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+// 가로 기본형으로 프로젝트 목록에서 사용됨.
+body[data-page="projects-list"] {
+  #content {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: #f2f3f5;
+  }
+}
+
+.projects-list.vertical-view {
+  li {
+    margin-bottom: 80px;
+    background: #fff;
+    transition: all 0.4s ease;
+
+    &:hover {
+      box-shadow: 0 10px 20px #c7cad1;
+      transform: translate(0, -5px);
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+
+    a {
+      display: flex;
+      text-decoration: none;
+      color: #646466;
+
+      > span {
+        display: inline-block;
+        width: 50%;
+      }
+    }
+
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    .description-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px 40px 80px 40px;
+      position: relative;
+
+      .meta {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        font-size: 1.3rem;
+        color: #7D7D80;
+      }
+
+      .title {
+        display: block;
+        font-size: 3.2rem;
+        color: #19191A;
+        text-transform: uppercase;
+      }
+
+      .subtitle {
+        margin-bottom: 24px;
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+
+      .body {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+
+
+  /*******************************************************************
+    반응형
+   *******************************************************************/
+  @media screen and (max-width: 1149px) {
+    li .description-wrap {
+      padding: 30px;
+
+      .meta {
+        top: 30px;
+        left: 30px;
+      }
+
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .subtitle {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  // Tablet
+  @media screen and (max-width: 768px) {
+    li {
+      margin-bottom: 60px;
+
+      .description-wrap {
+        padding: 20px;
+
+        .meta {
+          top: 20px;
+          left: 20px;
+        }
+
+        .title {
+          font-size: 2.3rem;
+        }
+      }
+    }
+  }
+
+
+  // PC samll, Mobile bic (작은 브라우저, 큰 스마트폰 화면에도 포함하기 위해 720이하로 적용)
+  @media screen and (max-width: 720px) {
+    li {
+      a {
+        display: block;
+
+        > span {
+          display: inline-block;
+          width: 100%;
+        }
+
+
+        .description-wrap {
+          .meta {
+            position: initial;
+            margin-bottom: 10px;
+          }
+
+          .title {
+            font-size: 2.3rem;
+            line-height: 1.5;
+          }
+
+          .subtitle {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
   }
 }

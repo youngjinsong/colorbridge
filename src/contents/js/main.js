@@ -119,7 +119,12 @@ $(function() {
         moveScrollTop(0);
       }
 
-      // 하단 페이지네이션
+      // 목록 스타일 처리를 위해 구분함
+      if (!isTwoDepth) {
+        $body.attr('data-page', 'projects-list');
+      }
+
+      // 페이지네이션
       projects.init({
         $appendTarget: $('.projects-list'),
         renderType: isTwoDepth ? "pagination" : "all",

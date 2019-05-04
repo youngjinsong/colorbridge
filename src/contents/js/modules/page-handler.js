@@ -6,6 +6,7 @@ function PageHandler(parent) {
   console.log('Loaded PageHandler');
 
   var that = this;
+  var $body = $('body');
   var $content = $('#content');
   var $menus = $('#menus');
 
@@ -16,6 +17,7 @@ function PageHandler(parent) {
   function setFocusMenu(name) {
     console.log('setFocusMenu', arguments);
 
+    $body.attr('data-page', name);
     $menus.find('.selected').removeClass('selected');
     $menus.find('a[href*="' + name + '"]').addClass('selected');
     $('title').html('COLOR BRIDGE - ' + name.replace('-', ' '));

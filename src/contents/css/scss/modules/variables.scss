@@ -1,3 +1,9 @@
 $minCalcHeight: calc(100vh - 215px);
 $minHeight: 400px;
 $activeFontColor: #4a90e2;
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
