@@ -18,8 +18,8 @@ function getProjectList() {
       name: "ReBranding",
       path: "rebranding",
       imageURL: "/contents/img/projects/readingand@2x.png",
-      date: "2016.03 ~ 2018.04",
-      role: "BX Graphic Design",
+      date: "2019.01 ~ 2019.03",
+      role: "BX Design",
       type: "Logo Design",
       description: "EBS 리딩클럽 서비스가 국내 시장 외 해외 시장으로 서비스를 확장함에 따라 사용자가 쉽게 인지할 수 있고, " +
       "주목도 있는 브랜드로 도약하기 위한 리브랜딩 작업을 진행했습니다."
@@ -28,7 +28,7 @@ function getProjectList() {
       name: "iPortfolio",
       path: "iportfolio",
       imageURL: "/contents/img/projects/ipf@2x.jpg",
-      date: "2016.03 ~ 2018.04",
+      date: "2018.05 ~ 2018.09",
       role: "Web Design, Development",
       type: "Responsive Web Design",
       description: "회사 브랜드 사이트가 오래전에 개발된 상태로 외부에 공개되는 게 줄곧 신경이 쓰여 작업을 시작하게 되었습니다. " +
@@ -38,7 +38,7 @@ function getProjectList() {
       name: "English Road App",
       path: "era",
       imageURL: "/contents/img/projects/era@2x.jpg",
-      date: "2016.03 ~ 2018.04",
+      date: "2016.12 ~ 2017.02",
       role: "Product UI/UX Design",
       type: "App Design",
       description: "멀리맘 앱은 연령별로 선정된 도서들을 분석해 성장기에 맞춘 자녀에게 도서를 추천하는 큐레이션 서비스 입니다. " +
@@ -48,7 +48,7 @@ function getProjectList() {
       name: "AR",
       path: "ar",
       imageURL: "/contents/img/projects/ar@2x.jpg",
-      date: "2016.03 ~ 2018.04",
+      date: "2018.01 ~ 2018.05",
       role: "Product UI/UX Design",
       type: "App Design",
       description: "EBS 리딩클럽의 서비스에 AR 기능을 적용한 파일럿 버전입니다. " +
@@ -58,21 +58,21 @@ function getProjectList() {
       name: "Learning Management System",
       path: "lms",
       imageURL: "/contents/img/projects/lms@2x.jpg",
-      date: "2016.03 ~ 2018.04",
+      date: "2018.10 ~ 2019.03",
       role: "Product UI/UX Design",
       type: "Web Design",
       description: "EBS 리딩클럽의 B2B를 위한 시스템입니다. 교육기관의 학생들과 관리자에게 필요한 다양한 학습 콘텐츠, 학습 자원을 제공합니다. " +
       "또 학생들의 학습 과정 관리를 도와 관리자가 진행 상황 파악이 쉽게 도와줍니다."
     },
-    {
-      name: "MomTalk",
-      path: "momtalk",
-      imageURL: "/contents/img/projects/lms@2x.jpg",
-      date: "2016.03 ~ 2018.04",
-      role: "Product UI/UX Design",
-      type: "App Design",
-      description: "부모를 위한 서비스인 Momtalk에 대한 Web, App 서비스 디자인을 진행했습니다. " +
-      "신규 기능에 대해 디자인 하고 Momtalk의 메인 디자이너로 업무를 진행 했습니다. 보다 세분화된 목표에 대한 추천 시스템을 디자인 했습니다."
-    }
+    // {
+    //   name: "MomTalk",
+    //   path: "momtalk",
+    //   imageURL: "/contents/img/projects/lms@2x.jpg",
+    //   date: "2016.03 ~ 2018.04",
+    //   role: "Product UI/UX Design",
+    //   type: "App Design",
+    //   description: "부모를 위한 서비스인 Momtalk에 대한 Web, App 서비스 디자인을 진행했습니다. " +
+    //   "신규 기능에 대해 디자인 하고 Momtalk의 메인 디자이너로 업무를 진행 했습니다. 보다 세분화된 목표에 대한 추천 시스템을 디자인 했습니다."
+    // }
   ]
 }
