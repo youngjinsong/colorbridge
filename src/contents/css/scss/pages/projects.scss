@@ -240,3 +240,13 @@ body[data-page="projects-list"] {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  // 가로 기본형으로 프로젝트 목록에서 사용됨.
+  body[data-page="projects-list"] {
+    #content {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}

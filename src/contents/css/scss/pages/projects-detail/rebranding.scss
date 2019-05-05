@@ -248,11 +248,14 @@
   /*******************************************************************
     반응형
    *******************************************************************/
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     $margin-bottom-default: 100px;
 
-    .process-content {
-      height: 550px;
+    #logo-design {
+      .visual {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
     }
 
     #logo-type {
@@ -292,13 +295,12 @@
           p strong {
             width: 50px;
           }
-        }
-      }
-    }
 
-    #motif {
-      .description p {
-        text-align: left;
+          div:nth-child(3),
+          div:nth-child(4) {
+            margin-bottom: 0;
+          }
+        }
       }
     }
 
@@ -307,6 +309,22 @@
 
       li {
         height: 25vw;
+
+        img {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .process-content {
+      height: 550px;
+    }
+
+    #motif {
+      .description p {
+        text-align: left;
       }
     }
   }
@@ -325,13 +343,6 @@
 
     #before-logo {
       height: 500px;
-    }
-
-    #logo-design {
-      .visual {
-        padding-top: 30px;
-        padding-bottom: 30px;
-      }
     }
 
     #logo-type {
@@ -401,6 +412,15 @@
       .color-wrap {
         div::before {
           height: 120px;
+        }
+      }
+    }
+
+    #tails {
+      li {
+
+        img {
+          max-width: 100px;
         }
       }
     }

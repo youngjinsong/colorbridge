@@ -23,14 +23,14 @@ $strong-color: #222;
 
     p {
       font-size: 2.4rem;
-      font-weight: bold;
+      font-weight: 500;
       color: $strong-color;
     }
 
     h2 {
       display: block;
       margin-bottom: 82px;
-      font-size: 6.8rem;
+      font-size: 6rem;
       color: $strong-color;
       line-height: 1.2;
     }
@@ -108,7 +108,7 @@ $strong-color: #222;
   footer {
     h3 {
       margin-bottom: 10px;
-      font-size: 2.4rem;
+      font-size: 1.8rem;
     }
   }
 }
