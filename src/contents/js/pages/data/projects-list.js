@@ -11,7 +11,7 @@ function getProjectList() {
       date: "2016.03 ~ 2018.04",
       role: "Product UI/UX Design",
       type: "Web/App Design",
-      description: "iPortfolio에서 가장 기여를 많이한 프로젝트로 자사 대표 서비스의 UX/UI 디자인 업무를 진행했습니다.\n" +
+      description: "iPortfolio에서 가장 기여를 많이한 프로젝트로 자사 대표 서비스의 UX/UI 디자인 업무를 진행했습니다. " +
       "EBS 리딩클럽은 iOS, Android, Web을 제공하고 있는 멀티 플랫폼 서비스입니다."
     },
     {
@@ -21,7 +21,7 @@ function getProjectList() {
       date: "2016.03 ~ 2018.04",
       role: "BX Graphic Design",
       type: "Logo Design",
-      description: "EBS 리딩클럽 서비스가 국내 시장 외 해외 시장으로 서비스를 확장함에 따라 사용자가 쉽게 인지할 수 있고,\n" +
+      description: "EBS 리딩클럽 서비스가 국내 시장 외 해외 시장으로 서비스를 확장함에 따라 사용자가 쉽게 인지할 수 있고, " +
       "주목도 있는 브랜드로 도약하기 위한 리브랜딩 작업을 진행했습니다."
     },
     {
@@ -29,9 +29,9 @@ function getProjectList() {
       path: "iportfolio",
       imageURL: "/contents/img/projects/ipf@2x.jpg",
       date: "2016.03 ~ 2018.04",
-      role: "Design, Development",
+      role: "Web Design, Development",
       type: "Responsive Web Design",
-      description: "회사 브랜드 사이트가 오래전에 개발된 상태로 외부에 공개되는 게 줄곧 신경이 쓰여 작업을 시작하게 되었습니다.\n" +
+      description: "회사 브랜드 사이트가 오래전에 개발된 상태로 외부에 공개되는 게 줄곧 신경이 쓰여 작업을 시작하게 되었습니다. " +
       "서비스 아이덴티티와 화면에 대한 디자인 리뉴얼, 개발을 함께 진행했습니다."
     },
     {
@@ -41,7 +41,7 @@ function getProjectList() {
       date: "2016.03 ~ 2018.04",
       role: "Product UI/UX Design",
       type: "App Design",
-      description: "멀리맘 앱은 연령별로 선정된 도서들을 분석해 성장기에 맞춘 자녀에게 도서를 추천하는 큐레이션 서비스 입니다.\n" +
+      description: "멀리맘 앱은 연령별로 선정된 도서들을 분석해 성장기에 맞춘 자녀에게 도서를 추천하는 큐레이션 서비스 입니다. " +
       "메인 디자이너로서 안드로이드 화면 설계 및 UI, 로고 디자인, 사용자 인터페이스 디자인 및 프로토타이핑을 진행했습니다."
     },
     {
@@ -50,8 +50,9 @@ function getProjectList() {
       imageURL: "/contents/img/projects/ar@2x.jpg",
       date: "2016.03 ~ 2018.04",
       role: "Product UI/UX Design",
-      type: "iOS Design",
-      description: "EBS 리딩클럽의 서비스에 AR 기능을 적용한 파일럿 버전입니다. 회사에서는 매년 2~3회 해외 전시를 참가합니다. 그 중 2018년 상반기 영국과 일본에서의 시연을 위해 작업을 진행했습니다."
+      type: "App Design",
+      description: "EBS 리딩클럽의 서비스에 AR 기능을 적용한 파일럿 버전입니다. " +
+      "회사에서는 매년 2~3회 해외 전시를 참가합니다. 그 중 2018년 상반기 영국과 일본에서의 시연을 위해 작업을 진행했습니다."
     },
     {
       name: "Learning Management System",
@@ -60,8 +61,7 @@ function getProjectList() {
       date: "2016.03 ~ 2018.04",
       role: "Product UI/UX Design",
       type: "Web Design",
-      description: "\n" +
-      "EBS 리딩클럽의 B2B를 위한 시스템입니다. 교육기관의 학생들과 관리자에게 필요한 다양한 학습 콘텐츠, 학습 자원을 제공합니다.\n" +
+      description: "EBS 리딩클럽의 B2B를 위한 시스템입니다. 교육기관의 학생들과 관리자에게 필요한 다양한 학습 콘텐츠, 학습 자원을 제공합니다. " +
       "또 학생들의 학습 과정 관리를 도와 관리자가 진행 상황 파악이 쉽게 도와줍니다."
     },
     {
@@ -69,9 +69,10 @@ function getProjectList() {
       path: "momtalk",
       imageURL: "/contents/img/projects/lms@2x.jpg",
       date: "2016.03 ~ 2018.04",
-      role: "Design, Development",
-      type: "Responsive Web Design",
-      description: "EBS 리딩클럽의 서비스에 AR 기능을 적용한 파일럿 버전입니다. 회사에서는 매년 2~3회 해외 전시를 참가합니다. 그 중 2018년 상반기 영국과 일본에서의 시연을 위해 작업을 진행했습니다."
+      role: "Product UI/UX Design",
+      type: "App Design",
+      description: "부모를 위한 서비스인 Momtalk에 대한 Web, App 서비스 디자인을 진행했습니다. " +
+      "신규 기능에 대해 디자인 하고 Momtalk의 메인 디자이너로 업무를 진행 했습니다. 보다 세분화된 목표에 대한 추천 시스템을 디자인 했습니다."
     }
   ]
 }
