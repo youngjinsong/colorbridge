@@ -82,6 +82,10 @@
 
 // 가로 기본형으로 프로젝트 목록에서 사용됨.
 body[data-page="projects-list"] {
+  #gnb {
+    margin-bottom: 40px;
+  }
+
   #content {
     padding-top: 80px;
     padding-bottom: 80px;
