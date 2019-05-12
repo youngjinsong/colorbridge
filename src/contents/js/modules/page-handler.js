@@ -24,6 +24,18 @@ function PageHandler(parent) {
   }
 
   /**
+   * 동적으로 호출하는 페이지를 GA 트레킹한다.
+   * @param page
+   */
+  function sendGA(page) {
+    if (page.match('home')) {
+      return false;
+    }
+    ga('send', 'pageview', { page: page });
+    console.log('sendGA', page);
+  }
+
+  /**
    * 페이지 호출 처리
    * @param url
    */
@@ -34,6 +46,7 @@ function PageHandler(parent) {
       $content.html(data);
       that.loaded(url);
       hideLoaderPending(url, 200);
+      sendGA(url.split('/views/')[1].replace('.html', ''));
     });
   }
 
