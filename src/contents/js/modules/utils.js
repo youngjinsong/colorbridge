@@ -28,4 +28,3 @@ function Utils() {
 
   this.getOS = getOS;
 }
-

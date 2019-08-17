@@ -22,9 +22,12 @@ $(function() {
    */
   function moveScrollTop(top, hasAnimation) {
     if (hasAnimation) {
-      $("html, body").animate({
-        scrollTop: top
-      }, 500);
+      $('html, body').animate(
+        {
+          scrollTop: top,
+        },
+        500
+      );
     } else {
       $win.scrollTop(top);
     }
@@ -63,8 +66,8 @@ $(function() {
     var v3 = document.querySelectorAll('.sa-v3');
 
     SR.reveal(v1, { delay: 100, distance: '30px' });
-    SR.reveal(v2, { delay: 300, distance: '80px'});
-    SR.reveal(v3, { delay: 500, distance: '100px'});
+    SR.reveal(v2, { delay: 300, distance: '80px' });
+    SR.reveal(v3, { delay: 500, distance: '100px' });
   }
 
   /**
@@ -127,8 +130,8 @@ $(function() {
       // 페이지네이션
       projects.init({
         $appendTarget: $('.projects-list'),
-        renderType: isTwoDepth ? "pagination" : "all",
-        currentPage: currentPage
+        renderType: isTwoDepth ? 'pagination' : 'all',
+        currentPage: currentPage,
       });
     }
 

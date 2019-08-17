@@ -2,6 +2,4 @@
  * ScrollHandler
  * @constructor
  */
-function ScrollHandler() {
-
-}
+function ScrollHandler() {}

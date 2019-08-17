@@ -1,6 +1,6 @@
 #page-about {
-
-  h1, h2 {
+  h1,
+  h2 {
     //font-family: "chosin";
   }
 
@@ -104,25 +104,55 @@
         border: solid 1px #eeeeee;
         border-radius: 2px;
 
-        background: url("/contents/img/about/skills.png") no-repeat 0 0;
+        background: url('/contents/img/about/skills.png') no-repeat 0 0;
         background-size: 724px 153px;
 
-        &.sketch        { background-position: 0 0; }
-        &.zeplin        { background-position: -83px 0; }
-        &.invision      { background-position: -164px 0; }
-        &.principle     { background-position: -244px 0; }
-        &.illustrator   { background-position: -325px 0; }
-        &.photoshop     { background-position: -406px 0; }
-        &.after-effect  { background-position: -487px 0; }
-        &.premiere      { background-position: -568px 0; }
-        &.indesign      { background-position: -649px 0; }
+        &.sketch {
+          background-position: 0 0;
+        }
+        &.zeplin {
+          background-position: -83px 0;
+        }
+        &.invision {
+          background-position: -164px 0;
+        }
+        &.principle {
+          background-position: -244px 0;
+        }
+        &.illustrator {
+          background-position: -325px 0;
+        }
+        &.photoshop {
+          background-position: -406px 0;
+        }
+        &.after-effect {
+          background-position: -487px 0;
+        }
+        &.premiere {
+          background-position: -568px 0;
+        }
+        &.indesign {
+          background-position: -649px 0;
+        }
 
-        &.html5         { background-position: 0 -81px; }
-        &.css3          { background-position: -83px -81px; }
-        &.sass          { background-position: -164px -81px; }
-        &.javascript    { background-position: -244px -81px; }
-        &.jquery        { background-position: -325px -81px; }
-        &.git           { background-position: -406px -81px; }
+        &.html5 {
+          background-position: 0 -81px;
+        }
+        &.css3 {
+          background-position: -83px -81px;
+        }
+        &.sass {
+          background-position: -164px -81px;
+        }
+        &.javascript {
+          background-position: -244px -81px;
+        }
+        &.jquery {
+          background-position: -325px -81px;
+        }
+        &.git {
+          background-position: -406px -81px;
+        }
       }
 
       p {

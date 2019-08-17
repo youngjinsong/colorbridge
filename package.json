@@ -1,32 +1,35 @@
 {
-	"name": "colorbridge",
-	"version": "2.2.1",
-	"author": "ssongki",
-	"description": "personal site",
-	"homepage": "http://colorbridge.co.kr",
-	"devDependencies": {
-		"browser-sync": "^2.24.4",
-		"gulp": "^3.9.1",
-		"gulp-autoprefixer": "^5.0.0",
-		"gulp-changed": "^3.2.0",
-		"gulp-clean": "^0.4.0",
-		"gulp-clean-css": "^3.9.4",
-		"gulp-concat": "^2.6.1",
-		"gulp-header": "^2.0.7",
-		"gulp-imagemin": "^4.1.0",
-		"gulp-inject": "^4.3.2",
-		"gulp-rename": "^1.4.0",
-		"gulp-sass": "^4.0.1",
-		"gulp-sourcemaps": "^2.6.4",
-		"gulp-uglify": "^3.0.2",
-		"run-sequence": "^2.2.1"
-	},
-	"main": "gulpfile.js",
-	"scripts": {
-		"start": "gulp",
-		"build": "gulp build-all",
-		"build-img": "gulp build-img",
-		"deploy": "git subtree push --prefix build origin gh-pages",
-		"deploy-force": "git push origin `git subtree split --prefix build master`:gh-pages --force"
-	}
+  "name": "colorbridge",
+  "version": "2.2.2",
+  "author": "ssongki",
+  "description": "personal site",
+  "homepage": "http://colorbridge.co.kr",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.7",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-inject": "^4.3.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.2",
+    "run-sequence": "^2.2.1"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build-all",
+    "build-img": "gulp build-img",
+    "deploy": "git subtree push --prefix build origin gh-pages",
+    "deploy-force": "git push origin `git subtree split --prefix build master`:gh-pages --force"
+  },
+  "dependencies": {
+    "natives": "^1.1.6"
+  }
 }

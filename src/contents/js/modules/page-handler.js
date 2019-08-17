@@ -82,7 +82,6 @@ function PageHandler(parent) {
 
       setFocusMenu(menuName);
       getPage(viewPath);
-
     } else if (location.pathname === '/') {
       getPage('/views/home.html');
     } else {

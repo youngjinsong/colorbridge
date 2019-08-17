@@ -20,18 +20,18 @@ function Projects() {
 
     return [
       '<li>',
-        '<a href="#projects/' + path + '" title="' + name + '">',
-          '<span class="image-wrap">',
-            '<img src="' + imageURL + '" alt="' + name + '" />',
-          '</span>',
-          '<span class="description-wrap">',
-            '<p class="meta">' + meta + '</p>',
-            '<strong class="title">' + name + '</strong>',
-            '<p class="subtitle">' + subtitle + '</p>',
-            '<p class="body">' + description + '</p>',
-          '</span>',
-        '</a>',
-      '</li>'
+      '<a href="#projects/' + path + '" title="' + name + '">',
+      '<span class="image-wrap">',
+      '<img src="' + imageURL + '" alt="' + name + '" />',
+      '</span>',
+      '<span class="description-wrap">',
+      '<p class="meta">' + meta + '</p>',
+      '<strong class="title">' + name + '</strong>',
+      '<p class="subtitle">' + subtitle + '</p>',
+      '<p class="body">' + description + '</p>',
+      '</span>',
+      '</a>',
+      '</li>',
     ].join('\n');
   }
 
@@ -47,7 +47,7 @@ function Projects() {
       listHTML += getTemplate(data);
     });
 
-    return $target.html("<ul>" + listHTML + "</ul>");
+    return $target.html('<ul>' + listHTML + '</ul>');
   }
 
   /**
@@ -86,13 +86,13 @@ function Projects() {
         indexArr.push(insertedIndex + i);
       }
       // 마지막 (-3, -2, -1)
-    } else if (insertedIndex === (arr.length - 1)) {
+    } else if (insertedIndex === arr.length - 1) {
       startIndex = -3;
       for (var i = startIndex; i <= startIndex + (length - 1); i++) {
         indexArr.push(insertedIndex + i);
       }
       // 마지막에서 두번째 (-2, -1, 1)
-    } else if (insertedIndex === (arr.length - 2)) {
+    } else if (insertedIndex === arr.length - 2) {
       startIndex = -2;
       for (var i = startIndex; i <= startIndex + length; i++) {
         if (i !== 0) {
@@ -127,7 +127,7 @@ function Projects() {
     if (renderType === 'all') {
       renderList($target, list);
 
-    // 페이지네이션
+      // 페이지네이션
     } else {
       var index = findIndex(list, currentPage);
       var data = filterData(list, index);
@@ -136,6 +136,6 @@ function Projects() {
   }
 
   $.extend(this, {
-    init: init
+    init: init,
   });
 }
