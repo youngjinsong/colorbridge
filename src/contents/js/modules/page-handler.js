@@ -17,10 +17,18 @@ function PageHandler(parent) {
   function setFocusMenu(name) {
     console.log('setFocusMenu', arguments);
 
-    $body.attr('data-page', name);
     $menus.find('.selected').removeClass('selected');
     $menus.find('a[href*="' + name + '"]').addClass('selected');
     $('title').html('COLOR BRIDGE - ' + name.replace('-', ' '));
+  }
+
+  /**
+   * 바디에 data-page 속성 추가
+   * @param {*} name
+   */
+  function setPageNameToBody(name) {
+    console.log('setPageNameToBody', arguments);
+    $body.attr('data-page', name);
   }
 
   /**
@@ -80,10 +88,12 @@ function PageHandler(parent) {
         menuName = menuName.split('/')[0];
       }
 
-      setFocusMenu(menuName);
       getPage(viewPath);
+      setFocusMenu(menuName);
+      setPageNameToBody(menuName);
     } else if (location.pathname === '/') {
       getPage('/views/home.html');
+      setPageNameToBody('home');
     } else {
       $('#bi').click();
     }

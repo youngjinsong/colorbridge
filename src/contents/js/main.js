@@ -71,7 +71,7 @@ $(function() {
   }
 
   /**
-   * 테마 변경
+   * 컨텐츠 영역의 테마값을 기준으로 body 테마 변경
    * @param $target
    */
   function changeThema($target) {
@@ -135,7 +135,7 @@ $(function() {
       });
     }
 
-    changeThema($body.find('.projects-detail'));
+    changeThema($body.find('[data-thema]'));
     setTimeout(bindScrollReveal, 10);
     onScroll();
   }
