@@ -18,4 +18,8 @@ body[data-page='home'] {
   #site-footer {
     color: rgba(255, 255, 255, 0.6);
   }
+
+  &[data-os='win'] {
+    background-color: #0e1a3a;
+  }
 }
