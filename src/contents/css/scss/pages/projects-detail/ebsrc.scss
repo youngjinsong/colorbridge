@@ -65,39 +65,42 @@
     .pieces {
       display: flex;
       justify-content: space-between;
+      color: #666;
 
       & > div {
-        flex-basis: 50%;
+        flex-basis: 33%;
       }
 
       h5 {
-        font-size: 3rem;
-        font-weight: 500;
-        margin-bottom: 30px;
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 15px;
       }
     }
 
     #concept-color {
-      padding-right: 20px;
-
       ul {
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
       }
 
       li {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        font-weight: 500;
         text-transform: uppercase;
+        margin-bottom: 25px;
 
         &::before {
           display: block;
-          content: "";
+          content: '';
           margin-right: 15px;
-          margin-bottom: 7px;
-          width: 100px;
-          height: 100px;
+          margin-bottom: 4px;
+          width: 60px;
+          height: 60px;
           background-color: #78cd13;
-          border: solid 1px #eee;
+          border: solid 1px rgba(0, 0, 0, 0.03);
+          border-radius: 6px;
         }
 
         &:nth-child(2) {
@@ -108,31 +111,64 @@
 
         &:nth-child(3) {
           &::before {
-            background-color: #fff;
+            background-color: #ff4141;
           }
         }
 
         &:nth-child(4) {
           &::before {
-            background-color: #bcab74;
+            background-color: #92cd33;
+          }
+        }
+
+        &:nth-child(5) {
+          &::before {
+            background-color: #e59708;
+          }
+        }
+
+        &:nth-child(6) {
+          &::before {
+            background-color: #666666;
+          }
+        }
+
+        &:nth-child(7) {
+          &::before {
+            background-color: #114dba;
+          }
+        }
+
+        &:nth-child(8) {
+          &::before {
+            background-color: #fdfdfd;
           }
         }
       }
     }
 
     #concept-font {
-      li {
+      margin-left: 85px;
+      margin-right: 85px;
+
+      h6,
+      p {
+        color: #222;
+        font-weight: 300;
+      }
+
+      h6 {
+        margin-bottom: 18px;
+        font-size: 2rem;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      p {
         margin-bottom: 20px;
-        text-align: left;
-        font-size: 1.8rem;
-      }
-
-      li:nth-child(2) {
-        font-weight: 500;
-      }
-
-      li:nth-child(3) {
-        font-weight: 800;
+        font-size: 3rem;
+        word-break: break-all;
+        line-height: 1.4;
       }
     }
   }
@@ -182,7 +218,7 @@
     }
 
     #bookshelf .content,
-    #attendance .content  {
+    #attendance .content {
       margin-bottom: 50px;
     }
 
@@ -237,7 +273,6 @@
       }
     }
   }
-
 
   /*******************************************************************
     반응형
@@ -428,4 +463,3 @@
     }
   }
 }
-
