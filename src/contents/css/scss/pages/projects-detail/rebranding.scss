@@ -153,7 +153,7 @@
 
         &::before {
           float: left;
-          content: "";
+          content: '';
           display: block;
           width: 141px;
           height: 141px;
@@ -194,7 +194,7 @@
         p {
           strong {
             display: inline-block;
-            width: 80px;
+            width: 70px;
           }
         }
       }
@@ -243,7 +243,6 @@
       }
     }
   }
-
 
   /*******************************************************************
     반응형
@@ -418,7 +417,6 @@
 
     #tails {
       li {
-
         img {
           max-width: 100px;
         }
