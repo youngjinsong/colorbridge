@@ -1,6 +1,7 @@
 #lms {
   header {
-    p, h2 {
+    p,
+    h2 {
       color: #fff;
     }
 
@@ -26,7 +27,7 @@
   .main-visual {
     padding-bottom: 170px;
     text-align: center;
-    background-image: url("/contents/img/projects/lms/bg-pattern1.png");
+    background-image: url('/contents/img/projects/lms/bg-pattern1.png');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: contain;
@@ -55,7 +56,7 @@
 
   .features {
     padding-bottom: 170px;
-    background-image: url("/contents/img/projects/lms/bg-pattern2.png");
+    background-image: url('/contents/img/projects/lms/bg-pattern2.png');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
@@ -123,7 +124,7 @@
           &:nth-child(1) {
             flex-basis: 50%;
             margin-right: 0;
-            order: 1
+            order: 1;
           }
         }
       }
@@ -133,22 +134,124 @@
       }
     }
   }
-}
 
-/*******************************************************************
-  반응형
- *******************************************************************/
-@media screen and (max-width: 1439px) {
-  .fixed-wrap {
-    padding-left: 20px;
-    padding-right: 20px;
+  #style-guide {
+    padding-top: 80px;
+    padding-bottom: 0;
+    background-image: none;
 
-    &.w1440 {
-      width: 100%;
+    .piece:nth-child(1) {
+      padding-right: 86px;
+    }
+
+    dl {
+      margin-bottom: 70px;
+    }
+
+    dt {
+      margin-bottom: 20px;
+
+      h4 {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 1;
+        text-transform: unset;
+      }
+    }
+
+    dl:nth-child(1) {
+      dd {
+        color: #fff;
+      }
     }
   }
 
-  #lms {
+  #typography {
+    dd {
+      p {
+        font-size: 2.6rem;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        word-break: break-all;
+      }
+    }
+  }
+
+  #icons {
+    img {
+      max-width: 450px;
+    }
+  }
+
+  #color {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      margin-right: 20px;
+      margin-bottom: 30px;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      width: 21%;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 75px;
+        margin-bottom: 10px;
+        background: #fff;
+      }
+
+      &:nth-child(1) {
+        &::before {
+          background: #2ea46b;
+        }
+      }
+      &:nth-child(2) {
+        &::before {
+          background: #1e2e44;
+        }
+      }
+      &:nth-child(3) {
+        &::before {
+          background: #80868b;
+        }
+      }
+      &:nth-child(4) {
+        &::before {
+          background: #468ee5;
+        }
+      }
+      &:nth-child(5) {
+        &::before {
+          background: #f78224;
+        }
+      }
+      &:nth-child(6) {
+        &::before {
+          background: #f14d4b;
+        }
+      }
+    }
+  }
+
+  /*******************************************************************
+    반응형
+  *******************************************************************/
+  @media screen and (max-width: 1439px) {
+    .fixed-wrap {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &.w1440 {
+        width: 100%;
+      }
+    }
+
     .main-visual {
       h2 {
         font-size: 7rem;
@@ -161,11 +264,35 @@
       }
     }
   }
-}
 
-// Tablet
-@media screen and (max-width: 768px) {
-  #lms {
+  @media screen and (max-width: 1024px) {
+    .piece2 {
+      display: block;
+    }
+
+    #style-guide {
+      .piece {
+        padding-right: 0 !important;
+      }
+    }
+
+    #color {
+      ul {
+        justify-content: space-between;
+      }
+      li {
+        margin-right: 0;
+        flex-basis: 31.5%;
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Tablet
+  @media screen and (max-width: 768px) {
     header h2 {
       font-size: 4.5rem;
     }
@@ -192,17 +319,15 @@
       }
     }
   }
-}
 
-// PC samll, Mobile bic (작은 브라우저, 큰 스마트폰 화면에도 포함하기 위해 720이하로 적용)
-@media screen and (max-width: 720px) {
-  #lms {
+  // PC samll, Mobile bic (작은 브라우저, 큰 스마트폰 화면에도 포함하기 위해 720이하로 적용)
+  @media screen and (max-width: 720px) {
     .main-visual {
       padding-bottom: 100px;
       margin-bottom: -1px;
 
       h2 {
-        font-size: 3rem;
+        font-size: 2.9rem;
       }
     }
 
@@ -219,7 +344,6 @@
             margin-bottom: 10px;
           }
         }
-
 
         h4 {
           margin: 0 0 10px;
@@ -239,6 +363,16 @@
             order: 0;
           }
         }
+      }
+    }
+
+    #style-guide {
+      dt h4 {
+        font-size: 2rem;
+      }
+
+      #typography p {
+        font-size: 2rem;
       }
     }
   }

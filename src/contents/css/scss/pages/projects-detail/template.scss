@@ -153,6 +153,23 @@ $strong-color: #222;
   }
 }
 
+.pieces {
+  display: flex;
+  justify-content: space-between;
+
+  &.piece2 {
+    .piece {
+      flex-basis: 50%;
+    }
+  }
+
+  &.piece3 {
+    .piece {
+      flex-basis: 33%;
+    }
+  }
+}
+
 .image-pieces {
   display: flex;
   flex-wrap: wrap;
