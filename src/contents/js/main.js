@@ -6,14 +6,15 @@
  */
 $(function() {
   this.loader = new Loader();
+  this.utils = new Utils(that);
   var that = this;
+  var utils = this.utils;
   var pageHandler = new PageHandler(that, {
     loaderPendingPage: /home|weekly-drawing/,
   });
   var home = new Home(that);
   var weeklyDrawing = new WeeklyDrawing(that);
   var projects = new Projects(that);
-  var utils = new Utils(that);
   var $win = $(window);
   var $body = $('body');
   var $btnTop = null;

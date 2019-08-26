@@ -3,7 +3,7 @@
  * @constructor
  */
 function Home(parent) {
-  console.log('Loaded Home', parent);
+  console.log('Loaded Home', parent, parent.utils.isDirtyBrowser);
 
   /**
    * 영상 백그라운드 컬러가 PC마다 그래픽 랜더링 차이로 달라서 영상의 BG 추출.
@@ -20,6 +20,7 @@ function Home(parent) {
     ctx.drawImage(video, 0, 0);
 
     var imgData = ctx.getImageData(0, 0, 2, 2).data;
+    // console.log('확인 imgData', ctx.getImageData(0, 0, 2, 2));
     return [imgData[0], imgData[1], imgData[2]];
   }
 
@@ -38,10 +39,18 @@ function Home(parent) {
     var video = document.getElementsByTagName('video')[0];
 
     video.onloadeddata = function() {
-      video.play();
       parent.loader.hide();
-      setBackgroundColor(getVideoBackgroundColor(video));
-      $('canvas').remove();
+
+      setTimeout(
+        function() {
+          var rgbArray = getVideoBackgroundColor(video);
+          if (rgbArray[0] > 0) {
+            setBackgroundColor(rgbArray);
+          }
+          $('canvas').remove();
+        },
+        parent.utils.isDirtyBrowser ? 100 : 0
+      );
     };
   }
 

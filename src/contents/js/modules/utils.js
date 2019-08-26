@@ -26,5 +26,9 @@ function Utils() {
     return os;
   }
 
+  // exports
+  this.isEdge = /MSIE|rv:11/i.test(navigator.userAgent);
+  this.isIE = /Edge\/\d./i.test(navigator.userAgent);
+  this.isDirtyBrowser = this.isEdge || this.isIE;
   this.getOS = getOS;
 }
