@@ -39,8 +39,6 @@ function Home(parent) {
     var video = document.getElementsByTagName('video')[0];
 
     video.onloadeddata = function() {
-      parent.loader.hide();
-
       setTimeout(
         function() {
           var rgbArray = getVideoBackgroundColor(video);
@@ -48,6 +46,7 @@ function Home(parent) {
             setBackgroundColor(rgbArray);
           }
           $('canvas').remove();
+          parent.loader.hide();
         },
         parent.utils.isDirtyBrowser ? 200 : 100
       );
