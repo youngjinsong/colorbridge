@@ -49,7 +49,7 @@ function Home(parent) {
           }
           $('canvas').remove();
         },
-        parent.utils.isDirtyBrowser ? 100 : 0
+        parent.utils.isDirtyBrowser ? 200 : 100
       );
     };
   }
