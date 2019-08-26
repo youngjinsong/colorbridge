@@ -7,7 +7,10 @@
 $(function() {
   this.loader = new Loader();
   var that = this;
-  var pageHandler = new PageHandler(that);
+  var pageHandler = new PageHandler(that, {
+    loaderPendingPage: /home|weekly-drawing/,
+  });
+  var home = new Home(that);
   var weeklyDrawing = new WeeklyDrawing(that);
   var projects = new Projects(that);
   var utils = new Utils(that);
@@ -108,7 +111,9 @@ $(function() {
       $body.addClass('loaded');
     }, 10);
 
-    if (url.match('weekly-drawing')) {
+    if (url.match('home')) {
+      home.init();
+    } else if (url.match('weekly-drawing')) {
       weeklyDrawing.init();
     } else if (url.match('projects')) {
       var isTwoDepth = false;
@@ -118,7 +123,6 @@ $(function() {
         isTwoDepth = true;
         currentPage = url.split('/views/projects/')[1];
         currentPage = currentPage.split('.html')[0];
-
         moveScrollTop(0);
       }
 

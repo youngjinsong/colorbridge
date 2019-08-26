@@ -7,6 +7,10 @@
   right: 0;
   z-index: 99;
   background: #fff;
+
+  body[data-page='home'] & {
+    background: #0d1a38;
+  }
 }
 
 .loading {
@@ -22,32 +26,32 @@
   animation: loading 1s ease-in-out infinite;
 }
 .loading-bar:nth-child(1) {
-  background-color: #FF3E49;
+  background-color: #ff3e49;
   animation-delay: 0;
 }
 .loading-bar:nth-child(2) {
-  background-color: #FF6B8E;
-  animation-delay: .18s;
+  background-color: #ff6b8e;
+  animation-delay: 0.18s;
 }
 .loading-bar:nth-child(3) {
-  background-color: #FEBF24;
+  background-color: #febf24;
   animation-delay: 0.27s;
 }
 .loading-bar:nth-child(4) {
-  background-color: #5F5DD3;
-  animation-delay: .37s;
+  background-color: #5f5dd3;
+  animation-delay: 0.37s;
 }
 .loading-bar:nth-child(5) {
-  background-color: #15CDFB;
-  animation-delay: .47s;
+  background-color: #15cdfb;
+  animation-delay: 0.47s;
 }
 .loading-bar:nth-child(6) {
-  background-color: #30EBC6;
-  animation-delay: .57s;
+  background-color: #30ebc6;
+  animation-delay: 0.57s;
 }
 .loading-bar:nth-child(7) {
-  background-color: #BFC3FC;
-  animation-delay: .67s;
+  background-color: #bfc3fc;
+  animation-delay: 0.67s;
 }
 @keyframes loading {
   0% {

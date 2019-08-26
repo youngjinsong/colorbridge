@@ -2,7 +2,7 @@
  * PageHandler
  * @constructor
  */
-function PageHandler(parent) {
+function PageHandler(parent, options) {
   console.log('Loaded PageHandler');
 
   var that = this;
@@ -65,7 +65,7 @@ function PageHandler(parent) {
    */
   function hideLoaderPending(url, timeout) {
     // 위클리 드로잉은 자체 로더 컨트롤
-    if (!url.match('weekly-drawing')) {
+    if (!url.match(options.loaderPendingPage)) {
       setTimeout(function() {
         parent.loader.hide();
       }, timeout);
