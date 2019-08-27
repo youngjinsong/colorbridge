@@ -29,7 +29,9 @@ function Home(parent) {
    * @param {} value
    */
   function setBackgroundColor(value) {
-    $('head').append('<style>body[data-os=win][data-page=home] { background: rgb(' + value + ') !important; }</style>');
+    $('head').append(
+      '<style>body[data-page=home]:not([data-os=mac]) { background: rgb(' + value + ') !important; }</style>'
+    );
   }
 
   /**
