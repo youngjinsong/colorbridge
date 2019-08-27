@@ -29,7 +29,7 @@ function Home(parent) {
    * @param {} value
    */
   function setBackgroundColor(value) {
-    $('head').append('<style>body[data-page=home] { background: rgb(' + value + ') !important; }</style>');
+    $('head').append('<style>body[data-os=win][data-page=home] { background: rgb(' + value + ') !important; }</style>');
   }
 
   /**
@@ -48,7 +48,7 @@ function Home(parent) {
           $('canvas').remove();
           parent.loader.hide();
         },
-        parent.utils.isDirtyBrowser ? 200 : 100
+        parent.utils.isDirtyBrowser ? 200 : 10
       );
     };
   }
