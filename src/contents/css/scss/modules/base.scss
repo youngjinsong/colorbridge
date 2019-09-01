@@ -15,7 +15,7 @@
     flex-basis: 32%;
     height: 28px;
     color: #222;
-    background: url("/contents/img/logo.svg") no-repeat 0 center;
+    background: url('/contents/img/logo.svg') no-repeat 0 center;
     font-size: 0;
     font-weight: bold;
     text-decoration: none;
@@ -32,7 +32,7 @@
       text-align: center;
 
       &.selected {
-        color: $activeFontColor;
+        color: $linkFontColor;
         font-weight: 500;
       }
     }
@@ -71,7 +71,8 @@
   position: relative;
   z-index: 100;
 
-  div, nav {
+  div,
+  nav {
     flex-basis: 50%;
   }
 
@@ -81,6 +82,7 @@
 
     a {
       margin-right: 15px;
+      opacity: 0.9;
     }
   }
 
@@ -98,7 +100,7 @@
   width: 56px;
   height: 40px;
   background: #000;
-  box-shadow: 0 14px 33px rgba(0,0,0,0.6);
+  box-shadow: 0 14px 33px rgba(0, 0, 0, 0.6);
   text-align: center;
   font-size: 1.2rem;
   color: #fff;
@@ -138,17 +140,17 @@
 .thema-white {
   #gnb {
     #bi {
-      background-image: url("/contents/img/logo-wh.svg");
+      background-image: url('/contents/img/logo-wh.svg');
     }
     #menus a {
       color: #fff;
     }
-
   }
 }
 
 // for page scroll animation
-.sa-v1, .sa-v2 {
+.sa-v1,
+.sa-v2 {
   visibility: hidden;
 }
 
