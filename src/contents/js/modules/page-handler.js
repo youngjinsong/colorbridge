@@ -65,7 +65,7 @@ function PageHandler(parent, options) {
    */
   function hideLoaderPending(url, timeout) {
     // 위클리 드로잉은 자체 로더 컨트롤
-    if (!url.match(options.loaderPendingPage)) {
+    if (!url.match(options.selfLoaderHandlePage)) {
       setTimeout(function() {
         parent.loader.hide();
       }, timeout);

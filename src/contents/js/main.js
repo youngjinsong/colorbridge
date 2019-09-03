@@ -10,7 +10,7 @@ $(function() {
   var that = this;
   var utils = this.utils;
   var pageHandler = new PageHandler(that, {
-    loaderPendingPage: /home|weekly-drawing/,
+    selfLoaderHandlePage: /home|weekly-drawing/,
   });
   var home = new Home(that);
   var weeklyDrawing = new WeeklyDrawing(that);
