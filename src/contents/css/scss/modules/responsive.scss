@@ -15,10 +15,6 @@
 }
 
 @media screen and (max-width: 1149px) {
-  #page-home {
-    width: calc(100vw - 10vw);
-  }
-
   #overview {
     > div div {
       br {
@@ -60,7 +56,6 @@
   }
 }
 
-
 @media screen and (max-width: 850px) {
   .fixed-wrap {
     &.w850 {
@@ -68,7 +63,6 @@
     }
   }
 }
-
 
 // Tablet
 @media screen and (max-width: 768px) {
@@ -125,7 +119,6 @@
       display: flex;
       justify-content: space-around;
 
-
       li {
         margin: 0;
         flex-basis: 24%;
@@ -148,7 +141,8 @@
     margin-bottom: 10px;
     height: 50px;
 
-    div, nav {
+    div,
+    nav {
       display: block;
       width: 100%;
       position: absolute;
@@ -167,11 +161,6 @@
     div {
       bottom: 0;
     }
-  }
-
-  // 메인
-  #page-home {
-    background-position-y: 10%;
   }
 
   // 프로젝트 상세
@@ -222,7 +211,8 @@
         font-size: 1.4rem;
       }
 
-      dt, h1 {
+      dt,
+      h1 {
         font-size: 1.4rem;
       }
 
