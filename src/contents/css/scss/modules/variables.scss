@@ -2,6 +2,7 @@ $minCalcHeight: calc(100vh - 215px);
 $minHeight: 400px;
 // $linkFontColor: #4a90e2;
 $linkFontColor: #2c59e8;
+$serif: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 
 @mixin ellipsis {
   text-overflow: ellipsis;

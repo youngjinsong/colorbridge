@@ -1,15 +1,18 @@
 @import 'modules/variables';
 
 #page-about {
-  h1,
-  h2 {
-    //font-family: "chosin";
-  }
-
   h1 {
     margin-bottom: 5px;
-    font-size: 2.6rem;
+    font-size: 5rem;
+    line-height: 1.4;
     letter-spacing: -1px;
+    font-family: $serif;
+
+    span {
+      display: block;
+      font-size: 2rem;
+      line-height: 1;
+    }
 
     img {
       display: none;
@@ -182,13 +185,19 @@
 @media screen and (max-width: 720px) {
   #page-about {
     h1 {
+      font-size: 2.5rem;
+      text-align: center;
+
+      span {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
       .profile {
         display: block;
         width: 50%;
         margin: 20px auto;
       }
-
-      text-align: center;
     }
 
     .introduction {
@@ -226,15 +235,6 @@
           font-size: 1.2rem;
         }
       }
-    }
-  }
-}
-
-// Mobile M
-@media screen and (max-width: 375px) {
-  #page-about {
-    h1 span {
-      font-size: 3.2rem;
     }
   }
 }
