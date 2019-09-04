@@ -1,4 +1,3 @@
-
 // 카드타입은 페이지 네이션으로 사용됨
 .projects-list.card-view {
   li {
@@ -39,7 +38,7 @@
 
     .meta {
       font-size: 1.3rem;
-      color: #7D7D80;
+      color: #7d7d80;
       order: 2;
     }
 
@@ -52,7 +51,8 @@
       order: 1;
     }
 
-    .subtitle, .body {
+    .subtitle,
+    .body {
       display: none;
     }
   }
@@ -60,9 +60,8 @@
   &:after {
     clear: both;
     display: block;
-    content: "";
+    content: '';
   }
-
 
   /*******************************************************************
     반응형
@@ -81,7 +80,7 @@
 }
 
 // 가로 기본형으로 프로젝트 목록에서 사용됨.
-body[data-page="projects-list"] {
+body[data-page='projects-list'] {
   #gnb {
     margin-bottom: 40px;
   }
@@ -136,14 +135,14 @@ body[data-page="projects-list"] {
         top: 40px;
         left: 40px;
         font-size: 1.3rem;
-        color: #7D7D80;
+        color: #7d7d80;
       }
 
       .title {
         display: block;
         font-size: 3rem;
         line-height: 1.5;
-        color: #19191A;
+        color: #19191a;
         text-transform: uppercase;
       }
 
@@ -158,8 +157,6 @@ body[data-page="projects-list"] {
       }
     }
   }
-
-
 
   /*******************************************************************
     반응형
@@ -212,7 +209,6 @@ body[data-page="projects-list"] {
     }
   }
 
-
   // PC samll, Mobile bic (작은 브라우저, 큰 스마트폰 화면에도 포함하기 위해 720이하로 적용)
   @media screen and (max-width: 720px) {
     li {
@@ -223,7 +219,6 @@ body[data-page="projects-list"] {
           display: inline-block;
           width: 100%;
         }
-
 
         .description-wrap {
           .meta {
@@ -247,7 +242,7 @@ body[data-page="projects-list"] {
 
 @media screen and (max-width: 768px) {
   // 가로 기본형으로 프로젝트 목록에서 사용됨.
-  body[data-page="projects-list"] {
+  body[data-page='projects-list'] {
     #content {
       padding-top: 50px;
       padding-bottom: 50px;

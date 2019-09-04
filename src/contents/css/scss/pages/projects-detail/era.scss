@@ -1,6 +1,7 @@
 #era {
   header {
-    p, h2 {
+    p,
+    h2 {
       color: #fff;
     }
 
@@ -41,7 +42,7 @@
 
       &::before {
         display: block;
-        content: "";
+        content: '';
         margin-right: 16px;
         width: 38px;
         height: 38px;
@@ -51,19 +52,19 @@
 
       &:nth-child(2) {
         &::before {
-          background-color: #7EC46A;
+          background-color: #7ec46a;
         }
       }
 
       &:nth-child(3) {
         &::before {
-          background-color: #2EA1DA;
+          background-color: #2ea1da;
         }
       }
 
       &:nth-child(4) {
         &::before {
-          background-color: #6D24BB;
+          background-color: #6d24bb;
         }
       }
     }
@@ -79,7 +80,7 @@
     }
 
     img:first-child {
-      margin-bottom: 160px
+      margin-bottom: 160px;
     }
 
     img:last-child {

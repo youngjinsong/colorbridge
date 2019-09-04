@@ -1,6 +1,7 @@
 #momtalk {
   header {
-    p, h2 {
+    p,
+    h2 {
       color: #222222;
     }
 
@@ -46,7 +47,7 @@
     .visual {
       padding-top: 100px;
       text-align: center;
-      background: #ffda05 url("/contents/img/projects/momtalk/project-pt@2x.png") no-repeat center center;
+      background: #ffda05 url('/contents/img/projects/momtalk/project-pt@2x.png') no-repeat center center;
       background-size: cover;
 
       img {
@@ -70,7 +71,7 @@
   }
 
   #talk {
-    border-top: solid 1px rgba(0,0,0,0.1);
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
   }
 
   #event {
