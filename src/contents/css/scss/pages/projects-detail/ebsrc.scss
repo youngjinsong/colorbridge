@@ -264,16 +264,34 @@
         right: 4%;
       }
 
-      .image-pieces li {
-        margin-right: 20px;
-      }
-
       .process {
         padding-top: 100px;
 
         h4 {
           line-height: 1;
           text-transform: unset;
+        }
+      }
+
+      .image-grid {
+        display: grid;
+      }
+
+      #initial-concept {
+        .image-grid {
+          grid-template-columns: repeat(4, 1fr);
+          grid-column-gap: 8px;
+          grid-row-gap: 5px;
+        }
+      }
+
+      #final-design {
+        .image-grid {
+          grid-template-columns: repeat(3, 1fr);
+
+          img {
+            vertical-align: top;
+          }
         }
       }
     }
@@ -513,13 +531,15 @@
       #medal {
         padding-bottom: 50px;
 
-        .image-pieces {
-          flex-wrap: wrap;
+        #initial-concept {
+          .image-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
 
-          li {
-            flex-basis: 50%;
-            margin-right: 0;
-            margin-bottom: 20px;
+        #final-design {
+          .image-grid {
+            grid-template-columns: repeat(2, 1fr);
           }
         }
       }
