@@ -1,0 +1,90 @@
+#remember {
+  header {
+    p,
+    h2 {
+      color: #fff;
+    }
+
+    &::after {
+      background-color: #2d235e;
+    }
+  }
+
+  #the-project {
+    .visual {
+      padding-top: 72px;
+      padding-bottom: 72px;
+      background: #5f3dac;
+      text-align: center;
+
+      img {
+        max-width: 726px;
+      }
+    }
+  }
+
+  #persona {
+    #needs {
+      padding: 90px 0;
+      background: #f9f9f9;
+    }
+
+    .comment-black {
+      margin: 0 30px;
+      padding: 30px 40px;
+      border-radius: 2px;
+      background: #000;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+
+      p {
+        margin-bottom: 12px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  #approach {
+    #concept {
+      padding: 216px 0;
+      background: #494d58;
+      * {
+        color: #fff;
+      }
+    }
+
+    #remember-logo-wrap {
+      width: 490px;
+      height: 308px;
+      border-radius: 15px;
+      box-shadow: 0 12px 44px 0 rgba(39, 38, 38, 0.2);
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 316px;
+      }
+    }
+
+    .features {
+      padding: 170px 0;
+      background: #4b75ff;
+    }
+  }
+
+  #final-design {
+    .visual {
+      background: #5f3dac;
+    }
+  }
+
+  /*******************************************************************
+    반응형
+   *******************************************************************/
+}

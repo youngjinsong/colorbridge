@@ -80,5 +80,15 @@ function getProjectList() {
       description:
         '“임신한 순간 똑똑하고 경험 많은 비서를 고용했다”란 슬로건으로 엄마를 위한 서비스 Momtalk의 메인 디자이너로 업무를 진행했습니다.',
     },
+    {
+      name: 'Remember',
+      path: 'remember',
+      imageURL: '/contents/img/projects/remember@2x.jpg',
+      date: '2019.06 ~ 2019.06',
+      role: 'Product UI/UX Design',
+      type: 'UI/UX 개선 개인프로젝트',
+      description:
+        '현재 서비스에서 아쉬운 점은 그룹 목록과 명함 목록의 개수에 따라 컨테이너들의 높이가 불규칙하게 나열되어 레이아웃이 다소 불안정한 느낌을 받았습니다. PC의 넓은 화면을 활용해 안정감을 주고 관리가 용이한 레이아웃을 제공하는 것이 주요 개선 포인트입니다.',
+    },
   ];
 }
