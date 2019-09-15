@@ -55,6 +55,27 @@
       * {
         color: #fff;
       }
+
+      h4 {
+        font-size: 1.6rem;
+      }
+
+      .piece {
+        flex-basis: auto;
+        &:first-child {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        &:last-child {
+          flex-basis: 490px;
+        }
+      }
+
+      .font-wrap {
+        margin-bottom: 40px;
+      }
     }
 
     #remember-logo-wrap {
@@ -76,6 +97,28 @@
       padding: 170px 0;
       background: #4b75ff;
     }
+
+    .color-palette {
+      li {
+        &:nth-child(1) {
+          &::before {
+            background-color: #fff;
+          }
+        }
+
+        &:nth-child(2) {
+          &::before {
+            background-color: #000;
+          }
+        }
+
+        &:nth-child(3) {
+          &::before {
+            background-color: #5f3dac;
+          }
+        }
+      }
+    }
   }
 
   #final-design {
@@ -87,4 +130,54 @@
   /*******************************************************************
     반응형
    *******************************************************************/
+  @media screen and (max-width: 768px) {
+    $paddingSize: 70px 0;
+    #the-project {
+      img {
+        width: 70vw;
+      }
+    }
+
+    #persona {
+      .comment-black {
+        margin: 0 10px;
+        padding: 10px 15px;
+        font-size: 16px;
+
+        br {
+          display: none;
+        }
+      }
+
+      #needs {
+        padding: $paddingSize;
+      }
+    }
+
+    #approach {
+      #concept,
+      .features {
+        padding: $paddingSize;
+      }
+
+      #concept {
+        .pieces {
+          flex-direction: column;
+        }
+
+        #style-wrap {
+          order: 1;
+        }
+
+        #remember-logo-wrap {
+          padding: 0 50px;
+          order: 0;
+          width: auto;
+          flex-basis: 160px;
+          margin-bottom: 50px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
 }

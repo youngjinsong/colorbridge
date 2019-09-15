@@ -19,7 +19,7 @@ function PageHandler(parent, options) {
 
     $menus.find('.selected').removeClass('selected');
     $menus.find('a[href*="' + name + '"]').addClass('selected');
-    $('title').html('COLOR BRIDGE - ' + name.replace('-', ' '));
+    $('title').html('COLOR BRIDGE - ' + name.replace('-', ' ').toUpperCase());
   }
 
   /**
