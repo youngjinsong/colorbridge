@@ -86,7 +86,7 @@ function getProjectList() {
       imageURL: '/contents/img/projects/remember@2x.jpg',
       date: '2019.06 ~ 2019.06',
       role: 'Product UI/UX Design',
-      type: 'UI/UX 개선 개인프로젝트',
+      type: '개인프로젝트 (Web App 개선)',
       description:
         '현재 서비스에서 아쉬운 점은 복잡한 메뉴 구성과 명함 목록의 개수에 따라 컨테이너들의 높이가 불규칙하게 나열되어 레이아웃이 다소 불안정한 느낌을 받았습니다. PC의 넓은 화면을 활용해 안정감을 주고 관리가 용이한 레이아웃을 제공하는 것이 주요 개선 포인트입니다.',
     },
