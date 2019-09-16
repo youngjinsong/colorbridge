@@ -152,6 +152,11 @@ gulp.task('build-html', function() {
       inject(sources, {
         ignorePath: '/build/',
         addRootSlash: false,
+        // Insert version
+        transform: function(filePath) {
+          filePath = `${filePath}?v=${pkg.version}`;
+          return inject.transform.apply(inject.transform, arguments);
+        },
       })
     )
     .pipe(gulp.dest(paths.build.root));
