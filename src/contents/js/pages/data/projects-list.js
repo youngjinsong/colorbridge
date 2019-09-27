@@ -84,7 +84,7 @@ function getProjectList() {
       name: 'Remember',
       path: 'remember',
       imageURL: '/contents/img/projects/remember@2x.jpg',
-      date: '2019.06 ~ 2019.06',
+      date: '2019.06',
       role: 'Product UI/UX Design',
       type: '개인프로젝트 (Web App 개선)',
       description:
