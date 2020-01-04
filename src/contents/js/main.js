@@ -15,6 +15,9 @@ $(function() {
   var home = new Home(that);
   var weeklyDrawing = new WeeklyDrawing(that);
   var projects = new Projects(that);
+  var subpage = {
+    remember: new Remember(),
+  };
   var $win = $(window);
   var $body = $('body');
   var $btnTop = null;
@@ -101,6 +104,39 @@ $(function() {
   }
 
   /**
+   * projects 로드 처리
+   * @param {*} url
+   */
+  function onLoadedProjects(url) {
+    var isTwoDepth = false;
+    var currentPage;
+
+    if (url.match('/projects/')) {
+      isTwoDepth = true;
+      currentPage = url.split('/views/projects/')[1];
+      currentPage = currentPage.split('.html')[0];
+      moveScrollTop(0);
+
+      // 하위 페이지 스크립트 초기화
+      if (subpage[currentPage]) {
+        subpage[currentPage].init();
+      }
+    }
+
+    // 목록 스타일 처리를 위해 구분함
+    if (!isTwoDepth) {
+      $body.attr('data-page', 'projects-list');
+    }
+
+    // 페이지네이션
+    projects.init({
+      $appendTarget: $('.projects-list'),
+      renderType: isTwoDepth ? 'pagination' : 'all',
+      currentPage: currentPage,
+    });
+  }
+
+  /**
    * 페이지 비동기 로드 완료 후 처리
    * @param url
    */
@@ -117,31 +153,11 @@ $(function() {
     } else if (url.match('weekly-drawing')) {
       weeklyDrawing.init();
     } else if (url.match('projects')) {
-      var isTwoDepth = false;
-      var currentPage;
-
-      if (url.match('/projects/')) {
-        isTwoDepth = true;
-        currentPage = url.split('/views/projects/')[1];
-        currentPage = currentPage.split('.html')[0];
-        moveScrollTop(0);
-      }
-
-      // 목록 스타일 처리를 위해 구분함
-      if (!isTwoDepth) {
-        $body.attr('data-page', 'projects-list');
-      }
-
-      // 페이지네이션
-      projects.init({
-        $appendTarget: $('.projects-list'),
-        renderType: isTwoDepth ? 'pagination' : 'all',
-        currentPage: currentPage,
-      });
+      onLoadedProjects(url);
     }
 
     changeThema($body.find('[data-thema]'));
-    setTimeout(bindScrollReveal, 10);
+    setTimeout(bindScrollReveal, 100);
     onScroll();
   }
 

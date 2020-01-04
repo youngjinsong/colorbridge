@@ -18,19 +18,20 @@ function Projects() {
     var description = data.description;
     var meta = data.date + ' · ' + data.role;
 
+    // prettier-ignore
     return [
       '<li>',
-      '<a href="#projects/' + path + '" title="' + name + '">',
-      '<span class="image-wrap">',
-      '<img src="' + imageURL + '" alt="' + name + '" />',
-      '</span>',
-      '<span class="description-wrap">',
-      '<p class="meta">' + meta + '</p>',
-      '<strong class="title">' + name + '</strong>',
-      '<p class="subtitle">' + subtitle + '</p>',
-      '<p class="body">' + description + '</p>',
-      '</span>',
-      '</a>',
+        '<a href="#projects/' + path + '" title="' + name + '">',
+          '<span class="image-wrap">',
+            '<img src="' + imageURL + '" alt="' + name + '" />',
+          '</span>',
+          '<span class="description-wrap">',
+            '<p class="meta">' + meta + '</p>',
+            '<strong class="title">' + name + '</strong>',
+            '<p class="subtitle">' + subtitle + '</p>',
+            '<p class="body">' + description + '</p>',
+          '</span>',
+        '</a>',
       '</li>',
     ].join('\n');
   }

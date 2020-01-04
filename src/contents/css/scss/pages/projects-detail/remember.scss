@@ -127,6 +127,10 @@
 
       .images {
         margin-bottom: 60px;
+
+        img:not(.active) {
+          display: none;
+        }
       }
 
       .buttons {
@@ -136,15 +140,20 @@
       }
 
       button {
-        padding: 8px 25px;
+        flex-basis: 100%;
+        margin: 0 8px;
+        padding: 8px 10px;
         color: #fff;
-
         border-radius: 20px;
         border: solid 0.6px #fff;
 
+        &.active,
+        &:hover {
+          border: solid 0.6px #0c33bd;
+        }
+
         &:hover {
           background: rgba(18, 57, 186, 0.7);
-          border: solid 0.6px #0c33bd;
         }
 
         &.active {
