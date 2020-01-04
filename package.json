@@ -33,6 +33,6 @@
     "deploy-force": "git push origin `git subtree split --prefix build master`:gh-pages --force"
   },
   "engines": {
-    "node": "^8.11.4"
+    "node": "^10.16.0"
   }
 }
