@@ -157,7 +157,7 @@ $(function() {
     }
 
     changeThema($body.find('[data-thema]'));
-    setTimeout(bindScrollReveal, 100);
+    setTimeout(bindScrollReveal, 200);
     onScroll();
   }
 
