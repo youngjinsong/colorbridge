@@ -123,29 +123,52 @@
     }
 
     #screen-shots {
-      padding-bottom: 100px;
+      padding-bottom: 170px;
 
       .images {
-        margin-bottom: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+        img {
+          width: 72%;
+        }
 
         img:not(.active) {
           display: none;
         }
       }
 
+      #image-description {
+        padding: 40px 20px 30px 40px;
+        background: #0b2582;
+        color: #fff;
+        border-left: solid 1px rgba(0, 0, 0, 0.1);
+        list-style: disc;
+
+        li {
+          margin-bottom: 10px;
+          font-size: 1.4rem;
+        }
+      }
+
       .buttons {
         display: flex;
         justify-content: space-between;
-        padding: 0 30px;
+        padding: 0 50px;
       }
 
       button {
         flex-basis: 100%;
         margin: 0 8px;
-        padding: 8px 10px;
+        padding: 14px 10px;
         color: #fff;
-        border-radius: 20px;
+        border-radius: 22px;
         border: solid 0.6px #fff;
+        transition: all 0.15s ease-out;
 
         &.active,
         &:hover {
@@ -161,6 +184,23 @@
         }
       }
     }
+
+    #shot-flash {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.05s ease-in-out;
+
+      &.visible {
+        z-index: 3000;
+        opacity: 1;
+      }
+    }
   }
 
   #final-design {
@@ -174,6 +214,7 @@
    *******************************************************************/
   @media screen and (max-width: 768px) {
     $paddingSize: 70px 0;
+
     #the-project {
       img {
         width: 70vw;
@@ -197,6 +238,8 @@
 
     #approach {
       #concept,
+      #layout,
+      #screen-shots,
       .features {
         padding: $paddingSize;
       }
@@ -217,6 +260,32 @@
           flex-basis: 160px;
           margin-bottom: 50px;
           border-radius: 3px;
+        }
+      }
+
+      #screen-shots {
+        img {
+          width: 100% !important;
+        }
+
+        #image-description {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    #approach {
+      #screen-shots {
+        .buttons {
+          flex-wrap: wrap;
+          padding: 0;
+
+          button {
+            margin: 0 0 14px 0;
+            flex-basis: 48%;
+          }
         }
       }
     }
