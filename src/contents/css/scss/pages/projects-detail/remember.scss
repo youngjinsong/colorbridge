@@ -264,8 +264,18 @@
       }
 
       #screen-shots {
+        .buttons {
+          padding: 0;
+
+          button {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+
         img {
           width: 100% !important;
+          height: 100% !important;
         }
 
         #image-description {
@@ -280,7 +290,6 @@
       #screen-shots {
         .buttons {
           flex-wrap: wrap;
-          padding: 0;
 
           button {
             margin: 0 0 14px 0;
