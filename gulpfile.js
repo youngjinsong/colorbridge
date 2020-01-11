@@ -214,6 +214,13 @@ gulp.task('build-all', function() {
 });
 
 /**
+ * 배포 소스 빌드 (이미지제외 - 코드만)
+ */
+gulp.task('build-only-code', function() {
+  runSequence(['build-js', 'build-css'], 'build-html', 'build-sub-html');
+});
+
+/**
  * 기본 개발용 task 실행
  */
 gulp.task('default', ['browserSync', 'watch']);
