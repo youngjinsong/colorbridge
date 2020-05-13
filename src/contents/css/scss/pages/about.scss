@@ -73,6 +73,7 @@
       color: #666;
       line-height: 1.5;
       font-weight: 300;
+      letter-spacing: -0.2px;
     }
   }
 
@@ -97,7 +98,7 @@
 
     li {
       display: inline-block;
-      margin-right: 22px;
+      margin-right: 18px;
       margin-bottom: 10px;
       min-width: 92px;
 
@@ -109,14 +110,17 @@
         border: solid 1px #eeeeee;
         border-radius: 2px;
 
-        background: url('/contents/img/about/skills.png') no-repeat 0 0;
-        background-size: 724px 153px;
+        background: url('/contents/img/about/skills-icons.png') no-repeat 0 0;
+        background-size: 805px 153px; // 아이콘이 추가되면 사이즈 수정 필요 (이미지 크기의 나누기 2)
 
         &.sketch {
           background-position: 0 0;
         }
         &.zeplin {
           background-position: -83px 0;
+        }
+        &.figma {
+          background-position: -730px 0;
         }
         &.invision {
           background-position: -164px 0;
@@ -167,23 +171,19 @@
       }
     }
   }
-}
 
-/*******************************************************************
-  반응형
- *******************************************************************/
-@media screen and (max-width: 768px) {
-  #page-about {
+  /*******************************************************************
+    반응형
+   *******************************************************************/
+  @media screen and (max-width: 768px) {
     #visual {
       img.profile {
         margin-right: 46px;
       }
     }
   }
-}
 
-@media screen and (max-width: 720px) {
-  #page-about {
+  @media screen and (max-width: 720px) {
     h1 {
       font-size: 2.5rem;
       text-align: center;
@@ -234,6 +234,14 @@
         p {
           font-size: 1.2rem;
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    #skills {
+      ul {
+        display: inline-block;
       }
     }
   }
