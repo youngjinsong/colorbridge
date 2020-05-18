@@ -129,11 +129,13 @@ gulp.task('build-css', ['scss'], function() {
  * 배포: 이미지
  */
 gulp.task('build-img', function() {
-  return gulp
-    .src(paths.build.img)
-    .pipe(changed(paths.build.root + '/contents/img'))
-    .pipe(imagemin())
-    .pipe(gulp.dest(paths.build.root + '/contents/img'));
+  return (
+    gulp
+      .src(paths.build.img)
+      .pipe(changed(paths.build.root + '/contents/img'))
+      // .pipe(imagemin())
+      .pipe(gulp.dest(paths.build.root + '/contents/img'))
+  );
 });
 
 /**
@@ -179,7 +181,7 @@ gulp.task('build-clean', function() {
     .src([`${paths.build.root}/contents/css`, `${paths.build.root}/contents/img`, `${paths.build.root}/contents/js`], {
       read: false,
     })
-    .pipe(clean());
+    .pipe(clean({ force: true }));
 });
 
 /**
