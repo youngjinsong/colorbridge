@@ -27,9 +27,9 @@ function getProjectList() {
         '주목도 있는 브랜드로 도약하기 위한 리브랜딩 작업을 진행했습니다.',
     },
     {
-      name: 'English Road App',
-      path: 'era',
-      imageURL: '/contents/img/projects/era@2x.jpg',
+      name: 'morlymom',
+      path: 'morlymom',
+      imageURL: '/contents/img/projects/morlymom@2x.jpg',
       date: '2016.12 ~ 2017.02',
       role: 'Product UI/UX Design',
       type: 'App Design',
