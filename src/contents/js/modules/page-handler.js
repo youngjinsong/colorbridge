@@ -88,6 +88,12 @@ function PageHandler(parent, options) {
         menuName = menuName.split('/')[0];
       }
 
+      // replace era to morlymom
+      if (viewPath.match(/era/)) {
+        location.hash = 'projects/morlymom';
+        return false;
+      }
+
       getPage(viewPath);
       setFocusMenu(menuName);
       setPageNameToBody(menuName);
