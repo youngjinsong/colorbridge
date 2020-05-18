@@ -41,8 +41,8 @@ function getProjectList() {
       name: 'iPortfolio',
       path: 'iportfolio',
       imageURL: '/contents/img/projects/ipf@2x.jpg',
-      date: '2018.05 ~ 2018.09',
-      role: 'Web Design, Development',
+      date: '2018.04 ~ 2018.09',
+      role: 'UI/UX Design Lead, Web Development',
       type: 'Responsive Web Design',
       description:
         '회사 브랜드 사이트가 오래전에 개발된 상태로 외부에 공개되는 게 줄곧 신경이 쓰여 작업을 시작하게 되었습니다. ' +

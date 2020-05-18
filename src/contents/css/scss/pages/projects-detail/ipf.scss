@@ -9,6 +9,13 @@
     background-color: #eeeeee;
   }
 
+  #points {
+    .visual {
+      padding: 70px 0;
+      background-color: #f9f9f9;
+    }
+  }
+
   #idea-sketch {
     .image-pieces {
       flex-wrap: nowrap;
@@ -29,9 +36,8 @@
   }
 
   #concept {
-    li:nth-child(5),
-    li:nth-child(6) {
-      margin-bottom: 0;
+    .visual {
+      background-color: transparent;
     }
   }
 
