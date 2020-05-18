@@ -8,7 +8,7 @@ function getProjectList() {
       name: 'EBS Reading Club',
       path: 'ebsrc',
       imageURL: '/contents/img/projects/ebsrc@2x.jpg',
-      date: '2016.03 ~ 2020 진행중',
+      date: '2016.03 ~ 2020.04',
       role: 'Product UI/UX Design',
       type: 'Web/App Design',
       description:
@@ -18,7 +18,7 @@ function getProjectList() {
     {
       name: 'ReBranding',
       path: 'rebranding',
-      imageURL: '/contents/img/projects/readingand@2x.png',
+      imageURL: '/contents/img/projects/readingn@2x.png',
       date: '2019.01 ~ 2019.03',
       role: 'BX Design',
       type: 'Logo Design',

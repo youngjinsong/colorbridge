@@ -14,6 +14,14 @@
   }
 }
 
+@media screen and (max-width: 1439px) {
+  .fixed-wrap {
+    &.w1440 {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 1149px) {
   #overview {
     > div div {

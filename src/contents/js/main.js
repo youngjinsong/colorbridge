@@ -73,8 +73,8 @@ $(function() {
     var v3 = document.querySelectorAll('.sa-v3');
 
     SR.reveal(v1, { delay: 100, distance: '30px' });
-    SR.reveal(v2, { delay: 300, distance: '80px' });
-    SR.reveal(v3, { delay: 500, distance: '100px' });
+    SR.reveal(v2, { delay: 200, distance: '60px' });
+    SR.reveal(v3, { delay: 350, distance: '90px' });
   }
 
   /**
