@@ -63,7 +63,7 @@ function getProjectList() {
       name: 'Learning Management System',
       path: 'lms',
       imageURL: '/contents/img/projects/lms@2x.jpg',
-      date: '2018.10 ~ 2019.03',
+      date: '2018.10 ~ 2020.04',
       role: 'Product UI/UX Design',
       type: 'Web Design',
       description:
