@@ -56,7 +56,7 @@ function getProjectList() {
       role: 'Product UI/UX Design',
       type: 'App Design',
       description:
-        "매년 참가하는 국제 교육 전시에서 (e.g 'Frankfurt Book Fair', 'London Bett') 신기능을 선보이기 위해 iOS에서 제공하는 AR 기능을 활용한<br />영어 학습을 기능의 UI/UX 디자인을 진행했습니다.",
+        "매년 참가하는 국제 교육 전시에서 (e.g 'Frankfurt Book Fair', 'London Bett') 신기능을 선보이기 위해 iOS에서 제공하는 AR 기능을 활용한 영어 학습 기능의<br />UI/UX 디자인을 진행했습니다.",
     },
     {
       name: 'Learning Management System',
