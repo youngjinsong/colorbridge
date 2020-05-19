@@ -15,6 +15,11 @@
     }
   }
 
+  #points .visual,
+  #effect .visual {
+    background-color: #f9f9f9;
+  }
+
   #idea-sketch {
     .image-pieces {
       flex-wrap: nowrap;
