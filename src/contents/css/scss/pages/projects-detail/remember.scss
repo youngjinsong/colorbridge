@@ -35,7 +35,6 @@
       background: #000;
       color: #fff;
       font-size: 18px;
-      font-weight: 600;
 
       p {
         margin-bottom: 12px;
@@ -50,7 +49,7 @@
   #approach {
     #concept {
       padding: 216px 0;
-      background: #494d58;
+      background: #4c308a;
       * {
         color: #fff;
       }
@@ -82,7 +81,7 @@
       height: 308px;
       border-radius: 15px;
       box-shadow: 0 12px 44px 0 rgba(39, 38, 38, 0.2);
-      background-color: #ffffff;
+      background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -93,7 +92,9 @@
     }
 
     .features {
-      background: #4b75ff;
+      // background: #4b75ff;
+      padding-top: 170px;
+      background-color: #5f3dac;
     }
 
     .color-palette {
@@ -118,8 +119,23 @@
       }
     }
 
+    #points {
+      .description {
+        * {
+          color: #fff;
+        }
+      }
+      p {
+        text-align: center;
+      }
+
+      .visual {
+        padding: 0;
+      }
+    }
+
     #layout {
-      padding: 170px 0;
+      // do something
     }
 
     #screen-shots {
@@ -144,7 +160,8 @@
 
       #image-description {
         padding: 40px 20px 30px 40px;
-        background: #0b2582;
+        // background: #0b2582;
+        background-color: #4c308a;
         color: #fff;
         border-left: solid 1px rgba(0, 0, 0, 0.1);
         list-style: disc;
@@ -172,15 +189,15 @@
 
         &.active,
         &:hover {
-          border: solid 0.6px #0c33bd;
+          border: solid 0.6px rgb(65, 40, 117);
         }
 
         &:hover {
-          background: rgba(18, 57, 186, 0.7);
+          background: rgba(76, 48, 138, 0.7);
         }
 
         &.active {
-          background: rgba(18, 57, 186, 1);
+          background: rgba(76, 48, 138, 1);
         }
       }
     }
