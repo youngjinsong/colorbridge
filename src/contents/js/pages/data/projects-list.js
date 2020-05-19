@@ -52,12 +52,11 @@ function getProjectList() {
       name: 'AR',
       path: 'ar',
       imageURL: '/contents/img/projects/ar@2x.jpg',
-      date: '2018.01 ~ 2018.05',
+      date: '2018.05 ~ 2018.07',
       role: 'Product UI/UX Design',
       type: 'App Design',
       description:
-        'EBS 리딩클럽의 서비스에 AR 기능을 적용한 파일럿 버전입니다. ' +
-        '회사에서는 매년 2~3회 해외 전시를 참가합니다. 그 중 2018년 상반기 영국과 일본에서의 시연을 위해 작업을 진행했습니다.',
+        "매년 참가하는 국제 교육 전시에서 (e.g 'Frankfurt Book Fair', 'London Bett') 신기능을 선보이기 위해 iOS에서 제공하는 AR 기능을 활용한<br />영어 학습을 기능의 UI/UX 디자인을 진행했습니다.",
     },
     {
       name: 'Learning Management System',
