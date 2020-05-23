@@ -230,12 +230,108 @@
       margin-bottom: 80px;
 
       p {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
       }
     }
 
     #ds-screen {
       background-color: transparent;
+    }
+  }
+
+  #ux-design {
+    margin-bottom: 0;
+
+    div:nth-child(2) {
+      background-color: #fff;
+    }
+  }
+
+  #viewer-design {
+    position: relative;
+    padding-top: 170px;
+
+    & > div {
+      position: relative;
+      z-index: 5;
+    }
+
+    &:after {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 810px;
+      background-color: #92cd33;
+    }
+
+    .visual {
+      background-color: transparent;
+    }
+  }
+
+  .viewer-design-detail {
+    h4 {
+      font-size: 2rem;
+      text-transform: none;
+    }
+
+    .description {
+      p {
+        text-align: center;
+      }
+    }
+
+    > div {
+      margin-bottom: 80px;
+
+      > p {
+        margin-bottom: 30px;
+      }
+    }
+
+    .pieces {
+      .detail {
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  #warmup-design {
+    .description {
+      p {
+        margin-bottom: 80px;
+      }
+    }
+
+    .piece2 {
+      > div:first-child {
+        margin-right: 50px;
+      }
+    }
+
+    .piece3 {
+      > div:nth-child(2) {
+        margin: 0 35px;
+      }
+
+      img {
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .detail {
+      height: 180px;
     }
   }
 
