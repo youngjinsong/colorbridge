@@ -17,6 +17,7 @@ $(function() {
   var projects = new Projects(that);
   var subpage = {
     remember: new Remember(),
+    iportfolio: new Iportpolio(),
   };
   var $win = $(window);
   var $body = $('body');
