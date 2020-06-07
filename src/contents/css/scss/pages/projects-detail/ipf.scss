@@ -46,30 +46,9 @@
   }
 
   #website-design {
-    ol {
-      flex-wrap: nowrap;
-    }
-
-    li {
-      flex-basis: auto;
-
-      &:first-child {
-        flex-basis: 28% !important;
-        margin-right: 4%;
-      }
-
-      &:last-child {
-        flex-basis: 72% !important;
-      }
-
-      p {
-        margin-bottom: 12px;
-        text-align: center;
-      }
-
-      img {
-        box-shadow: 0 15px 36px 0 rgba(0, 0, 0, 0.2);
-      }
+    video {
+      object-fit: cover;
+      border: solid 1px rgba(0, 0, 0, 0.1);
     }
   }
 }
