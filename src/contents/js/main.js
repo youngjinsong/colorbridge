@@ -4,15 +4,14 @@
  * @author ssongki (ssongki@gmail.com)
  *
  */
-$(function() {
+$(function () {
   this.loader = new Loader();
   this.utils = new Utils(that);
   var that = this;
   var utils = this.utils;
   var pageHandler = new PageHandler(that, {
-    selfLoaderHandlePage: /home|weekly-drawing/,
+    selfLoaderHandlePage: /weekly-drawing/,
   });
-  var home = new Home(that);
   var weeklyDrawing = new WeeklyDrawing(that);
   var projects = new Projects(that);
   var subpage = {
@@ -55,9 +54,9 @@ $(function() {
    * Top 버튼 바인딩
    */
   function appendTopButton($target) {
-    $target.append('<button id="btn-top" class="shown">TOP</button>');
+    $target.append('<button id="btn-top">TOP</button>');
     $btnTop = $('#btn-top');
-    $btnTop.on('click', function() {
+    $btnTop.on('click', function () {
       moveScrollTop(0, true);
     });
   }
@@ -126,7 +125,11 @@ $(function() {
 
     // 목록 스타일 처리를 위해 구분함
     if (!isTwoDepth) {
-      $body.attr('data-page', 'projects-list');
+      if (url.match('home')) {
+        $body.attr('data-page', 'home-projects-list');
+      } else {
+        $body.attr('data-page', 'projects-list');
+      }
     }
 
     // 페이지네이션
@@ -145,12 +148,12 @@ $(function() {
     console.log('url', url);
 
     $body.removeClass('loaded');
-    setTimeout(function() {
+    setTimeout(function () {
       $body.addClass('loaded');
     }, 10);
 
     if (url.match('home')) {
-      home.init();
+      onLoadedProjects(url);
     } else if (url.match('weekly-drawing')) {
       weeklyDrawing.init();
     } else if (url.match('projects')) {

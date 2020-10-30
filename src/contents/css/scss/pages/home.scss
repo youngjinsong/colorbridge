@@ -1,38 +1,56 @@
 @import '../modules/variables';
 
-body[data-page='home'] {
-  background-color: #0f1b41;
+body[data-page='home-projects-list'] {
+  #gnb {
+    margin-bottom: 40px;
+  }
 
-  #site-footer {
-    * {
-      color: rgba(255, 255, 255, 0.6);
+  #content {
+    padding-top: 60px;
+  }
+
+  #introduction-wrap {
+    margin-bottom: 100px;
+    h2 {
+      margin-bottom: 30px;
+      font-size: 6.8rem;
+      letter-spacing: -1px;
+      font-family: $serif;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 3rem;
+      font-weight: 400;
     }
   }
 
-  #page-home {
-    min-height: $minHeight;
-    height: $minCalcHeight;
-    // background: url('/contents/img/main.jpg') no-repeat 50% 50%;
-    // background-size: contain;
+  #list-wrap {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    background: #f2f3f5;
+  }
 
-    video {
-      width: 100%;
-      height: 100%;
+  @media screen and (max-width: 720px) {
+    #introduction-wrap {
+      margin-bottom: 50px;
+      h2 {
+        margin-bottom: 15px;
+        font-size: 3.6rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
     }
 
-    @media screen and (max-width: 1149px) {
-      width: calc(100vw - 10vw);
+    #content {
+      padding-top: 20px;
     }
 
-    // PC samll, Mobile bic (작은 브라우저, 큰 스마트폰 화면에도 포함하기 위해 720이하로 적용)
-    @media screen and (max-width: 720px) {
-      background-position-y: 10%;
-    }
-
-    // Mobile L
-    @media screen and (max-width: 425px) {
-      min-height: 350px;
-      height: calc(100vh - 280px);
+    #list-wrap {
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
   }
 }
