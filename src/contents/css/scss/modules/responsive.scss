@@ -118,7 +118,7 @@
 
     #bi {
       display: block;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
       text-align: center;
       background-position-x: center;
     }
@@ -129,12 +129,8 @@
 
       li {
         margin: 0;
-        flex-basis: 24%;
+        flex-basis: 50%;
         text-align: center;
-
-        &:nth-child(2) {
-          flex-basis: 52%;
-        }
       }
     }
   }
