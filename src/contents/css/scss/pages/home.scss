@@ -14,14 +14,36 @@ body[data-page='home-projects-list'] {
     h2 {
       margin-bottom: 30px;
       font-size: 6.8rem;
+      line-height: 1.15;
       letter-spacing: -1px;
       font-family: $serif;
       font-weight: bold;
     }
 
+    .hand {
+      display: inline-block;
+      font-size: 5rem;
+      // animation-name: hand;
+      // animation-duration: 0.5s;
+      // animation-iteration-count: 5;
+      // animation-timing-function: ease;
+    }
+
+    @keyframes hand {
+      0% {
+        transform: rotate(-5deg);
+      }
+      50% {
+        transform: rotate(2deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
     p {
-      font-size: 3rem;
-      font-weight: 400;
+      font-size: 2rem;
+      font-weight: 300;
     }
   }
 
@@ -36,11 +58,11 @@ body[data-page='home-projects-list'] {
       margin-bottom: 50px;
       h2 {
         margin-bottom: 15px;
-        font-size: 3.6rem;
+        font-size: 3rem;
       }
 
       p {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
 
