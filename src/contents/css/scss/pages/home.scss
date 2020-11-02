@@ -22,22 +22,26 @@ body[data-page='home-projects-list'] {
 
     .hand {
       display: inline-block;
-      font-size: 5rem;
-      // animation-name: hand;
-      // animation-duration: 0.5s;
-      // animation-iteration-count: 5;
-      // animation-timing-function: ease;
+      font-size: 4.6rem;
+      animation-name: hand;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      cursor: default;
     }
 
     @keyframes hand {
       0% {
-        transform: rotate(-5deg);
+        transform: rotate(-4deg);
       }
       50% {
-        transform: rotate(2deg);
+        transform: rotate(10deg);
+      }
+      75% {
+        transform: rotate(-1deg);
       }
       100% {
-        transform: rotate(0deg);
+        transform: rotate(-7deg);
       }
     }
 
@@ -63,6 +67,10 @@ body[data-page='home-projects-list'] {
 
       p {
         font-size: 1.8rem;
+      }
+
+      .hand {
+        font-size: 2.2rem;
       }
     }
 
