@@ -100,6 +100,10 @@ body[data-page='projects-list'] {
     &:hover {
       box-shadow: 0 10px 20px #c7cad1;
       transform: translate(0, -5px);
+
+      a img {
+        transform: scale(1.02) translate(0, -2px);
+      }
     }
 
     &:last-child {
@@ -114,12 +118,14 @@ body[data-page='projects-list'] {
       > span {
         display: inline-block;
         width: 50%;
+        overflow: hidden;
       }
     }
 
     img {
       width: 100%;
       vertical-align: middle;
+      transition: all 0.3s ease-out;
     }
 
     .description-wrap {
