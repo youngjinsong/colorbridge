@@ -7,6 +7,7 @@ body[data-page='home-projects-list'] {
 
   #content {
     padding-top: 60px;
+    padding-bottom: 0;
   }
 
   #introduction-wrap {
@@ -53,13 +54,14 @@ body[data-page='home-projects-list'] {
 
   #list-wrap {
     padding-top: 150px;
-    padding-bottom: 80px;
+    padding-bottom: 150px;
     background: #f2f3f5;
   }
 
   @media screen and (max-width: 720px) {
     #introduction-wrap {
       margin-bottom: 50px;
+
       h2 {
         margin-bottom: 15px;
         font-size: 3rem;

@@ -1,5 +1,11 @@
 @import 'modules/variables';
 
+body[data-page='about'] {
+  #content {
+    padding-bottom: 0;
+  }
+}
+
 #page-about {
   $block-margin-bottom-desktop: 160px;
   $block-margin-bottom-mobile: 80px;

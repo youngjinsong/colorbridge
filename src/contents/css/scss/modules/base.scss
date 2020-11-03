@@ -57,40 +57,49 @@
 }
 
 #content {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   min-height: $minCalcHeight;
 }
 
 #site-footer {
-  display: flex;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 100;
+  background: #19191a;
+  color: #fff;
 
-  div,
-  nav {
-    flex-basis: 50%;
-  }
+  .fixed-wrap {
+    display: flex;
+    position: relative;
+    z-index: 100;
+    height: 104px;
 
-  nav {
-    font-size: 1.2rem;
-    text-align: right;
-
-    a {
-      margin-right: 15px;
-      opacity: 0.9;
+    div,
+    nav {
+      flex-basis: 50%;
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
     }
-  }
 
-  div {
-    font-size: 1.2rem;
+    div {
+      justify-content: flex-start;
+    }
+
+    nav {
+      justify-content: flex-end;
+
+      a {
+        margin-right: 15px;
+        opacity: 0.9;
+
+        color: #fff;
+      }
+    }
   }
 }
 
 #btn-top {
   display: none;
   position: fixed;
-  bottom: 6%;
+  bottom: 120px;
   right: 3%;
   z-index: 100;
   width: 56px;

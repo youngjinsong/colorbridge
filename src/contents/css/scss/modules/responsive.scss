@@ -135,35 +135,31 @@
     }
   }
 
-  #content {
-    margin-bottom: 20px;
-  }
-
   #site-footer {
     display: block;
     position: relative;
-    margin-bottom: 10px;
-    height: 50px;
 
-    div,
-    nav {
-      display: block;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      text-align: center;
-    }
-
-    nav {
-      top: 0;
-
-      a:last-child {
-        margin: 0;
+    .fixed-wrap {
+      div,
+      nav {
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        text-align: center;
       }
-    }
 
-    div {
-      bottom: 0;
+      nav {
+        top: 20px;
+
+        a:last-child {
+          margin: 0;
+        }
+      }
+
+      div {
+        bottom: 20px;
+      }
     }
   }
 
