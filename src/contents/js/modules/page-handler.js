@@ -50,7 +50,7 @@ function PageHandler(parent, options) {
   function getPage(url) {
     console.log('getPage', arguments);
 
-    $.get(url, function(data) {
+    $.get(url, function (data) {
       $content.html(data);
       that.loaded(url);
       hideLoaderPending(url, 200);
@@ -66,7 +66,7 @@ function PageHandler(parent, options) {
   function hideLoaderPending(url, timeout) {
     // 위클리 드로잉은 자체 로더 컨트롤
     if (!url.match(options.selfLoaderHandlePage)) {
-      setTimeout(function() {
+      setTimeout(function () {
         parent.loader.hide();
       }, timeout);
     }
@@ -99,6 +99,7 @@ function PageHandler(parent, options) {
       setPageNameToBody(menuName);
     } else if (location.pathname === '/') {
       getPage('/views/home.html');
+      setFocusMenu('home');
       setPageNameToBody('home');
     } else {
       $('#bi').click();
@@ -111,7 +112,7 @@ function PageHandler(parent, options) {
    * 해쉬 변경을 감지 한다.
    */
   function bindHashChange() {
-    $(window).bind('hashchange', function() {
+    $(window).bind('hashchange', function () {
       var hash = location.hash.split('#')[1];
       handleHash(hash);
     });
