@@ -1,7 +1,7 @@
 $minCalcHeight: calc(100vh - 230px);
 $minHeight: 400px;
 $linkFontColor: #2c59e8;
-$serif: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+$serif: 'Frank Ruhl Libre', 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
 
 @mixin ellipsis {
   text-overflow: ellipsis;
