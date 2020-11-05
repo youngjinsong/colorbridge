@@ -21,6 +21,7 @@ $(function () {
   var $win = $(window);
   var $body = $('body');
   var $btnTop = null;
+  var bubbly = new Bubbly();
 
   /**
    * 스크롤 이동 합니다.
@@ -173,6 +174,7 @@ $(function () {
     pageHandler.loaded = onLoaded;
     appendTopButton($body);
     $win.scroll(onScroll);
+    bubbly.init();
   }
 
   init();
