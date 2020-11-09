@@ -97,7 +97,7 @@ body[data-page='about'] {
 
     ul {
       &:first-of-type {
-        margin-bottom: 50px;
+        margin-bottom: 80px;
       }
 
       &::after {
@@ -107,70 +107,73 @@ body[data-page='about'] {
 
     li {
       display: inline-block;
-      margin-right: 18px;
+      margin-right: 8px;
       margin-bottom: 10px;
-      min-width: 92px;
+      min-width: 72px;
 
       span {
-        $size: 76px;
+        $size: 56px;
         display: block;
         margin: 0 auto 5px;
         width: $size;
         height: $size;
-        border: solid 1px #eeeeee;
+        border: solid 1px rgba(0, 0, 0, 0);
         border-radius: 2px;
 
-        background: url('/contents/img/about/skills-icons.png') no-repeat 0 0;
-        background-size: 805px 153px; // 아이콘이 추가되면 사이즈 수정 필요 (이미지 크기의 나누기 2)
+        background: url('/contents/img/about/skills-icons@2x.jpg') no-repeat 0 0;
+        background-size: 630px 118px; // 아이콘이 추가되면 사이즈 수정 필요 (이미지 크기의 나누기 2)
 
         &.sketch {
           background-position: 0 0;
         }
         &.zeplin {
-          background-position: -83px 0;
+          background-position: -64px 0;
         }
         &.figma {
-          background-position: -730px 0;
+          background-position: -574px 0;
         }
         &.invision {
-          background-position: -164px 0;
+          background-position: -128px 0;
         }
         &.principle {
-          background-position: -244px 0;
+          background-position: -192px 0;
+        }
+        &.framer {
+          background-position: -384px -64px;
         }
         &.illustrator {
-          background-position: -325px 0;
+          background-position: -256px 0;
         }
         &.photoshop {
-          background-position: -406px 0;
+          background-position: -320px 0;
         }
         &.after-effect {
-          background-position: -487px 0;
+          background-position: -384px 0;
         }
         &.premiere {
-          background-position: -568px 0;
+          background-position: -448px 0;
         }
         &.indesign {
-          background-position: -649px 0;
+          background-position: -512px 0;
         }
 
         &.html5 {
-          background-position: 0 -81px;
+          background-position: 0 -64px;
         }
         &.css3 {
-          background-position: -83px -81px;
+          background-position: -64px -64px;
         }
         &.sass {
-          background-position: -164px -81px;
+          background-position: -128px -64px;
         }
         &.javascript {
-          background-position: -244px -81px;
+          background-position: -192px -64px;
         }
         &.jquery {
-          background-position: -325px -81px;
+          background-position: -256px -64px;
         }
         &.git {
-          background-position: -406px -81px;
+          background-position: -320px -64px;
         }
       }
 
@@ -200,16 +203,10 @@ body[data-page='about'] {
 
     #skills {
       ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: block;
 
         li {
           margin-right: 0;
-
-          &:last-child {
-            justify-self: start;
-          }
         }
 
         p {
@@ -243,12 +240,6 @@ body[data-page='about'] {
 
     & > div {
       margin-bottom: $block-margin-bottom-mobile;
-    }
-
-    #skills {
-      ul {
-        display: inline-block;
-      }
     }
 
     img {
