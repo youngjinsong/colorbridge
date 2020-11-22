@@ -5,6 +5,17 @@
 function getProjectList() {
   return [
     {
+      name: 'Woney',
+      path: 'https://www.behance.net/gallery/106855419/Finance-Application-Woney',
+      imageURL: '/contents/img/projects/woney.gif',
+      date: '2020.05 ~ 2020.08',
+      role: 'Product UI/UX Design',
+      type: 'App Design',
+      description:
+        '내가 필요한 기능을 모아 놓은 자산 관리 앱이 있었으면 좋겠다고 느끼고, 필요한 기능을 바탕으로 ‘Woney’ 라는 Concept App Design을 진행 했습니다.<br/>' +
+        'Woney App은 눈에 보이는 자산관리로 실현 가능한 목표를 잡아주고 자산 운용에 대한 방향을 제시합니다.',
+    },
+    {
       name: 'EBS Reading Club',
       path: 'ebsrc',
       imageURL: '/contents/img/projects/ebsrc@2x.jpg',

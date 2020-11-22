@@ -17,11 +17,14 @@ function Projects() {
     var subtitle = data.type;
     var description = data.description;
     var meta = data.date + ' · ' + data.role;
+    var isExternalLink = path.match(/http/i);
+    var url = isExternalLink ? path : '#projects/' + path;
+    var linkTarget = isExternalLink ? '_blank' : '';
 
     // prettier-ignore
     return [
       '<li>',
-        '<a href="#projects/' + path + '" title="' + name + '">',
+        '<a href="' + url + '" title="' + name + '" target="' + linkTarget + '">',
           '<span class="image-wrap">',
             '<img src="' + imageURL + '" alt="' + name + '" />',
           '</span>',
@@ -44,7 +47,7 @@ function Projects() {
   function renderList($target, arr) {
     var listHTML = '';
 
-    arr.map(function(data, i) {
+    arr.map(function (data, i) {
       listHTML += getTemplate(data);
     });
 
@@ -110,7 +113,7 @@ function Projects() {
       }
     }
 
-    indexArr.map(function(item) {
+    indexArr.map(function (item) {
       result.push(arr[item]);
     });
 
