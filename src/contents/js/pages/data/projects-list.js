@@ -7,7 +7,7 @@ function getProjectList() {
     {
       name: 'Woney',
       path: 'https://www.behance.net/gallery/106855419/Finance-Application-Woney',
-      imageURL: '/contents/img/projects/woney.gif',
+      imageURL: '/contents/img/projects/woney@2x.gif',
       date: '2020.05 ~ 2020.08',
       role: 'Product UI/UX Design',
       type: 'App Design',
