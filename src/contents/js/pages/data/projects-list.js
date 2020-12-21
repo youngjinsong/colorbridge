@@ -5,6 +5,16 @@
 function getProjectList() {
   return [
     {
+      name: 'Cheer up, youngest!',
+      path: 'https://www.behance.net/gallery/106855419/Finance-Application-Woney',
+      imageURL: '/contents/img/projects/youngest@2x.jpg',
+      date: '2020.10 ~ 2020.12',
+      role: 'Product UI/UX Design',
+      type: 'App Design',
+      description:
+        '‘막내야 힘내’ 앱은 투표 형식의 설문 앱입니다. 근무했던 회사에서는 입사한 지 얼마 안 된 막내가 음료 주문을 했습니다. 저 또한 과거에 그랬던 적이 있었고 매번 일일이 물어보고 답변이 올 때까지 기다리는 답답함과 다양한 주문에 힘들었던 적이 있습니다. 그런 경험을 바탕으로 앱의 기능을 만들었습니다.',
+    },
+    {
       name: 'Woney',
       path: 'https://www.behance.net/gallery/106855419/Finance-Application-Woney',
       imageURL: '/contents/img/projects/woney@2x.gif',
@@ -12,7 +22,7 @@ function getProjectList() {
       role: 'Product UI/UX Design',
       type: 'App Design',
       description:
-        '내가 필요한 기능을 모아 놓은 자산 관리 앱이 있었으면 좋겠다고 느끼고, 필요한 기능을 바탕으로 ‘Woney’ 라는 Concept App Design을 진행 했습니다.<br/>' +
+        '내게 필요한 기능들을 모아 놓은 자산 관리 앱이 있었으면 좋겠다고 느끼고, 원하는 기능을 바탕으로 ‘Woney’ 라는 Concept App Design을 진행 했습니다.<br/>' +
         'Woney App은 눈에 보이는 자산관리로 실현 가능한 목표를 잡아주고 자산 운용에 대한 방향을 제시합니다.',
     },
     {
@@ -96,7 +106,7 @@ function getProjectList() {
       imageURL: '/contents/img/projects/remember@2x.jpg',
       date: '2019.05 ~ 2019.06',
       role: 'Product UI/UX Design',
-      type: '개인프로젝트 (Web App 개선)',
+      type: 'Web App 개선 (Side Project)',
       description:
         '현재 서비스에서 아쉬운 점은 복잡한 메뉴 구성과 명함 목록의 개수에 따라 컨테이너들의 높이가 불규칙하게 나열되어 레이아웃이 다소 불안정한 느낌을 받았습니다. PC의 넓은 화면을 활용해 안정감을 주고 관리가 용이한 레이아웃을 제공하는 것이 주요 개선 포인트입니다.',
     },
