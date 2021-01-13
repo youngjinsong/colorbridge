@@ -5,14 +5,14 @@
 function getProjectList() {
   return [
     {
-      name: 'Cheer up, youngest!',
+      name: 'PICK',
       path: 'https://www.behance.net/gallery/109909239/Vote-Application-Cheer-up-youngest',
-      imageURL: '/contents/img/projects/youngest@2x.jpg',
+      imageURL: '/contents/img/projects/pick@2x.jpg',
       date: '2020.10 ~ 2020.12',
       role: 'Product UI/UX Design',
       type: 'App Design',
       description:
-        '‘막내야 힘내’ 앱은 투표 형식의 설문 앱입니다.<br/>근무했던 회사에서는 입사한 지 얼마 안 된 막내가 음료 주문을 했습니다. 저 또한 과거에 그랬던 적이 있었고 매번 일일이 물어보고 답변이 올 때까지 기다리는 답답함과 다양한 주문에 힘들었던 적이 있습니다. 그 경험을 바탕으로 불편함을 개선하기 위한 앱 디자인을 진행했습니다.',
+        '‘PICK’ 앱은 투표 형식의 설문 앱입니다.<br/>근무했던 회사에서는 입사한 지 얼마 안 된 막내가 음료 주문을 했습니다. 저 또한 과거에 그랬던 적이 있었고 매번 일일이 물어보고 답변이 올 때까지 기다리는 답답함과 다양한 주문에 힘들었던 적이 있습니다. 그 경험을 바탕으로 불편함을 개선하기 위한 앱 디자인을 진행했습니다.',
     },
     {
       name: 'Woney',
