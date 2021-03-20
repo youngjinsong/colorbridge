@@ -31,6 +31,10 @@
       text-decoration: none;
       text-align: center;
 
+      &:hover {
+        color: $linkFontColor;
+      }
+
       &.selected {
         color: $linkFontColor;
         font-weight: 500;
