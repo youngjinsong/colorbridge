@@ -136,29 +136,17 @@
   }
 
   #site-footer {
-    display: block;
-    position: relative;
-
     .fixed-wrap {
-      div,
-      nav {
-        display: block;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        text-align: center;
-      }
+      height: 180px;
 
       nav {
-        top: 20px;
+        $size: 42px;
 
-        a:last-child {
-          margin: 0;
+        a {
+          margin-right: 12px;
+          width: $size;
+          height: $size;
         }
-      }
-
-      div {
-        bottom: 20px;
       }
     }
   }
