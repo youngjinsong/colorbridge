@@ -5,6 +5,19 @@
 function getProjectList() {
   return [
     {
+      name: 'LIFIC',
+      path: 'https://www.behance.net/gallery/148717993/Beauty-Fitness-APP-LIFIC',
+      imageURL: '/contents/img/projects/lific@2x.png',
+      date: '2021.06 ~ 2022.07',
+      role: 'Product UI/UX Design',
+      type: 'App Design',
+      description:
+        '라이픽 모바입 앱과 입점 파트너를 위한 서비스의 UX/UI 개선 작업과 디자인 시스템 개선 및 고도화 작업을 진행했습니다. ' +
+        '다지인 시스템 개선 작업에서는 컴포넌트의 네이밍부터 표준화 작업을 진행했습니다. ' +
+        '작업 속도와 효율성을 높이기 위해 컴포넌트별 중복 요소를 제거하고 그룹화하여 사용하기 용이하게 변경하였습니다. ' +
+        '그리고 디자인 가이드 고도화를 진행하여 서비스의 다양한 화면에서 통일감을 높이기 위한 작업에 집중하였습니다.',
+    },
+    {
       name: 'EBS Reading Club',
       path: 'ebsrc',
       imageURL: '/contents/img/projects/ebsrc@2x.jpg',

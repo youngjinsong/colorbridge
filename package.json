@@ -5,6 +5,7 @@
   "description": "personal site",
   "homepage": "http://colorbridge.co.kr",
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "natives": "^1.1.6"
   },
   "devDependencies": {
@@ -29,8 +30,7 @@
     "start": "gulp",
     "build": "gulp build-all",
     "build-img": "gulp build-img",
-    "deploy": "git subtree push --prefix build origin gh-pages",
-    "deploy-force": "git push origin `git subtree split --prefix build master`:gh-pages --force"
+    "deploy": "gh-pages -d build"
   },
   "engines": {
     "node": "^10.16.0"
