@@ -7,7 +7,7 @@ function getProjectList() {
     {
       name: 'LIFIC',
       path: 'https://www.behance.net/gallery/148717993/Beauty-Fitness-APP-LIFIC',
-      imageURL: '/contents/img/projects/lific@2x.png',
+      imageURL: '/contents/img/projects/lific.gif',
       date: '2021.06 ~ 2022.07',
       role: 'Product UI/UX Design',
       type: 'App Design',
